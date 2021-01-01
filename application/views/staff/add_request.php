@@ -2,11 +2,11 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1><?php echo $_GET['menu'] ;?> </h1>
+            <h1><?php echo $_GET['menu']; ?> </h1>
         </div>
         <div class="row container">
             <div class="col-md-12 bg-white p-3" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px;">
-                <h3 class="font-weight-bold" style="color: #34395e!important;"><?php echo $_GET['submenu'];?> </h3>
+                <h3 class="font-weight-bold" style="color: #34395e!important;"><?php echo $_GET['submenu']; ?> </h3>
                 <hr>
                 <form method="POST" action="<?= base_url('admin/add_pegawai') ?>">
                     <div class="form-group ">
@@ -29,7 +29,7 @@
                             <?php
                             foreach ($kategori as $u) {
                             ?>
-                                <option <?php if ($_GET['menu'] == $u->kategori) : ?> selected <?php endif ?> value="<?php echo $u->kategori ?>" ><?php echo $u->kategori ?></option>
+                                <option <?php if ($_GET['menu'] == $u->kategori) : ?> selected <?php endif ?> value="<?php echo $u->kategori ?>"><?php echo $u->kategori ?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -40,7 +40,7 @@
                             <?php
                             foreach ($m_subkategori as $u) {
                             ?>
-                                <option <?php if ($_GET['submenu'] == $u->subkategori) : ?> selected <?php endif ?>  value="<?php echo $u->id ?>"><?php echo $u->subkategori ?></option>
+                                <option <?php if ($_GET['submenu'] == $u->subkategori) : ?> selected <?php endif ?> value="<?php echo $u->id ?>"><?php echo $u->subkategori ?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -78,6 +78,14 @@
                     <div class="form-group">
                         <label>Count Asset:</label>
                         <p class="form-control" id="count_data" type="text" readonly></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Start Date : </label>
+                        <input class="form-control"  type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>End Date :</label>
+                        <input class="form-control"  type="date">
                     </div>
                     <div class="form-group">
                         <label>Subject</label>
