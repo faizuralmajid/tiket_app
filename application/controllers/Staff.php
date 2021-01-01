@@ -63,12 +63,12 @@ class Staff extends CI_Controller
 		$this->load->model('Mkategori');
 		$data['level'] = $this->session->userdata('level');
 		$data['kategori'] = $this->Mkategori->get_category()->result();
+		$data['group'] = $this->Mkategori->get_group()->result();
+		$data['m_subkategori'] = $this->Mkategori->get_sub_category($_GET['id_menu'])->result();
 		$data['nama'] = $this->session->userdata('nama');
 		$data['id_user'] = $this->session->userdata('id');
-		$data['m_subkategori'] = $this->Mkategori->get_sub_category($_GET['id_menu'])->result();
-		$data['m_sla'] = $this->Mrequest->for_option('master_sla');
 		$data['m_asset'] = $this->Mrequest->for_option('tbl_asset');
-		$data['m_pj'] = $this->Mrequest->for_option('users');
+		$data['m_pj'] = $this->Mkategori->get_teknisi()->result();
 		$this->load->view('navbar/nav_staff',$data);
 		$this->load->view('staff/add_request', $data);
 	}
@@ -112,7 +112,8 @@ class Staff extends CI_Controller
 		]);
 
 		if ($this->form_validation->run() == false) {
-			$this->load->view("staff/add_assets");
+			$url_data = "staff/add_request?id_menu={$_POST['id_menu']}&menu={$_POST['kategori']}&submenu={$_POST['sub_kategori']}";
+			redirect(base_url($url_data));
 		} else {
 			$data = [
 				'user' => htmlspecialchars($this->input->post('user', true)),
@@ -128,7 +129,7 @@ class Staff extends CI_Controller
 			];
 			//echo $this->session->userdata('level');
 			$this->db->insert('tbl_request', $data);
-			redirect(base_url('index.php/staff/list_request'));
+			redirect(base_url('staff/list_request'));
 		}
 	}
 

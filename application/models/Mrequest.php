@@ -26,10 +26,7 @@ class Mrequest extends CI_Model
 
     public function for_option($table)
     {
-
         $query = $this->db->get($table);
-
-
         return $query->result();
     }
 }

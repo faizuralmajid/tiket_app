@@ -12,5 +12,15 @@ class Mkategori extends CI_Model{
         $query = $this->db->get_where('master_subkategori', array('id_kategori' => $category_id));
         return $query;
     }
+
+    function get_group(){
+        $query = $this->db->get('tbl_group');
+        return $query;
+    }
+
+    function get_teknisi(){
+        $query = $this->db->get_where('users', array('level_akses' => '1'));
+        return $query;
+    }
      
 }

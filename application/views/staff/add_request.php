@@ -8,7 +8,7 @@
             <div class="col-md-12 bg-white p-3" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px;">
                 <h3 class="font-weight-bold" style="color: #34395e!important;"><?php echo $_GET['submenu']; ?> </h3>
                 <hr>
-                <form method="POST" action="<?= base_url('admin/add_pegawai') ?>">
+                <form method="POST" action="<?= base_url('staff/create_request') ?>">
                     <div class="form-group ">
                         <label>Nama</label>
                         <input type="text" readonly="readonly" value="<?php echo $nama ?>" class="form-control" name="user" placeholder="Masukan Nama">
@@ -40,7 +40,7 @@
                             <?php
                             foreach ($m_subkategori as $u) {
                             ?>
-                                <option <?php if ($_GET['submenu'] == $u->subkategori) : ?> selected <?php endif ?> value="<?php echo $u->id ?>"><?php echo $u->subkategori ?></option>
+                                <option <?php if ($_GET['submenu'] == $u->subkategori) : ?> selected <?php endif ?> value="<?php echo $u->subkategori ?>"><?php echo $u->subkategori ?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -57,11 +57,13 @@
                     </div>
                     <div class="form-group">
                         <label>Group:</label>
-                        <select style=" height:50px;" class="form-control selectpicker" name="type">
-                            <option value="PM">PM</option>
-                            <option value="Operasional Task">Operasional Task</option>
-                            <option value="Problem">Problem</option>
-                            <option value="Change">Change</option>
+                        <select style=" height:50px;" class="form-control selectpicker" name="staff_nama">
+                            <option>---- Pilih Group ---- </option>
+                            <?php
+                            foreach ($group as $u) {
+                            ?>
+                                <option value="<?php echo $u->nama_group ?>"><?php echo $u->nama_group  ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                     <div class="form-group">
@@ -97,7 +99,11 @@
                         <textarea class="ckeditor" id="ckedtor"></textarea>
                     </div>
 
-                    <input type="submit" value="Tambah Pegawai" class="btn btn-success btn-block">
+                    <div class="form-group" style="visibility: hidden;">
+                        <input name="id_menu" value="<?php echo $_GET['id_menu']?>">
+                    </div>
+
+                    <input type="submit" value="Created Request Catalog" class="btn btn-success btn-block">
             </div>
             </form>
 

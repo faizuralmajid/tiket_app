@@ -26,19 +26,7 @@ class Masset extends CI_Model
 
     public function for_option()
     {
-
         $query = $this->db->query('SELECT * FROM tbl_asset');
-
-
         return $query->result();
-    }
-
-    public function for_sub_option($where)
-    {
-
-        $this->db->where('id_kategori', $where);
-		$query = $this->db->get('master_subkategori');
-
-		return $query;
     }
 }
