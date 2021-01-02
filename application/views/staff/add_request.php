@@ -111,16 +111,7 @@
 </div>
 </div>
 </div>
-<footer class="main-footer">
-    <div class="footer-left">
-        Copyright &copy; 2020 <div class="bullet"></div> Program & Design by <a href="faizurrahmanallammajid.github.io">Faizurrahman
-    </div>
-    <div class="footer-right">
-        Made with <span class="text-danger"> &#10084;</span> by Faizurrahman
-    </div>
-</footer>
-</div>
-</div>
+<?php include("footer.php")?>
 
 <!-- General JS Scripts -->
 <script>

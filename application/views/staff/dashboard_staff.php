@@ -232,16 +232,7 @@
         </div>
 </div>
 </div>
-<footer class="main-footer">
-    <div class="footer-left">
-        Copyright &copy; 2020 <div class="bullet"></div> Code & Design by <a href="https://faizurrahmanallammajid.github.io/">Faizurrahman</a>
-    </div>
-    <div class="footer-right">
-        Made with <span class="text-danger"> &#10084;</span> by Faizurrahman
-    </div>
-</footer>
-</div>
-</div>
+<?php include("footer.php")?>
 
 <!-- General JS Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
