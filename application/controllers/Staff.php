@@ -11,7 +11,7 @@ class Staff extends CI_Controller
 		$this->load->library('form_validation');
 		$this->load->helper('form');
 		$check = $this->session->userdata('level');
-		if($check != "Staff"){
+		if ($check != "Staff") {
 			redirect(base_url());
 		}
 	}
@@ -22,8 +22,8 @@ class Staff extends CI_Controller
 		$data['nama'] = $this->session->userdata('nama');
 		$data['level'] = $this->session->userdata('level');
 		$data['request'] = $this->Mrequest->tampil_data()->result();
-		$this->load->view('navbar/nav_staff',$data);
-		$this->load->view('staff/dashboard_staff',$data);
+		$this->load->view('navbar/nav_staff', $data);
+		$this->load->view('staff/dashboard_staff', $data);
 	}
 
 	public function list_request()
@@ -32,7 +32,7 @@ class Staff extends CI_Controller
 		$data['level'] = $this->session->userdata('level');
 		$data['nama'] = $this->session->userdata('nama');
 		$data['request'] = $this->Mrequest->tampil_data()->result();
-		$this->load->view('navbar/nav_staff',$data);
+		$this->load->view('navbar/nav_staff', $data);
 		$this->load->view('staff/list_request', $data);
 	}
 
@@ -42,7 +42,7 @@ class Staff extends CI_Controller
 		$data['level'] = $this->session->userdata('level');
 		$data['nama'] = $this->session->userdata('nama');
 		$data['request'] = $this->Mrequest->tampil_data()->result();
-		$this->load->view('navbar/nav_staff',$data);
+		$this->load->view('navbar/nav_staff', $data);
 		$this->load->view('staff/list_pengumuman', $data);
 	}
 
@@ -52,7 +52,7 @@ class Staff extends CI_Controller
 		$data['level'] = $this->session->userdata('level');
 		$data['nama'] = $this->session->userdata('nama');
 		$data['request'] = $this->Mrequest->tampil_data()->result();
-		$this->load->view('navbar/nav_staff',$data);
+		$this->load->view('navbar/nav_staff', $data);
 		$this->load->view('staff/list_solusi', $data);
 	}
 
@@ -69,17 +69,14 @@ class Staff extends CI_Controller
 		$data['id_user'] = $this->session->userdata('id');
 		$data['m_asset'] = $this->Mrequest->for_option('tbl_asset');
 		$data['m_pj'] = $this->Mkategori->get_teknisi()->result();
-		$this->load->view('navbar/nav_staff',$data);
+		$this->load->view('navbar/nav_staff', $data);
 		$this->load->view('staff/add_request', $data);
 	}
 
 	public function create_request()
 	{
-		$this->form_validation->set_rules('user', 'user', 'required', [
-			'required' => 'user Wajib Diisi.',
-		]);
 
-		$this->form_validation->set_rules('sla', 'sla', 'required', [
+		$this->form_validation->set_rules('status', 'status', 'required', [
 			'required' => 'sla Wajib Diisi.',
 		]);
 
@@ -91,12 +88,12 @@ class Staff extends CI_Controller
 			'required' => 'sub_kategori Wajib Diisi',
 		]);
 
-		$this->form_validation->set_rules('staff_nama', 'staff_nama', 'required', [
-			'required' => 'staff_nama Wajib Diisi.',
+		$this->form_validation->set_rules('pj', 'pj', 'required', [
+			'required' => 'Penanggung Jawab Wajib Diisi.',
 		]);
 
-		$this->form_validation->set_rules('type', 'type', 'required', [
-			'required' => 'type Wajib Diisi.',
+		$this->form_validation->set_rules('grup', 'grup', 'required', [
+			'required' => 'Group Wajib Diisi.',
 		]);
 
 		$this->form_validation->set_rules('subject', 'subject', 'required', [
@@ -112,12 +109,24 @@ class Staff extends CI_Controller
 		]);
 
 		if ($this->form_validation->run() == false) {
-			$url_data = "staff/add_request?id_menu={$_POST['id_menu']}&menu={$_POST['kategori']}&submenu={$_POST['sub_kategori']}";
-			redirect(base_url($url_data));
+			$this->load->model('Mrequest');
+			$this->load->model('Mkategori');
+			$url_data = "?id_menu={$_POST['id_menu']}&menu={$_POST['kategori']}&submenu={$_POST['sub_kategori']}";
+			$data['level'] = $this->session->userdata('level');
+			$data['kategori'] = $this->Mkategori->get_category()->result();
+			$data['group'] = $this->Mkategori->get_group()->result();
+			$data['m_subkategori'] = $this->Mkategori->get_sub_category($_POST['id_menu'])->result();
+			$data['nama'] = $this->session->userdata('nama');
+			$data['id_user'] = $this->session->userdata('id');
+			$data['m_asset'] = $this->Mrequest->for_option('tbl_asset');
+			$data['m_pj'] = $this->Mkategori->get_teknisi()->result();
+			$this->load->view('navbar/nav_staff', $data);
+			$this->load->vars($url_data);
+			$this->load->view('staff/add_request/'.$url_data, $data);
 		} else {
 			$data = [
 				'user' => htmlspecialchars($this->input->post('user', true)),
-				'sla' => htmlspecialchars($this->input->post('sla', true)),
+				'status' => htmlspecialchars($this->input->post('status', true)),
 				'kategori' => htmlspecialchars($this->input->post('kategori', true)),
 				'sub_kategori' => htmlspecialchars($this->input->post('sub_kategori', true)),
 				'staff_nama' => htmlspecialchars($this->input->post('staff_nama', true)),
@@ -132,6 +141,14 @@ class Staff extends CI_Controller
 			redirect(base_url('staff/list_request'));
 		}
 	}
+
+	function get_sub_category(){
+		$this->load->model('Mkategori');
+		$data['level'] = $this->session->userdata('level');
+        $category_id = $this->input->post('id',TRUE);
+        $data = $this->Mkategori->get_sub_category($category_id)->result();
+        echo json_encode($data);
+    }
 
 	public function logout()
 	{
