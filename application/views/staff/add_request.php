@@ -148,7 +148,8 @@
         for (var i = 0; i < options.length; i++) {
             if (options[i].selected) count++;
         } // end of for loop
-        document.getElementById("count_data").innerHTML = count;
+        document.getElementById("count_data").value = count;
+        console.log(count);
     } // end of function
 </script>
 

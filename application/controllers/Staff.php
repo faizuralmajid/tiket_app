@@ -73,6 +73,16 @@ class Staff extends CI_Controller
 		$this->load->view('staff/add_request', $data);
 	}
 
+	public function detail_request($id)
+	{
+		$this->load->model('Mrequest');
+		$data['nama'] = $this->session->userdata('nama');
+		$data['id_user'] = $this->session->userdata('id');
+		$data['detail'] = $this->Mrequest->tampil_data_detail($id)->result();
+		$this->load->view('navbar/nav_staff', $data);
+		$this->load->view('staff/detail', $data);
+	}
+
 	public function create_request()
 	{
 
@@ -104,8 +114,18 @@ class Staff extends CI_Controller
 			'required' => 'body Wajib Diisi.',
 		]);
 
-		$this->form_validation->set_rules('asset', 'asset', 'required', [
+		$this->form_validation->set_rules('assets', 'asset', 'required', [
 			'required' => 'asset Wajib Diisi.',
+		]);
+
+		
+		$this->form_validation->set_rules('start_date', 'start_date', 'required', [
+			'required' => 'Start Date Wajib Diisi.',
+		]);
+
+		
+		$this->form_validation->set_rules('end_date', 'end Date', 'required', [
+			'required' => 'End Date Wajib Diisi.',
 		]);
 
 		if ($this->form_validation->run() == false) {
@@ -129,12 +149,14 @@ class Staff extends CI_Controller
 				'status' => htmlspecialchars($this->input->post('status', true)),
 				'kategori' => htmlspecialchars($this->input->post('kategori', true)),
 				'sub_kategori' => htmlspecialchars($this->input->post('sub_kategori', true)),
-				'staff_nama' => htmlspecialchars($this->input->post('staff_nama', true)),
-				'type' => htmlspecialchars($this->input->post('tyoe', true)),
+				'grup' => htmlspecialchars($this->input->post('grup', true)),
+				'count_asset' => htmlspecialchars($this->input->post('count_a', true)),
 				'subject' =>  htmlspecialchars($this->input->post('subject', true)),
 				'body' => htmlspecialchars($this->input->post('body', true)),
-				'asset' => htmlspecialchars($this->input->post('asset', true)),
-				'status' => "open",
+				'pj' => htmlspecialchars($this->input->post('pj', true)),
+				'asset' => htmlspecialchars($this->input->post('assets', true)),
+				'start_date' => htmlspecialchars($this->input->post('start_date', true)),
+				'end_date' => htmlspecialchars($this->input->post('end_date', true)),
 			];
 			//echo $this->session->userdata('level');
 			$this->db->insert('tbl_request', $data);

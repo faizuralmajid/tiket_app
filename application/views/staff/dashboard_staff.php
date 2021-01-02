@@ -105,7 +105,7 @@
                                 </td>
                             </tr>
                         <?php
-                        }
+                        $i++;}
                         ?>
                     </tbody>
                 </table>
@@ -145,7 +145,7 @@
                                 </td>
                             </tr>
                         <?php
-                        }
+                        $i++;}
                         ?>
                     </tbody>
                 </table>
@@ -183,7 +183,7 @@
                                 </td>
                             </tr>
                         <?php
-                        }
+                        $i++;}
                         ?>
                     </tbody>
                 </table>
@@ -224,7 +224,7 @@
                                 </td>
                             </tr>
                         <?php
-                        }
+                        $i++;}
                         ?>
                     </tbody>
                 </table>
