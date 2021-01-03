@@ -6,7 +6,7 @@ class Welcome extends CI_Controller
 
     public function logout()
     {
-        $this->session->unset_userdata('arr_login');
+        $this->session->sess_destroy();
         $this->session->set_flashdata('success-logout', 'Berhasil!');
         redirect(base_url('auth'));
     }

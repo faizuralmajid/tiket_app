@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Admin Dashboard - Sidayan</title>
+    <title>Tiket</title>
     <!-- General CSS Files -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:500,600,700&display=swap" rel="stylesheet">
@@ -26,10 +26,6 @@
         }
 
         #Option {
-            visibility: hidden;
-        }
-
-        #No {
             visibility: hidden;
         }
 
@@ -106,7 +102,7 @@ $active = $url[1];
                         <a href="<?= base_url('staff') ?>" style="font-size: 35px; font-weight:900;font-family: 'Roboto', sans-serif;" class="text-success">&#9795;Tiket.&not;</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="<?= base_url('staff') ?>">SDY</a>
+                        <a href="<?= base_url('staff') ?>">TKT</a>
                     </div>
 
                     <ul class="sidebar-menu">
@@ -132,7 +128,7 @@ $active = $url[1];
                             } else {
                                 echo '
 							<li class="nav-item dropdown">
-								<a href="' . $dataMenu['kategori'] . '" class="nav-link has-dropdown" data-toggle="dropdown"> <i class="fas fa-list-alt "></i>' . $dataMenu['kategori'] . ' <b class="caret"></b></a>
+								<a href="' . $dataMenu['kategori'] . '" class="nav-link has-dropdown"> <i class="fas fa-list-alt "></i><span>' . $dataMenu['kategori'] . '</span></a>
 								<ul class="dropdown-menu">';
                                 while ($dataSubmenu = mysqli_fetch_assoc($submenu)) {
                                     $pesan = "Selamat datang {$nama}"; # tanda petik dua

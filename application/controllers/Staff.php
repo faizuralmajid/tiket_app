@@ -12,7 +12,11 @@ class Staff extends CI_Controller
 		$this->load->helper('form');
 		$check = $this->session->userdata('level');
 		if ($check != "Staff") {
-			redirect(base_url());
+			echo ("<script LANGUAGE='JavaScript'>
+	window.alert('Login dulu ya !!');
+	var base_url = window.location.origin;
+    window.location.href=base_url+'/tiket';
+    </script>");
 		}
 	}
 
