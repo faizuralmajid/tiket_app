@@ -20,15 +20,6 @@
                                 <input type="text" readonly="readonly" value="<?php echo $nama ?>" class="form-control" name="user" placeholder="Masukan Nama">
                             </div>
                             <div class="form-group">
-                                <label>Status</label>
-                                <select style=" height:50px;" class="form-control selectpicker" name="status">
-                                    <option>---- Pilih Status ---- </option>
-                                    <option value="Open">Open</option>
-                                    <option value="Open">Close</option>
-                                    <option value="Open">Tindak Lanjut</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
                                 <label>Kategori:</label>
                                 <select style=" height:50px;" class="form-control selectpicker" id="category" name="kategori">
                                     <option>---- Pilih Kategori ---- </option>
@@ -42,7 +33,7 @@
                             <div class="form-group">
                                 <label>Sub Kategori:</label>
                                 <select style=" height:50px;" class="form-control selectpicker" id="sub_category" name="sub_kategori">
-                                    <option>---- Pilih Sub Kategori ---- </option>
+                                    <option >---- Pilih Sub Kategori ---- </option>
                                     <?php
                                     foreach ($m_subkategori as $u) {
                                     ?>
@@ -51,9 +42,18 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label>Status</label>
+                                <select style=" height:50px;" class="form-control selectpicker" name="status">
+                                    <option value="">---- Pilih Status ---- </option>
+                                    <option value="Open">Open</option>
+                                    <option value="Close">Close</option>
+                                    <option value="Tindak Lanjut">Tindak Lanjut</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label>Penanggung Jawab:</label>
                                 <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                                    <option>---- Pilih PJ ---- </option>
+                                    <option value="">---- Pilih PJ ---- </option>
                                     <?php
                                     foreach ($m_pj as $u) {
                                     ?>
@@ -64,7 +64,7 @@
                             <div class="form-group">
                                 <label>Group:</label>
                                 <select style=" height:50px;" class="form-control selectpicker" name="grup">
-                                    <option>---- Pilih Group ---- </option>
+                                    <option value="">---- Pilih Group ---- </option>
                                     <?php
                                     foreach ($group as $u) {
                                     ?>
@@ -74,17 +74,21 @@
                             </div>
                             <div class="form-group">
                                 <label>Asset:</label>
-                                <select onchange="count_aset()" id="assetss" name="assets" title="---- Pilih Asset ---- " class="form-control selectpicker" multiple data-live-search="true">
-                                    <option>---- Pilih Asset ---- </option>
+                                <select onchange="count_aset()" id="assetss"  title="---- Pilih Asset ---- " class="form-control selectpicker" multiple data-live-search="true">
+                                    <option value="">---- Pilih Asset ---- </option>
                                     <?php
                                     foreach ($m_asset as $u) {
                                     ?>
-                                        <option value="<?php echo $u->nama_asset ?>"><?php echo $u->nama_asset ?></option>
+                                        <option><?php echo $u->nama_asset ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-6">
+                            <div class="form-group" style="display: none;">
+                                <label>Start Date : </label>
+                                <input class="form-control" id="ass" type="text" name="assets">
+                            </div>
                             <div class="form-group">
                                 <label>Count Asset:</label>
                                 <input class="form-control" id="count_data" name="count_a" type="text" readonly>
@@ -148,14 +152,17 @@
 <!-- General JS Scripts -->
 <script>
     function count_aset() {
+        var selectedItem = $('#assetss').val();
         var options = document.getElementById("assetss").options,
             count = 0;
         for (var i = 0; i < options.length; i++) {
             if (options[i].selected) count++;
         } // end of for loop
         document.getElementById("count_data").value = count;
+        document.getElementById("ass").value = selectedItem;
         console.log(count);
     } // end of function
+
 </script>
 
 

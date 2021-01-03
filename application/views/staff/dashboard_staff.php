@@ -98,8 +98,8 @@
                                 <td><?php echo $i ?></td>
                                 <td><?php echo $u->user ?></td>
                                 <td><?php echo $u->subject ?></td>
-                                <td><?php echo $u->created_date ?></td>
-                                <td><?php echo $u->created_date ?></td>
+                                <td><?php echo $u->start_date ?></td>
+                                <td><?php echo $u->end_date ?></td>
                                 <td class="text-center">
                                     <a href=<?= base_url("staff/detail_request/" . $u->id) ?> class="btn btn-sm btn-success">Detail</a>
                                 </td>
@@ -133,16 +133,16 @@
                     <tbody>
                         <?php
                         $i = 1;
-                        foreach ($request as $u) {
+                        foreach ($request_lama as $u) {
                         ?>
                             <tr class="text-center">
                                 <td><?php echo $i ?></td>
                                 <td><?php echo $u->user ?></td>
                                 <td><?php echo $u->subject ?></td>
-                                <td><?php echo $u->created_date ?></td>
-                                <td><?php echo $u->created_date ?></td>
+                                <td><?php echo $u->start_date ?></td>
+                                <td><?php echo $u->end_date ?></td>
                                 <td class="text-center">
-                                    <a href="#" class="btn btn-sm btn-success">Detail</a>
+                                    <a href=<?= base_url("staff/detail_request/" . $u->id) ?> class="btn btn-sm btn-success">Detail</a>
                                 </td>
                             </tr>
                         <?php

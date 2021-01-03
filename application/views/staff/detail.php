@@ -110,7 +110,7 @@
                                     ?>
                                      <?php $html = $u->body ?>
                                      <tr class="text-left">
-                                         <td width="600px"> <textarea style="width:100%; height:2000px " class="ckeditor" id="isi_artikel" name="isi_artikel" disabled><?php echo $html ?></textarea></td>
+                                         <td><?php echo $html ?></td>
                                      </tr>
 
                                  <?php

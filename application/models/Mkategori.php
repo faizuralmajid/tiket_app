@@ -22,5 +22,13 @@ class Mkategori extends CI_Model{
         $query = $this->db->get_where('users', array('level_akses' => '1'));
         return $query;
     }
+
+    function cek($table, $cari,$colom)
+	{
+		$this->db->where("`$colom` LIKE '%$cari%'");
+		$query = $this->db->get($table);
+
+		return $query;
+	}
      
 }
