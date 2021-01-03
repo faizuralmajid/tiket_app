@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Jan 2021 pada 15.29
+-- Waktu pembuatan: 03 Jan 2021 pada 15.41
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.8
 
@@ -239,6 +239,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `nama` varchar(20) NOT NULL,
   `email` varchar(60) NOT NULL,
+  `username` varchar(40) NOT NULL,
   `password` varchar(100) NOT NULL,
   `level_akses` int(11) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT current_timestamp()
@@ -248,11 +249,11 @@ CREATE TABLE `users` (
 -- Dumping data untuk tabel `users`
 --
 
-INSERT INTO `users` (`id`, `nama`, `email`, `password`, `level_akses`, `created_date`) VALUES
-(1, 'Admin', 'admin@admin.com', 'admin', 0, '2020-12-22 03:43:56'),
-(2, 'Jajang Suharja', 'teknisi@gmail.com', '12345', 1, '2020-12-22 04:03:57'),
-(3, 'Roy Suryo', 'roy@gmail.com', '12345', 2, '2020-12-22 09:07:53'),
-(4, 'Abdul Roji', 'abdul@gmail.com', '12345', 1, '2020-12-22 12:58:17');
+INSERT INTO `users` (`id`, `nama`, `email`, `username`, `password`, `level_akses`, `created_date`) VALUES
+(1, 'Admin', 'admin@admin.com', 'admin', 'admin', 0, '2020-12-22 03:43:56'),
+(2, 'Jajang Suharja', 'teknisi@gmail.com', 'jajang', '12345', 1, '2020-12-22 04:03:57'),
+(3, 'Roy Suryo', 'roy@gmail.com', 'roy', '12345', 2, '2020-12-22 09:07:53'),
+(4, 'Abdul Roji', 'abdul@gmail.com', 'abdul', '12345', 1, '2020-12-22 12:58:17');
 
 --
 -- Indexes for dumped tables
