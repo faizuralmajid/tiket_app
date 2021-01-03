@@ -11,7 +11,7 @@
                               <tr class="text-center">
                                   <th scope="col">No</th>
                                   <th scope="col">Judul</th>
-                                  <th scope="col">Start Date</th>
+                                  <th scope="col">Created Date</th>
                                   <th scope="col">End Date</th>
                                   <th scope="col">Option</th>
                               </tr>
@@ -19,13 +19,13 @@
                           <tbody>
                               <?php
                                 $i = 1;
-                                foreach ($request as $u) {
+                                foreach ($pengumuman as $u) {
                                 ?>
                                   <tr class="text-center">
                                       <td><?php echo $i ?></td>
-                                      <td><?php echo $u->subject ?></td>
-                                      <td><?php echo $u->created_date ?></td>
-                                      <td><?php echo $u->created_date ?></td>
+                                      <td><?php echo $u->judul ?></td>
+                                      <td><?php echo $u->start_date ?></td>
+                                      <td><?php echo $u->end_date ?></td>
                                       <td class="text-center">
                                           <a href="#" class="btn btn-sm btn-success">Detail</a>
                                       </td>

@@ -101,11 +101,12 @@
                                 <td><?php echo $u->created_date ?></td>
                                 <td><?php echo $u->created_date ?></td>
                                 <td class="text-center">
-                                    <a href="#" class="btn btn-sm btn-success">Detail</a>
+                                    <a href=<?= base_url("staff/detail_request/" . $u->id) ?> class="btn btn-sm btn-success">Detail</a>
                                 </td>
                             </tr>
                         <?php
-                        $i++;}
+                            $i++;
+                        }
                         ?>
                     </tbody>
                 </table>
@@ -145,7 +146,8 @@
                                 </td>
                             </tr>
                         <?php
-                        $i++;}
+                            $i++;
+                        }
                         ?>
                     </tbody>
                 </table>
@@ -171,19 +173,20 @@
                     <tbody>
                         <?php
                         $i = 1;
-                        foreach ($request as $u) {
+                        foreach ($pengumuman as $u) {
                         ?>
                             <tr class="text-center">
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $u->subject ?></td>
-                                <td><?php echo $u->created_date ?></td>
-                                <td><?php echo $u->created_date ?></td>
+                                <td><?php echo $u->judul ?></td>
+                                <td><?php echo $u->start_date ?></td>
+                                <td><?php echo $u->end_date ?></td>
                                 <td class="text-center">
                                     <a href="#" class="btn btn-sm btn-success">Detail</a>
                                 </td>
                             </tr>
                         <?php
-                        $i++;}
+                            $i++;
+                        }
                         ?>
                     </tbody>
                 </table>
@@ -211,20 +214,21 @@
                     <tbody>
                         <?php
                         $i = 1;
-                        foreach ($request as $u) {
+                        foreach ($solusi as $u) {
                         ?>
                             <tr class="text-center">
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $u->subject ?></td>
+                                <td><?php echo $u->judul ?></td>
                                 <td><?php echo $u->user ?></td>
                                 <td><?php echo $u->created_date ?></td>
-                                <td><?php echo $u->created_date ?></td>
+                                <td><?php echo $u->end_date ?></td>
                                 <td class="text-center">
                                     <a href="#" class="btn btn-sm btn-success">Detail</a>
                                 </td>
                             </tr>
                         <?php
-                        $i++;}
+                            $i++;
+                        }
                         ?>
                     </tbody>
                 </table>
@@ -232,7 +236,7 @@
         </div>
 </div>
 </div>
-<?php include("footer.php")?>
+<?php include("footer.php") ?>
 
 <!-- General JS Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

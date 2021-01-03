@@ -19,9 +19,13 @@ class Staff extends CI_Controller
 	public function index()
 	{
 		$this->load->model('Mrequest');
+		$this->load->model('Mpengumuman');
+		$this->load->model('Msolusi');
 		$data['nama'] = $this->session->userdata('nama');
 		$data['level'] = $this->session->userdata('level');
 		$data['request'] = $this->Mrequest->tampil_data()->result();
+		$data['pengumuman'] = $this->Mpengumuman->tampil_data()->result();
+		$data['solusi'] = $this->Msolusi->tampil_data()->result();
 		$this->load->view('navbar/nav_staff', $data);
 		$this->load->view('staff/dashboard_staff', $data);
 	}
@@ -38,20 +42,20 @@ class Staff extends CI_Controller
 
 	public function list_pengumuman()
 	{
-		$this->load->model('Mrequest');
+		$this->load->model('Mpengumuman');
 		$data['level'] = $this->session->userdata('level');
 		$data['nama'] = $this->session->userdata('nama');
-		$data['request'] = $this->Mrequest->tampil_data()->result();
+		$data['pengumuman'] = $this->Mpengumuman->tampil_data()->result();
 		$this->load->view('navbar/nav_staff', $data);
 		$this->load->view('staff/list_pengumuman', $data);
 	}
 
 	public function list_solusi()
 	{
-		$this->load->model('Mrequest');
+		$this->load->model('Msolusi');
 		$data['level'] = $this->session->userdata('level');
 		$data['nama'] = $this->session->userdata('nama');
-		$data['request'] = $this->Mrequest->tampil_data()->result();
+		$data['solusi'] = $this->Msolusi->tampil_data()->result();
 		$this->load->view('navbar/nav_staff', $data);
 		$this->load->view('staff/list_solusi', $data);
 	}
@@ -118,12 +122,12 @@ class Staff extends CI_Controller
 			'required' => 'asset Wajib Diisi.',
 		]);
 
-		
+
 		$this->form_validation->set_rules('start_date', 'start_date', 'required', [
 			'required' => 'Start Date Wajib Diisi.',
 		]);
 
-		
+
 		$this->form_validation->set_rules('end_date', 'end Date', 'required', [
 			'required' => 'End Date Wajib Diisi.',
 		]);
@@ -142,7 +146,7 @@ class Staff extends CI_Controller
 			$data['m_pj'] = $this->Mkategori->get_teknisi()->result();
 			$this->load->view('navbar/nav_staff', $data);
 			$this->load->vars($url_data);
-			$this->load->view('staff/add_request/'.$url_data, $data);
+			$this->load->view('staff/add_request/' . $url_data, $data);
 		} else {
 			$data = [
 				'user' => htmlspecialchars($this->input->post('user', true)),
@@ -164,13 +168,14 @@ class Staff extends CI_Controller
 		}
 	}
 
-	function get_sub_category(){
+	function get_sub_category()
+	{
 		$this->load->model('Mkategori');
 		$data['level'] = $this->session->userdata('level');
-        $category_id = $this->input->post('id',TRUE);
-        $data = $this->Mkategori->get_sub_category($category_id)->result();
-        echo json_encode($data);
-    }
+		$category_id = $this->input->post('id', TRUE);
+		$data = $this->Mkategori->get_sub_category($category_id)->result();
+		echo json_encode($data);
+	}
 
 	public function logout()
 	{

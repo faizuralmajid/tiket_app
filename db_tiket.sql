@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Jan 2021 pada 14.30
+-- Waktu pembuatan: 03 Jan 2021 pada 01.18
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.8
 
@@ -76,14 +76,6 @@ INSERT INTO `master_subkategori` (`id`, `id_kategori`, `subkategori`, `id_user`)
 (15, 2, 'layanan ess', 2),
 (16, 2, 'layanan gps', 2),
 (17, 2, 'reporting', 2),
-(18, 2, 'core cctv', 2),
-(19, 2, 'core interkom', 2),
-(20, 2, 'core network', 2),
-(21, 2, 'core paging', 2),
-(22, 2, 'core radio', 2),
-(23, 2, 'core telepon', 2),
-(24, 2, 'distribution network', 2),
-(25, 2, 'layanan ess', 2),
 (26, 2, 'layanan gps', 2),
 (27, 2, 'reporting', 2);
 
@@ -135,31 +127,64 @@ INSERT INTO `tbl_group` (`id`, `nama_group`, `created_date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_pengumuman`
+--
+
+CREATE TABLE `tbl_pengumuman` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(150) NOT NULL,
+  `isi` text NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_request`
 --
 
 CREATE TABLE `tbl_request` (
   `id` int(11) NOT NULL,
   `user` varchar(30) NOT NULL,
-  `sla` varchar(25) NOT NULL,
+  `status` varchar(20) NOT NULL,
   `kategori` varchar(40) NOT NULL,
   `sub_kategori` varchar(40) NOT NULL,
-  `staff_nama` varchar(30) NOT NULL,
-  `type` varchar(10) NOT NULL,
+  `pj` varchar(30) NOT NULL,
+  `grup` varchar(40) NOT NULL,
+  `asset` varchar(50) NOT NULL,
+  `count_asset` varchar(2) NOT NULL,
   `subject` varchar(100) NOT NULL,
   `body` text NOT NULL,
-  `asset` varchar(30) NOT NULL,
-  `status` varchar(20) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `done_date` datetime DEFAULT NULL
+  `done_date` datetime DEFAULT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tbl_request`
 --
 
-INSERT INTO `tbl_request` (`id`, `user`, `sla`, `kategori`, `sub_kategori`, `staff_nama`, `type`, `subject`, `body`, `asset`, `status`, `created_date`, `done_date`) VALUES
-(1, 'Admin', 'Same Daya Services', '1', '1', 'Admin', 'PM', 'Wasassbdoasd', 'sadgasdgasdvtasdtavs', 'Printer', 'open', '2020-12-22 09:19:25', NULL);
+INSERT INTO `tbl_request` (`id`, `user`, `status`, `kategori`, `sub_kategori`, `pj`, `grup`, `asset`, `count_asset`, `subject`, `body`, `created_date`, `done_date`, `start_date`, `end_date`) VALUES
+(1, 'Admin', 'open', '1', '1', 'Admin', 'Same Daya Services', 'Printer', 'PM', 'Wasassbdoasd', 'sadgasdgasdvtasdtavs', '2020-12-22 09:19:25', NULL, '0000-00-00', '0000-00-00'),
+(2, 'Roy Suryo', 'Open', 'Data Center', 'Backup / Restore server', 'Jajang Suharja', 'Networking', 'Monitor', '2', 'LOGIN CPANEL (LIHAT USERNAME DAN PASSWORD)', '&lt;p&gt;Testing&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n &lt;li&gt;Yakin&lt;/li&gt;\r\n &lt;li&gt;Yakin&lt;/li&gt;\r\n&lt;/ul&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Mau Makan&lt;/strong&gt;&lt;/p&gt;\r\n', '2021-01-02 12:57:21', NULL, '2021-01-20', '2021-01-14'),
+(3, 'Roy Suryo', 'Open', 'Data Center', 'Install Aplikasi', 'Abdul Roji', 'IT Support', 'Monitor', '2', 'Mencoba Kembali', '&lt;p&gt;&lt;strong&gt;Ponorogo&lt;/strong&gt; - &lt;/p&gt;\r\n\r\n&lt;p&gt;Seorang bidan di Puskesmas Nailan, Kecamatan Slahung meninggal &lt;a href=&quot;https://www.detik.com/tag/terpapar-covid_19&quot;&gt;terpapar COVID-19&lt;/a&gt;. Tak lama berselang, ayah dan ibunya juga meninggal terpapar COVID-19.&lt;/p&gt;\r\n\r\n&lt;p&gt;Bupati Ponorogo Ipong Muchlissoni menjelaskan, awalnya bidan yang diketahui bernama Endang Mutyaningsih tersebut sempat dirawat selama tiga hari di ICU RSU Muhammadiyah Ponorogo. Ia mengeluhkan demam, batuk, sesak napas dan gambaran rontgent pneumoni bilateral.&lt;/p&gt;\r\n\r\n&lt;p&gt;&quot;Setelah tiga hari dirawat beliau meninggal dunia pada Selasa (29/12/2020) lalu,&quot; tutur Ipong kepada wartawan, Sabtu (2/1/2021).&lt;/p&gt;\r\n', '2021-01-02 14:35:22', NULL, '2021-01-13', '2021-01-21');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_solusi`
+--
+
+CREATE TABLE `tbl_solusi` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(150) NOT NULL,
+  `user` varchar(50) NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `isi` text NOT NULL,
+  `end_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -215,9 +240,21 @@ ALTER TABLE `tbl_group`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `tbl_pengumuman`
+--
+ALTER TABLE `tbl_pengumuman`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `tbl_request`
 --
 ALTER TABLE `tbl_request`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tbl_solusi`
+--
+ALTER TABLE `tbl_solusi`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -255,10 +292,22 @@ ALTER TABLE `tbl_group`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT untuk tabel `tbl_pengumuman`
+--
+ALTER TABLE `tbl_pengumuman`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `tbl_request`
 --
 ALTER TABLE `tbl_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_solusi`
+--
+ALTER TABLE `tbl_solusi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
