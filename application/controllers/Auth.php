@@ -21,9 +21,8 @@ class Auth extends CI_Controller
 
 	public function login()
 	{
-		$this->form_validation->set_rules('Email', 'Email', 'trim|required|valid_email', [
+		$this->form_validation->set_rules('Email', 'Username', 'trim|required', [
 			'required' => 'Harap isi bidang email!',
-			'valid_email' => 'Email tidak valid!',
 		]);
 		$this->form_validation->set_rules('Password', 'Password', 'trim|required', [
 			'required' => 'Harap isi bidang password!',
@@ -42,7 +41,7 @@ class Auth extends CI_Controller
 		$password = $this->input->post('Password');
 
 		$where = array(
-			'email' => $email,
+			'username' => $email,
 			'password' => $password
 		);
 		$cek = $this->Mlogin->cek_login("users", $where)->num_rows();
@@ -52,7 +51,8 @@ class Auth extends CI_Controller
 				$data_session = array(
 					'id' => $cek2->id,
 					'nama' => $cek2->nama,
-					'email' => $email,
+					'email' => $cek2->email,
+					'username' => $email,
 					'status' => "login",
 					'level' => "Admin"
 				);
@@ -89,7 +89,9 @@ class Auth extends CI_Controller
 			echo ("<script LANGUAGE='JavaScript'>
 		window.alert('Username atau Password Salah !!');
 		var base_url = window.location.origin;
-		window.location.href=base_url+'/tiket';
+		var folder = window.location;
+		var folder = folder.toString().split('/')[3];
+		window.location.href=base_url+'/'+folder;
 		</script>");
 
 			$this->load->view("login");

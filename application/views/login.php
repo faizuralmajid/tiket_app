@@ -39,8 +39,8 @@
                         <form method="post" action="<?=base_url('auth/login')?>" class="needs-validation"
                             novalidate="">
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input id="email" type="email" class="form-control" name="Email" tabindex="1" required
+                                <label for="email">Username</label>
+                                <input id="email" type="text" class="form-control" name="Email" tabindex="1" required
                                     autofocus>
                                 <div class="invalid-feedback">
                                     Harap isi bidang email
