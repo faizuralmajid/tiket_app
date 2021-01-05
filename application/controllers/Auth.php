@@ -25,7 +25,7 @@ class Auth extends CI_Controller
 			'required' => 'Harap isi bidang email!',
 		]);
 		$this->form_validation->set_rules('Password', 'Password', 'trim|required', [
-			'required' => 'Harap isi bidang password!',
+			'required' => 'Password Minimum 8 Karakter',
 		]);
 		if ($this->form_validation->run() == false) {
 			$this->load->view("login");
@@ -64,7 +64,8 @@ class Auth extends CI_Controller
 				$data_session = array(
 					'id' => $cek2->id,
 					'nama' => $cek2->nama,
-					'email' => $email,
+					'email' => $cek2->email,
+					'username' => $email,
 					'status' => "login",
 					'level' => "Teknisi"
 				);
@@ -76,7 +77,8 @@ class Auth extends CI_Controller
 				$data_session = array(
 					'id' => $cek2->id,
 					'nama' => $cek2->nama,
-					'email' => $email,
+					'email' => $cek2->email,
+					'username' => $email,
 					'status' => "login",
 					'level' => "Staff"
 				);

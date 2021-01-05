@@ -81,8 +81,8 @@
                     <thead class="thead-light">
                         <tr class="text-center">
                             <th scope="col">No</th>
-                            <th scope="col">Nama Request</th>
-                            <th scope="col">Subject</th>
+                            <th scope="col" style="text-align: left;">Nama Request</th>
+                            <th scope="col" style="text-align: left;">Subject</th>
                             <th scope="col">Start Date</th>
                             <th scope="col">End Date</th>
                             <th scope="col">Option</th>
@@ -96,8 +96,8 @@
                         ?>
                             <tr class="text-center">
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $u->user ?></td>
-                                <td><?php echo $u->subject ?></td>
+                                <td style="text-align: left;"><?php echo $u->user ?></td>
+                                <td style="text-align: left;"><?php echo $u->subject ?></td>
                                 <td><?php echo $u->start_date ?></td>
                                 <td><?php echo $u->end_date ?></td>
                                 <td class="text-center">
@@ -122,8 +122,8 @@
                     <thead class="thead-light">
                         <tr class="text-center">
                             <th scope="col">No</th>
-                            <th scope="col">Nama Request</th>
-                            <th scope="col">Subject</th>
+                            <th scope="col" style="text-align: left;">Nama Request</th>
+                            <th scope="col" style="text-align: left;">Subject</th>
                             <th scope="col">Start Date</th>
                             <th scope="col">End Date</th>
                             <th scope="col">Option</th>
@@ -137,8 +137,8 @@
                         ?>
                             <tr class="text-center">
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $u->user ?></td>
-                                <td><?php echo $u->subject ?></td>
+                                <td style="text-align: left;"><?php echo $u->user ?></td>
+                                <td style="text-align: left;"><?php echo $u->subject ?></td>
                                 <td><?php echo $u->start_date ?></td>
                                 <td><?php echo $u->end_date ?></td>
                                 <td class="text-center">

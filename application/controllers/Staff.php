@@ -181,6 +181,8 @@ class Staff extends CI_Controller
 			$this->load->view('staff/add_request/' . $url_data, $data);
 		} else {
 			$data = [
+				'id_user' => $this->session->userdata('id'),
+				'username' => $this->session->userdata('username'),
 				'user' => htmlspecialchars($this->input->post('user', true)),
 				'status' => htmlspecialchars($this->input->post('status', true)),
 				'kategori' => htmlspecialchars($this->input->post('kategori', true)),
@@ -251,6 +253,8 @@ class Staff extends CI_Controller
 		</script>");
 		} else {
 			$data_update = [
+				'id_user' => $this->session->userdata('id'),
+				'username' => $this->session->userdata('username'),
 				'user' => htmlspecialchars($this->input->post('user', true)),
 				'status' => htmlspecialchars($this->input->post('status', true)),
 				'kategori' => htmlspecialchars($this->input->post('kategori', true)),
@@ -270,6 +274,8 @@ class Staff extends CI_Controller
 			);
 
 			$data_log = [
+				'id_user' => $this->session->userdata('id'),
+				'username' => $this->session->userdata('username'),
 				'id_data' => htmlspecialchars($this->input->post('id_data', true)),
 				'user' => htmlspecialchars($this->input->post('log_user', true)),
 				'status' => htmlspecialchars($this->input->post('log_status', true)),

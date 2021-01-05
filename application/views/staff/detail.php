@@ -65,24 +65,6 @@
                                          <th scope="col" style="padding: 10px;">:</th>
                                          <td><?php echo $u->pj ?></td>
                                      </tr>
-
-                                     <tr class="text-left">
-                                         <th scope="col" style=" font-weight: bold;">Created Date</th>
-                                         <th scope="col" style="padding: 10px;">:</th>
-                                         <td><?php echo $u->created_date ?></td>
-                                     </tr>
-
-                                     <tr class="text-left">
-                                         <th scope="col" style=" font-weight: bold;">Start Date</th>
-                                         <th scope="col" style="padding: 10px;">:</th>
-                                         <td><?php echo $u->start_date ?></td>
-                                     </tr>
-
-                                     <tr class="text-left">
-                                         <th scope="col" style=" font-weight: bold;">End Date</th>
-                                         <th scope="col" style="padding: 10px;">:</th>
-                                         <td><?php echo $u->start_date ?></td>
-                                     </tr>
                                  <?php
                                     }
                                     ?>
@@ -94,28 +76,32 @@
                      <div class="section-header">
                          <table class="">
                              <thead class="">
-                                 <tr>
-                                     <td>
-                                         <h4 style="color:black">Deskripsi</h4>
-                                     </td>
+                                 <tr class="text-left">
+                                     <th scope="col" style=" font-weight: bold;">Created Date</th>
+                                     <th scope="col" style="padding: 10px;">:</th>
+                                     <td><?php echo $u->created_date ?></td>
                                  </tr>
-                                 <tr>
-                                     <td>
-                                         <h5 style="color:black"></br></h5>
-                                     </td>
-                                 </tr>
-                                 <?php
-                                    $i = 1;
-                                    foreach ($detail as $u) {
-                                    ?>
-                                     <?php $html = $u->body ?>
-                                     <tr class="text-left">
-                                         <td><?php echo $html ?></td>
-                                     </tr>
 
-                                 <?php
-                                    }
-                                    ?>
+                                 <tr class="text-left">
+                                     <th scope="col" style=" font-weight: bold;">Start Date</th>
+                                     <th scope="col" style="padding: 10px;">:</th>
+                                     <td><?php echo $u->start_date ?></td>
+                                 </tr>
+
+                                 <tr class="text-left">
+                                     <th scope="col" style=" font-weight: bold;">End Date</th>
+                                     <th scope="col" style="padding: 10px;">:</th>
+                                     <td><?php echo $u->start_date ?></td>
+                                 </tr>
+                                 <tr>
+                                     <th scope="col" style=" font-weight: bold;">Deskripsi</th>
+                                     <th scope="col" style="padding: 10px;"></th>
+                                 </tr>
+                                 <br>
+                                 <tr>
+                                     <td colspan="4"><textarea disabled class="ckeditor" id="ckedtor"><?php echo $u->body ?></textarea></td>
+                                 </tr>
+
                              </thead>
                          </table>
                      </div>

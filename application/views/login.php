@@ -40,10 +40,10 @@
                             novalidate="">
                             <div class="form-group">
                                 <label for="email">Username</label>
-                                <input id="email" type="text" class="form-control" name="Email" tabindex="1" required
+                                <input  id="email" type="text" class="form-control" name="Email" tabindex="1" required
                                     autofocus>
                                 <div class="invalid-feedback">
-                                    Harap isi bidang email
+                                    Harap isi bidang username
                                 </div>
                             </div>
 
@@ -51,10 +51,9 @@
                                 <div class="d-block">
                                     <label for="password" class="control-label">Password</label>
                                 </div>
-                                <input id="password" type="password" class="form-control" name="Password" tabindex="2"
-                                    required>
+                                <input pattern=".{8,}" required title="3 characters minimum" id="password" type="password" class="form-control" name="Password" tabindex="2">
                                 <div class="invalid-feedback">
-                                    Harap isi bidang password
+                                    Minimum Password 8 Karakter
                                 </div>
                             </div>
                             <br>

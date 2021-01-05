@@ -9,8 +9,9 @@
                       <table id="example" class="table align-items-center table-flush">
                           <thead class="thead-light">
                               <tr class="text-center">
-                                  <th scope="col">No</th>
+                                  <th style="width: 60px;" >No</th>
                                   <th scope="col">Judul</th>
+                                  <th scope="col">Tujuan</th>
                                   <th scope="col">Pembuat Solusi</th>
                                   <th scope="col">Created Date</th>
                                   <th scope="col">End Date</th>
@@ -23,8 +24,9 @@
                                 foreach ($solusi as $u) {
                                 ?>
                                   <tr class="text-center">
-                                      <td><?php echo $i ?></td>
+                                      <td style="width: 60px;"><?php echo $i ?></td>
                                       <td><?php echo $u->judul ?></td>
+                                      <td><?php echo $u->user ?></td>
                                       <td><?php echo $u->user ?></td>
                                       <td><?php echo $u->created_date ?></td>
                                       <td><?php echo $u->end_date ?></td>
@@ -120,7 +122,7 @@
               $('#example thead tr').clone(true).appendTo('#example thead').attr('id', 'search_make');
               $('#example thead tr:eq(1) th').each(function(i) {
                   var title = $(this).text();
-                  $(this).html('<input type="text" placeholder="Search ' + title + '" id="' + title + '"/>');
+                  $(this).html('<input type="text" placeholder="' + title + '" id="' + title + '"/>');
 
                   $('input', this).on('keyup change', function() {
                       if (table.column(i).search() !== this.value) {

@@ -12,9 +12,9 @@
                       <table id="example" class="table align-items-center table-flush">
                           <thead class="thead-light">
                               <tr class="text-center">
-                                  <th scope="col">No</th>
-                                  <th scope="col">Nama Request</th>
-                                  <th scope="col">Subject</th>
+                                  <th style="width: 60px;">No</th>
+                                  <th scope="col" style="text-align: left;">Nama Request</th>
+                                  <th scope="col" style="text-align: left;">Subject</th>
                                   <th scope="col">Status</th>
                                   <th scope="col">Start Date</th>
                                   <th scope="col">End Date</th>
@@ -27,9 +27,9 @@
                                 foreach ($request as $u) {
                                 ?>
                                   <tr class="text-center">
-                                      <td><?php echo $i ?></td>
-                                      <td><?php echo $u->user ?></td>
-                                      <td><?php echo $u->subject ?></td>
+                                      <td style="width: 60px;"><?php echo $i ?></td>
+                                      <td style="text-align: left;"><?php echo $u->user ?></td>
+                                      <td style="text-align: left;"><?php echo $u->subject ?></td>
                                       <td><?php echo $u->status ?></td>
                                       <td><?php echo $u->created_date ?></td>
                                       <td><?php echo $u->created_date ?></td>
@@ -126,7 +126,7 @@
               $('#example thead tr').clone(true).appendTo('#example thead').attr('id', 'search_make');
               $('#example thead tr:eq(1) th').each(function(i) {
                   var title = $(this).text();
-                  $(this).html('<input type="text" placeholder="Search ' + title + '" id="' + title + '"/>');
+                  $(this).html('<input type="text" placeholder="' + title + '" id="' + title + '"/>');
 
                   $('input', this).on('keyup change', function() {
                       if (table.column(i).search() !== this.value) {
@@ -137,7 +137,6 @@
                       }
                   });
               });
-
               var table = $('#example').DataTable({
                   orderCellsTop: true,
                   fixedHeader: true,
@@ -147,13 +146,9 @@
               });
           });
       </script>
-
       <!-- Template JS File -->
       <script src="<?= base_url('assets/') ?>stisla-assets/js/scripts.js"></script>
       <script src="<?= base_url('assets/') ?>stisla-assets/js/custom.js"></script>
-
-
-
       <!-- Page Specific JS File -->
       </body>
 

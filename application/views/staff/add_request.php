@@ -4,9 +4,9 @@
         <div class="section-header">
             <h1><?php echo $_GET['menu']; ?> </h1>
         </div>
-        <div class="row container">
-            <div class="col-md-12 bg-white p-3" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px;">
-                <h3 class="font-weight-bold" style="color: #34395e!important;"><?php echo $_GET['submenu']; ?> </h3>
+        <div class="row" syu>
+            <div class="col-md-12 bg-white" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px;">
+                <h3 class="font-weight-bold" style="color: #34395e!important; padding-top: 15px;"><?php echo $_GET['submenu']; ?> </h3>
                 <hr>
                 <form method="POST" action="<?= base_url('staff/create_request') ?>">
                     <div class="row" style="width: 100%;">
@@ -115,9 +115,11 @@
                                 <input name="id_menu" value="<?php echo $_GET['id_menu'] ?>" id="menu_id">
                             </div>
                         </div>
+                        <p style="padding-bottom: 20px;">
                     </div>
                     <input type="submit" value="Created Request Catalog" class="btn btn-success btn-block">
-            </div>
+                    <p style="padding-bottom: 20px;">
+            </div >
             </form>
 
         </div>
