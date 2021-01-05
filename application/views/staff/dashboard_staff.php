@@ -76,40 +76,42 @@
             <h1>Tiket Belum Selesai</h1>
         </div>
         <div class="row">
-            <div class="col-12">
-                <table id="example" class="table align-items-center table-flush">
-                    <thead class="thead-light">
-                        <tr class="text-center">
-                            <th scope="col">No</th>
-                            <th scope="col" style="text-align: left;">Nama Request</th>
-                            <th scope="col" style="text-align: left;">Subject</th>
-                            <th scope="col">Start Date</th>
-                            <th scope="col">End Date</th>
-                            <th scope="col">Option</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <?php
-                        $i = 1;
-                        foreach ($request as $u) {
-                        ?>
+            <div class="col-md-12">
+                <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
+                    <table id="example" class="table align-items-center table-flush">
+                        <thead class="thead-light">
                             <tr class="text-center">
-                                <td><?php echo $i ?></td>
-                                <td style="text-align: left;"><?php echo $u->user ?></td>
-                                <td style="text-align: left;"><?php echo $u->subject ?></td>
-                                <td><?php echo $u->start_date ?></td>
-                                <td><?php echo $u->end_date ?></td>
-                                <td class="text-center">
-                                    <a href=<?= base_url("staff/detail_request/" . $u->id) ?> class="btn btn-sm btn-success">Detail</a>
-                                </td>
+                                <th scope="col">No</th>
+                                <th scope="col" style="text-align: left;">Nama Request</th>
+                                <th scope="col" style="text-align: left;">Subject</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
+                                <th scope="col">Option</th>
                             </tr>
-                        <?php
-                            $i++;
-                        }
-                        ?>
-                    </tbody>
-                </table>
+                        </thead>
+
+                        <tbody>
+                            <?php
+                            $i = 1;
+                            foreach ($request as $u) {
+                            ?>
+                                <tr class="text-center">
+                                    <td><?php echo $i ?></td>
+                                    <td style="text-align: left;"><?php echo $u->user ?></td>
+                                    <td style="text-align: left;"><?php echo $u->subject ?></td>
+                                    <td><?php echo $u->start_date ?></td>
+                                    <td><?php echo $u->end_date ?></td>
+                                    <td class="text-center">
+                                        <a href=<?= base_url("staff/detail_request/" . $u->id) ?> class="btn btn-sm btn-success">Detail</a>
+                                    </td>
+                                </tr>
+                            <?php
+                                $i++;
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <hr width="80%" color="green">
@@ -117,40 +119,42 @@
             <h1>Tiket Terbaru</h1>
         </div>
         <div class="row">
-            <div class="col-12">
-                <table id="example" class="table align-items-center table-flush">
-                    <thead class="thead-light">
-                        <tr class="text-center">
-                            <th scope="col">No</th>
-                            <th scope="col" style="text-align: left;">Nama Request</th>
-                            <th scope="col" style="text-align: left;">Subject</th>
-                            <th scope="col">Start Date</th>
-                            <th scope="col">End Date</th>
-                            <th scope="col">Option</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <?php
-                        $i = 1;
-                        foreach ($request_lama as $u) {
-                        ?>
+            <div class="col-md-12">
+                <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
+                    <table id="example" class="table align-items-center table-flush">
+                        <thead class="thead-light">
                             <tr class="text-center">
-                                <td><?php echo $i ?></td>
-                                <td style="text-align: left;"><?php echo $u->user ?></td>
-                                <td style="text-align: left;"><?php echo $u->subject ?></td>
-                                <td><?php echo $u->start_date ?></td>
-                                <td><?php echo $u->end_date ?></td>
-                                <td class="text-center">
-                                    <a href=<?= base_url("staff/detail_request/" . $u->id) ?> class="btn btn-sm btn-success">Detail</a>
-                                </td>
+                                <th scope="col">No</th>
+                                <th scope="col" style="text-align: left;">Nama Request</th>
+                                <th scope="col" style="text-align: left;">Subject</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
+                                <th scope="col">Option</th>
                             </tr>
-                        <?php
-                            $i++;
-                        }
-                        ?>
-                    </tbody>
-                </table>
+                        </thead>
+
+                        <tbody>
+                            <?php
+                            $i = 1;
+                            foreach ($request_lama as $u) {
+                            ?>
+                                <tr class="text-center">
+                                    <td><?php echo $i ?></td>
+                                    <td style="text-align: left;"><?php echo $u->user ?></td>
+                                    <td style="text-align: left;"><?php echo $u->subject ?></td>
+                                    <td><?php echo $u->start_date ?></td>
+                                    <td><?php echo $u->end_date ?></td>
+                                    <td class="text-center">
+                                        <a href=<?= base_url("staff/detail_request/" . $u->id) ?> class="btn btn-sm btn-success">Detail</a>
+                                    </td>
+                                </tr>
+                            <?php
+                                $i++;
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <hr width="80%" color="green">
@@ -158,38 +162,40 @@
             <h1>Pengumuman</h1>
         </div>
         <div class="row">
-            <div class="col-12">
-                <table id="example" class="table align-items-center table-flush">
-                    <thead class="thead-light">
-                        <tr class="text-center">
-                            <th scope="col">No</th>
-                            <th scope="col">Judul</th>
-                            <th scope="col">Start Date</th>
-                            <th scope="col">End Date</th>
-                            <th scope="col">Option</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <?php
-                        $i = 1;
-                        foreach ($pengumuman as $u) {
-                        ?>
+            <div class="col-md-12">
+                <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
+                    <table id="example" class="table align-items-center table-flush">
+                        <thead class="thead-light">
                             <tr class="text-center">
-                                <td><?php echo $i ?></td>
-                                <td><?php echo $u->judul ?></td>
-                                <td><?php echo $u->start_date ?></td>
-                                <td><?php echo $u->end_date ?></td>
-                                <td class="text-center">
-                                    <a href="#" class="btn btn-sm btn-success">Detail</a>
-                                </td>
+                                <th scope="col">No</th>
+                                <th scope="col">Judul</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
+                                <th scope="col">Option</th>
                             </tr>
-                        <?php
-                            $i++;
-                        }
-                        ?>
-                    </tbody>
-                </table>
+                        </thead>
+
+                        <tbody>
+                            <?php
+                            $i = 1;
+                            foreach ($pengumuman as $u) {
+                            ?>
+                                <tr class="text-center">
+                                    <td><?php echo $i ?></td>
+                                    <td><?php echo $u->judul ?></td>
+                                    <td><?php echo $u->start_date ?></td>
+                                    <td><?php echo $u->end_date ?></td>
+                                    <td class="text-center">
+                                        <a href="#" class="btn btn-sm btn-success">Detail</a>
+                                    </td>
+                                </tr>
+                            <?php
+                                $i++;
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -198,40 +204,42 @@
             <h1>Solusi</h1>
         </div>
         <div class="row">
-            <div class="col-12">
-                <table id="example" class="table align-items-center table-flush">
-                    <thead class="thead-light">
-                        <tr class="text-center">
-                            <th scope="col">No</th>
-                            <th scope="col">Judul</th>
-                            <th scope="col">Pembuat Solusi</th>
-                            <th scope="col">Create Date</th>
-                            <th scope="col">End Date</th>
-                            <th scope="col">Option</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <?php
-                        $i = 1;
-                        foreach ($solusi as $u) {
-                        ?>
+            <div class="col-md-12">
+                <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
+                    <table id="example" class="table align-items-center table-flush">
+                        <thead class="thead-light">
                             <tr class="text-center">
-                                <td><?php echo $i ?></td>
-                                <td><?php echo $u->judul ?></td>
-                                <td><?php echo $u->user ?></td>
-                                <td><?php echo $u->created_date ?></td>
-                                <td><?php echo $u->end_date ?></td>
-                                <td class="text-center">
-                                    <a href="#" class="btn btn-sm btn-success">Detail</a>
-                                </td>
+                                <th scope="col">No</th>
+                                <th scope="col">Judul</th>
+                                <th scope="col">Pembuat Solusi</th>
+                                <th scope="col">Create Date</th>
+                                <th scope="col">End Date</th>
+                                <th scope="col">Option</th>
                             </tr>
-                        <?php
-                            $i++;
-                        }
-                        ?>
-                    </tbody>
-                </table>
+                        </thead>
+
+                        <tbody>
+                            <?php
+                            $i = 1;
+                            foreach ($solusi as $u) {
+                            ?>
+                                <tr class="text-center">
+                                    <td><?php echo $i ?></td>
+                                    <td><?php echo $u->judul ?></td>
+                                    <td><?php echo $u->user ?></td>
+                                    <td><?php echo $u->created_date ?></td>
+                                    <td><?php echo $u->end_date ?></td>
+                                    <td class="text-center">
+                                        <a href="#" class="btn btn-sm btn-success">Detail</a>
+                                    </td>
+                                </tr>
+                            <?php
+                                $i++;
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 </div>
