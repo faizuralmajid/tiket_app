@@ -5,38 +5,41 @@
                   <h1>List All Pengumuman </h1>
               </div>
               <div class="row" style="overflow: scroll">
-                  <div class="col-12">
-                      <table id="example" class="table align-items-center table-flush">
-                          <thead class="thead-light">
-                              <tr class="text-center">
-                                  <th style="width: 60px;">No</th>
-                                  <th scope="col">Judul</th>
-                                  <th scope="col">Created Date</th>
-                                  <th scope="col">End Date</th>
-                                  <th scope="col">Option</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <?php
-                                $i = 1;
-                                foreach ($pengumuman as $u) {
-                                ?>
+                  <div class="col-md-12">
+                      <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
+                          <table id="example" class="table align-items-center table-flush">
+                              <thead class="thead-light">
                                   <tr class="text-center">
-                                      <td style="width: 60px;"><?php echo $i ?></td>
-                                      <td><?php echo $u->judul ?></td>
-                                      <td><?php echo $u->start_date ?></td>
-                                      <td><?php echo $u->end_date ?></td>
-                                      <td class="text-center">
-                                          <a href="#" class="btn btn-sm btn-success">Detail</a>
-                                      </td>
+                                      <th style="width: 60px;">No</th>
+                                      <th scope="col">Judul</th>
+                                      <th scope="col">Created Date</th>
+                                      <th scope="col">End Date</th>
+                                      <th scope="col">Option</th>
                                   </tr>
-                              <?php
-                                }
-                                ?>
-                          </tbody>
-                      </table>
+                              </thead>
+                              <tbody>
+                                  <?php
+                                    $i = 1;
+                                    foreach ($pengumuman as $u) {
+                                    ?>
+                                      <tr class="text-center">
+                                          <td style="width: 60px;"><?php echo $i ?></td>
+                                          <td><?php echo $u->judul ?></td>
+                                          <td><?php echo $u->start_date ?></td>
+                                          <td><?php echo $u->end_date ?></td>
+                                          <td class="text-center">
+                                              <a href="#" class="btn btn-sm btn-success">Detail</a>
+                                          </td>
+                                      </tr>
+                                  <?php
+                                    }
+                                    ?>
+                              </tbody>
+                          </table>
+                      </div>
                   </div>
               </div>
+      </div>
       </div>
 
       <?php if ($this->session->flashdata('success-edit')) : ?>
@@ -83,15 +86,15 @@
                   x.style.visibility = "collapse";
                   element.innerHTML = "Tampilkan Filter";
               } else if (x.style.visibility === "collapse") {
-                x.style.visibility = "visible";
-                element.innerHTML = "Sembunyikan Filter";
+                  x.style.visibility = "visible";
+                  element.innerHTML = "Sembunyikan Filter";
               } else {
                   x.style.visibility = "collapse";
                   element.innerHTML = "Tampilkan Filter";
               }
           }
       </script>
-      <?php include("footer.php")?>
+      <?php include("footer.php") ?>
 
 
       <!-- General JS Scripts -->
@@ -135,7 +138,10 @@
                   fixedHeader: true,
                   "lengthChange": false,
                   "pagingType": "full_numbers",
-                  "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
+                  "lengthMenu": [
+                      [10, 25, 50, -1],
+                      [10, 25, 50, "All"]
+                  ]
               });
           });
       </script>
