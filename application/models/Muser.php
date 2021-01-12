@@ -7,7 +7,13 @@ class Muser extends CI_Model
         return $this->db->get('users');
     }
 
-    public function delete_asset($where, $table)
+    public function tampil_data_user($id_data)
+    {
+        $query = $this->db->get_where('users', array('username' => $id_data));
+        return $query;
+    }
+
+    public function delete_user($where, $table)
     {
         $this->db->where($where);
         $this->db->delete($table);

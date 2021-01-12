@@ -8,6 +8,14 @@ class Mkategori extends CI_Model{
         return $query;  
     }
  
+
+    function get_all_subcategory(){
+      return  $this->db->select('*,t1.id AS id_sub')
+     ->from('master_subkategori as t1')
+     ->join('master_kategori as t2', 't1.id_kategori = t2.id', 'INNER')
+     ->get();
+    }
+
     function get_sub_category($category_id){
         $query = $this->db->get_where('master_subkategori', array('id_kategori' => $category_id));
         return $query;
