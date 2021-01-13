@@ -2,53 +2,39 @@
       <div class="main-content">
           <section class="section">
               <div class="section-header">
-                  <h1>List Pengguna </h1>
+                  <h1>List Pengumuman </h1>
               </div>
               <div class="section-header">
-                  <a id="filtering" class="btn btn-primary" href="<?= base_url('admin/add_pengguna') ?>">Tambah Pengguna</a>
+                  <a id="filtering" class="btn btn-primary" href="<?= base_url('teknisi/add_Pengumuman') ?>">Tambah Pengumuman</a>
               </div>
               <div class="row" style="overflow: scroll">
                   <div class="col-md-12">
                       <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
-                          <table id="example" class="table align-items-center table-flush">
+                      <table id="example" class="table align-items-center table-flush">
                               <thead class="thead-light">
                                   <tr class="text-center">
                                       <th style="width: 60px;">No</th>
-                                      <th scope="col" style="text-align: left;">Nama</th>
-                                      <th scope="col" style="text-align: left;">Username</th>
-                                      <th scope="col" style="text-align: left;">Email</th>
-                                      <th scope="col">Akses</th>
+                                      <th scope="col">Judul</th>
                                       <th scope="col">Created Date</th>
+                                      <th scope="col">End Date</th>
                                       <th scope="col">Option</th>
                                   </tr>
                               </thead>
                               <tbody>
                                   <?php
                                     $i = 1;
-                                    foreach ($pengguna as $u) {
+                                    foreach ($pengumuman as $u) {
                                     ?>
                                       <tr class="text-center">
                                           <td style="width: 60px;"><?php echo $i ?></td>
-                                          <td scope="col" style="text-align: left;"><?php echo $u->nama ?></td>
-                                          <td scope="col" style="text-align: left;"><?php echo $u->username ?></td>
-                                          <td scope="col" style="text-align: left;"> <?php echo $u->email ?></td>
-                                          <?php
-                                            if ($u->level_akses == 1) {
-                                                echo "<td> Teknisi </td>";
-                                            } else if ($u->level_akses == 0) {
-                                                echo "<td> Admin </td>";
-                                            } else {
-                                                echo "<td> Staff </td>";
-                                            }
-                                            ?>
-                                          <td><?php echo $u->created_date ?></td>
+                                          <td><?php echo $u->judul ?></td>
+                                          <td><?php echo $u->start_date ?></td>
+                                          <td><?php echo $u->end_date ?></td>
                                           <td class="text-center">
-                                              <a href="#" class="btn btn-sm btn-warning">Update</a>
-                                              <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                              <a href="#" class="btn btn-sm btn-success">Detail</a>
                                           </td>
                                       </tr>
                                   <?php
-                                        $i++;
                                     }
                                     ?>
                               </tbody>

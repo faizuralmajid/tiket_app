@@ -9,10 +9,13 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Jumlah Request</h4>
+                            <h4>Status Open</h4>
                         </div>
                         <div class="card-body">
-                            <?php echo $this->db->count_all('tbl_request'); ?>
+                        <?php $this->db->from('tbl_request');
+                            $this->db->where('status', 'open');
+                            echo $this->db->count_all_results();
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -24,11 +27,12 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Status Open</h4>
+                            <h4>Sedang Dikerjakan</h4>
                         </div>
                         <div class="card-body">
                             <?php $this->db->from('tbl_request');
                             $this->db->where('status', 'open');
+                            $this->db->or_where('status', 'Tindak Lanjut');
                             echo $this->db->count_all_results();
                             ?>
                         </div>
@@ -42,11 +46,11 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Status Close</h4>
+                            <h4>Status Tindak Lanjut</h4>
                         </div>
                         <div class="card-body">
-                            <?php $this->db->from('tbl_request');
-                            $this->db->where('status', 'close');
+                        <?php $this->db->from('tbl_request');
+                            $this->db->where('status', 'tindak lanjut');
                             echo $this->db->count_all_results();
                             ?>
                         </div>
@@ -60,13 +64,14 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Status Tindak Lanjut</h4>
+                            <h4>Melewati batas Waktu</h4>
                         </div>
                         <div class="card-body">
-                            <?php $this->db->from('tbl_request');
-                            $this->db->where('status', 'tindak lanjut');
-                            echo $this->db->count_all_results();
-                            ?>
+                        <?php 
+                            $this->db->from('tbl_request');
+                            $this->db->where('end_date <', date("Y-m-d"));
+                            echo 
+                            $this->db->count_all_results() ?>
                         </div>
                     </div>
                 </div>
@@ -211,6 +216,7 @@
                             <tr class="text-center">
                                 <th scope="col">No</th>
                                 <th scope="col">Judul</th>
+                                <th scope="col">Tujuan</th>
                                 <th scope="col">Pembuat Solusi</th>
                                 <th scope="col">Create Date</th>
                                 <th scope="col">End Date</th>
@@ -226,6 +232,7 @@
                                 <tr class="text-center">
                                     <td><?php echo $i ?></td>
                                     <td><?php echo $u->judul ?></td>
+                                    <td><?php echo $u->tujuan ?></td>
                                     <td><?php echo $u->user ?></td>
                                     <td><?php echo $u->created_date ?></td>
                                     <td><?php echo $u->end_date ?></td>

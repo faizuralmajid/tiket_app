@@ -2,12 +2,15 @@
       <div class="main-content">
           <section class="section">
               <div class="section-header">
-                  <h1>List All Solusi </h1>
+                  <h1>List Solusi </h1>
+              </div>
+              <div class="section-header">
+                  <a id="filtering" class="btn btn-primary" href="<?= base_url('teknisi/add_solusi') ?>">Tambah Solusi</a>
               </div>
               <div class="row" style="overflow: scroll">
                   <div class="col-md-12">
                       <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
-                          <table id="example" class="table align-items-center table-flush">
+                      <table id="example" class="table align-items-center table-flush">
                               <thead class="thead-light">
                                   <tr class="text-center">
                                       <th style="width: 60px;">No</th>
@@ -27,7 +30,7 @@
                                       <tr class="text-center">
                                           <td style="width: 60px;"><?php echo $i ?></td>
                                           <td><?php echo $u->judul ?></td>
-                                          <td><?php echo $u->tujuan ?></td>
+                                          <td><?php echo $u->user ?></td>
                                           <td><?php echo $u->user ?></td>
                                           <td><?php echo $u->created_date ?></td>
                                           <td><?php echo $u->end_date ?></td>
@@ -80,27 +83,37 @@
           </script>
       <?php endif; ?>
 
-      <script>
-          var element = document.getElementById("id01");
-
-          function myFunction() {
-              var element = document.getElementById("filtering");
-              var x = document.getElementById("search_make");
-              if (x.style.visibility === "") {
-                  x.style.visibility = "collapse";
-                  element.innerHTML = "Tampilkan Filter";
-              } else if (x.style.visibility === "collapse") {
-                  x.style.visibility = "visible";
-                  element.innerHTML = "Sembunyikan Filter";
-              } else {
-                  x.style.visibility = "collapse";
-                  element.innerHTML = "Tampilkan Filter";
-              }
-          }
-      </script>
       <?php include("footer.php") ?>
 
+      <script>
+          $(document).ready(function() {
+              // Setup - add a text input to each footer cell
+              $('#example thead tr').clone(true).appendTo('#example thead').attr('id', 'search_make');
+              $('#example thead tr:eq(1) th').each(function(i) {
+                  var title = $(this).text();
+                  $(this).html('<input type="text" placeholder="' + title + '" id="' + title + '"/>');
 
+                  $('input', this).on('keyup change', function() {
+                      if (table.column(i).search() !== this.value) {
+                          table
+                              .column(i)
+                              .search(this.value)
+                              .draw();
+                      }
+                  });
+              });
+              var table = $('#example').DataTable({
+                  orderCellsTop: true,
+                  fixedHeader: true,
+                  "lengthChange": false,
+                  "pagingType": "full_numbers",
+                  "lengthMenu": [
+                      [10, 25, 50, -1],
+                      [10, 25, 50, "All"]
+                  ]
+              });
+          });
+      </script>
       <!-- General JS Scripts -->
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
@@ -119,37 +132,6 @@
       <!-- JS Libraies -->
       <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-      <script>
-          $(document).ready(function() {
-              // Setup - add a text input to each footer cell
-              $('#example thead tr').clone(true).appendTo('#example thead').attr('id', 'search_make');
-              $('#example thead tr:eq(1) th').each(function(i) {
-                  var title = $(this).text();
-                  $(this).html('<input type="text" placeholder="' + title + '" id="' + title + '"/>');
-
-                  $('input', this).on('keyup change', function() {
-                      if (table.column(i).search() !== this.value) {
-                          table
-                              .column(i)
-                              .search(this.value)
-                              .draw();
-                      }
-                  });
-              });
-
-              var table = $('#example').DataTable({
-                  orderCellsTop: true,
-                  fixedHeader: true,
-                  "lengthChange": false,
-                  "pagingType": "full_numbers",
-                  "lengthMenu": [
-                      [10, 25, 50, -1],
-                      [10, 25, 50, "All"]
-                  ]
-
-              });
-          });
-      </script>
 
       <!-- Template JS File -->
       <script src="<?= base_url('assets/') ?>stisla-assets/js/scripts.js"></script>

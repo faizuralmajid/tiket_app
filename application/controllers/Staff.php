@@ -29,8 +29,8 @@ class Staff extends CI_Controller
 		$data['level'] = $this->session->userdata('level');
 		$data['request'] = $this->Mrequest->tampil_data_ten_terbaru()->result();
 		$data['request_lama'] = $this->Mrequest->tampil_data_ten_terlama()->result();
-		$data['pengumuman'] = $this->Mpengumuman->tampil_data()->result();
-		$data['solusi'] = $this->Msolusi->tampil_data()->result();
+		$data['pengumuman'] = $this->Mpengumuman->tampil_data_terbaru()->result();
+		$data['solusi'] = $this->Msolusi->tampil_data_terbaru()->result();
 		$this->load->view('navbar/nav_staff', $data);
 		$this->load->view('staff/dashboard_staff', $data);
 	}

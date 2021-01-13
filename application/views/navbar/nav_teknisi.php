@@ -99,70 +99,70 @@ $active = $url[1];
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand text-danger">
-                        <a href="<?= base_url('admin') ?>" style="font-size: 35px; font-weight:900;font-family: 'Roboto', sans-serif;" class="text-success">&#9795;Tiket.&not;</a>
+                        <a href="<?= base_url('teknisi') ?>" style="font-size: 35px; font-weight:900;font-family: 'Roboto', sans-serif;" class="text-success">&#9795;Tiket.&not;</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="<?= base_url('admin') ?>">TKT</a>
+                        <a href="<?= base_url('teknisi') ?>">TKT</a>
                     </div>
 
                     <ul class="sidebar-menu">
                         
                         <li class="menu-header">Manajemen Asset</li>
                         <li class="nav-item dropdown <?php if ($active == 'data_peminjaman' || $active == 'add_peminjaman') : ?> active <?php endif ?>">
-                            <a href="<?= base_url('admin/list_pengguna') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
+                            <a href="<?= base_url('teknisi/list_pengguna') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
                                 <span>IT Assets</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Access Point</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Access Point</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Router</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Router</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Switch</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Switch</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Server</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Server</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Firewall</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Firewall</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">IP Phone</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">IP Phone</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">NTP</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">NTP</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Rack</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Rack</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Room Sensor</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Room Sensor</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Smart Phone</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Smart Phone</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Storage Device</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Storage Device</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Tablet</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Tablet</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">UPS</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">UPS</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Video Encoder</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Video Encoder</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">WAN Link</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">WAN Link</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown <?php if ($active == 'data_peminjaman' || $active == 'add_peminjaman') : ?> active <?php endif ?>">
-                            <a href="<?= base_url('admin/list_pengguna') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
+                            <a href="<?= base_url('teknisi/list_pengguna') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
                                 <span>Non IT Assets</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Project</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Project</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">TV</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">TV</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Video Conference</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Video Conference</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown <?php if ($active == 'data_peminjaman' || $active == 'add_peminjaman') : ?> active <?php endif ?>">
-                            <a href="<?= base_url('admin/list_pengguna') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
+                            <a href="<?= base_url('teknisi/list_pengguna') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
                                 <span>Virtual Hosts/VMs</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Virtual Hosts</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Virtual Hosts</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('admin/list_pengguna') ?>">Virtual Machines</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Virtual Machines</a>
                                 </li>
                             </ul>
                         </li>
@@ -171,7 +171,16 @@ $active = $url[1];
                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i>
                                 <span>List Solusi</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="<?= base_url('admin/list_menu') ?>">List Solusi</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_solusi') ?>">List Solusi</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-header">List Pengumuman</li>
+                        <li class="nav-item dropdown <?php if ($active == 'data_pengembalian') : ?> active <?php endif ?>">
+                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i>
+                                <span>List Pengumuman</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengumuman') ?>">List Pengumuman</a>
                                 </li>
                             </ul>
                         </li>
