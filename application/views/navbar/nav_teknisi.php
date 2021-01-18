@@ -109,60 +109,60 @@ $active = $url[1];
                         
                         <li class="menu-header">Manajemen Asset</li>
                         <li class="nav-item dropdown <?php if ($active == 'data_peminjaman' || $active == 'add_peminjaman') : ?> active <?php endif ?>">
-                            <a href="<?= base_url('teknisi/list_pengguna') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
+                            <a href="<?= base_url('teknisi/list_assets') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
                                 <span>IT Assets</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Access Point</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Access Point</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Router</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Router</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Switch</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Switch</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Server</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Server</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Firewall</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Firewall</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">IP Phone</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">IP Phone</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">NTP</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">NTP</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Rack</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Rack</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Room Sensor</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Room Sensor</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Smart Phone</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Smart Phone</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Storage Device</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Storage Device</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Tablet</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Tablet</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">UPS</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">UPS</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Video Encoder</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Video Encoder</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">WAN Link</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">WAN Link</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown <?php if ($active == 'data_peminjaman' || $active == 'add_peminjaman') : ?> active <?php endif ?>">
-                            <a href="<?= base_url('teknisi/list_pengguna') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
+                            <a href="<?= base_url('teknisi/list_assets') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
                                 <span>Non IT Assets</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Project</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Project</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">TV</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">TV</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Video Conference</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Video Conference</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown <?php if ($active == 'data_peminjaman' || $active == 'add_peminjaman') : ?> active <?php endif ?>">
-                            <a href="<?= base_url('teknisi/list_pengguna') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
+                            <a href="<?= base_url('teknisi/list_assets') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
                                 <span>Virtual Hosts/VMs</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Virtual Hosts</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Virtual Hosts</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_pengguna') ?>">Virtual Machines</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets') ?>">Virtual Machines</a>
                                 </li>
                             </ul>
                         </li>

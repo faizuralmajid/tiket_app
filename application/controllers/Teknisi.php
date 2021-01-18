@@ -127,14 +127,28 @@ class Teknisi extends CI_Controller
 		}
 	}
 
-	public function list_asset()
+	public function list_assets()
 	{
-		$this->load->model('Muser');
+		$this->load->model('Mpengumuman');
 		$data['nama'] = $this->session->userdata('nama');
 		$data['level'] = $this->session->userdata('level');
-		$data['pengguna'] = $this->Muser->tampil_data()->result();
+		$data['pengumuman'] = $this->Mpengumuman->tampil_data()->result();
 		$this->load->view('navbar/nav_teknisi',$data);
-		$this->load->view('admin/list_pengguna',$data);
+		$this->load->view('teknisi/list_assets',$data);
 	}
-
+	
+	public function add_assets()
+	{
+		$this->load->model('Mrequest');
+		$this->load->model('Mkategori');
+		$data['level'] = $this->session->userdata('level');
+		$data['kategori'] = $this->Mkategori->get_category()->result();
+		$data['group'] = $this->Mkategori->get_group()->result();
+		$data['nama'] = $this->session->userdata('nama');
+		$data['id_user'] = $this->session->userdata('id');
+		$data['m_asset'] = $this->Mrequest->for_option('tbl_asset');
+		$data['m_pj'] = $this->Mkategori->get_teknisi()->result();
+		$this->load->view('navbar/nav_teknisi', $data);
+		$this->load->view('teknisi/add_assets', $data);
+	}
 }
