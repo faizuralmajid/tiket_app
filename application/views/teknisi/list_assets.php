@@ -10,14 +10,21 @@
               <div class="row" style="overflow: scroll">
                   <div class="col-md-12">
                       <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
-                      <table id="example" class="table align-items-center table-flush">
+                          <table id="example" class="table align-items-center table-flush">
                               <thead class="thead-light">
                                   <tr class="text-center">
-                                      <th style="width: 60px;">No</th>
-                                      <th scope="col">Judul</th>
-                                      <th scope="col">Created Date</th>
-                                      <th scope="col">End Date</th>
-                                      <th scope="col">Option</th>
+                                      <th style="width: 60px;">Name</th>
+                                      <th scope="col">Ci Type</th>
+                                      <th scope="col">Is loaned</th>
+                                      <th scope="col">loan expiry</th>
+                                      <th scope="col">product</th>
+                                      <th scope="col">asset state</th>
+                                      <th scope="col">associated to</th>
+                                      <th scope="col">user</th>
+                                      <th scope="col">department</th>
+                                      <th scope="col">org</th>
+                                      <th scope="col">serial number</th>
+                                      <th scope="col">purchase cost($)</th>
                                   </tr>
                               </thead>
                               <tbody>
@@ -30,9 +37,14 @@
                                           <td><?php echo $u->judul ?></td>
                                           <td><?php echo $u->start_date ?></td>
                                           <td><?php echo $u->end_date ?></td>
-                                          <td class="text-center">
-                                              <a href="#" class="btn btn-sm btn-success">Detail</a>
-                                          </td>
+                                          <td><?php echo $u->judul ?></td>
+                                          <td><?php echo $u->start_date ?></td>
+                                          <td><?php echo $u->end_date ?></td>
+                                          <td><?php echo $u->judul ?></td>
+                                          <td><?php echo $u->start_date ?></td>
+                                          <td><?php echo $u->end_date ?></td>
+                                          <td><?php echo $u->judul ?></td>
+                                          <td><?php echo $u->start_date ?></td>
                                       </tr>
                                   <?php
                                     }
