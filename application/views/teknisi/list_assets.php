@@ -2,7 +2,7 @@
       <div class="main-content">
           <section class="section">
               <div class="section-header">
-                  <h1>List Assets </h1>
+                  <h1>List <?=$menu?></h1>
               </div>
               <div class="section-header">
                   <a id="filtering" class="btn btn-primary" href="<?= base_url('teknisi/add_assets') ?>">Tambah Assets</a>
@@ -10,47 +10,262 @@
               <div class="row" style="overflow: scroll">
                   <div class="col-md-12">
                       <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
-                          <table id="example" class="table align-items-center table-flush">
-                              <thead class="thead-light">
-                                  <tr class="text-center">
-                                      <th style="width: 60px;">Name</th>
-                                      <th scope="col">Ci Type</th>
-                                      <th scope="col">Is loaned</th>
-                                      <th scope="col">loan expiry</th>
-                                      <th scope="col">product</th>
-                                      <th scope="col">asset state</th>
-                                      <th scope="col">associated to</th>
-                                      <th scope="col">user</th>
-                                      <th scope="col">department</th>
-                                      <th scope="col">org</th>
-                                      <th scope="col">serial number</th>
-                                      <th scope="col">purchase cost($)</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <?php
-                                    $i = 1;
-                                    foreach ($pengumuman as $u) {
-                                    ?>
+
+
+
+                          <?php if ($menu == "Access Point" || $menu == "Firewall" || $menu == "IP Phone" || $menu == "Rack"  || $menu == "TV"  || $menu == "Video Conference"  || $menu == "Projector"  ) { ?>
+                              <table id="example" class="table align-items-center table-flush">
+                                  <thead class="thead-light">
                                       <tr class="text-center">
-                                          <td style="width: 60px;"><?php echo $i ?></td>
-                                          <td><?php echo $u->judul ?></td>
-                                          <td><?php echo $u->start_date ?></td>
-                                          <td><?php echo $u->end_date ?></td>
-                                          <td><?php echo $u->judul ?></td>
-                                          <td><?php echo $u->start_date ?></td>
-                                          <td><?php echo $u->end_date ?></td>
-                                          <td><?php echo $u->judul ?></td>
-                                          <td><?php echo $u->start_date ?></td>
-                                          <td><?php echo $u->end_date ?></td>
-                                          <td><?php echo $u->judul ?></td>
-                                          <td><?php echo $u->start_date ?></td>
+                                          <th style="width: 60px;">Name</th>
+                                          <th scope="col">Ci Type</th>
+                                          <th scope="col">Is loaned</th>
+                                          <th scope="col">loan expiry</th>
+                                          <th scope="col">product</th>
+                                          <th scope="col">asset state</th>
+                                          <th scope="col">associated to</th>
+                                          <th scope="col">user</th>
+                                          <th scope="col">department</th>
+                                          <th scope="col">org</th>
+                                          <th scope="col">serial number</th>
+                                          <th scope="col">purchase cost($)</th>
                                       </tr>
-                                  <?php
-                                    }
-                                    ?>
-                              </tbody>
-                          </table>
+                                  </thead>
+                                  <tbody>
+                                      <?php
+                                        $i = 1;
+                                        foreach ($pengumuman as $u) {
+                                        ?>
+                                          <tr class="text-center">
+                                              <td style="width: 60px;"><?php echo $i ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                          </tr>
+                                      <?php
+                                        }
+                                        ?>
+                                  </tbody>
+                              </table>
+                              <?php } ?>
+
+                             
+                             
+                              <?php if ($menu == "IPS" || $menu == "NTP" || $menu == "Router" || $menu == "Switch" ||  $menu == "UPS"  ||  $menu == "Video Encoder"  ||  $menu == "Storage Device" ||  $menu == "Room Sensor"   ) { ?>
+                              <table id="example" class="table align-items-center table-flush">
+                                  <thead class="thead-light">
+                                      <tr class="text-center">
+                                          <th style="width: 60px;">Name</th>
+                                          <th scope="col">Ci Type</th>
+                                          <th scope="col">Is loaned</th>
+                                          <th scope="col">loan expiry</th>
+                                          <th scope="col">product</th>
+                                          <th scope="col">asset state</th>
+                                          <th scope="col">associated to</th>
+                                          <th scope="col">user</th>
+                                          <th scope="col">department</th>
+                                          <th scope="col">serial number</th>
+                                          <th scope="col">purchase cost($)</th>
+                                          <th scope="col">manufacturer </th>
+                                          <th scope="col">serial number</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <?php
+                                        $i = 1;
+                                        foreach ($pengumuman as $u) {
+                                        ?>
+                                          <tr class="text-center">
+                                              <td style="width: 60px;"><?php echo $i ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                          </tr>
+                                      <?php
+                                        }
+                                        ?>
+                                  </tbody>
+                              </table>
+                              <?php } ?>
+
+
+                              <?php if ($menu == "Smart Phone" || $menu == "Tablet") { ?>
+                              <table id="example" class="table align-items-center table-flush">
+                                  <thead class="thead-light">
+                                      <tr class="text-center">
+                                          <th style="width: 60px;">Name</th>
+                                          <th scope="col">Ci Type</th>
+                                          <th scope="col">Is loaned</th>
+                                          <th scope="col">loan expiry</th>
+                                          <th scope="col">product</th>
+                                          <th scope="col">asset state</th>
+                                          <th scope="col">associated to</th>
+                                          <th scope="col">user</th>
+                                          <th scope="col">department</th>
+                                          <th scope="col">org</th>
+                                          <th scope="col">serial number</th>
+                                          <th scope="col">purchase cost($)</th>
+                                          <th scope="col">is personal</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <?php
+                                        $i = 1;
+                                        foreach ($pengumuman as $u) {
+                                        ?>
+                                          <tr class="text-center">
+                                              <td style="width: 60px;"><?php echo $i ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                          </tr>
+                                      <?php
+                                        }
+                                        ?>
+                                  </tbody>
+                              </table>
+                              <?php } ?>
+
+                              <?php if ($menu == "Server") { ?>
+                              <table id="example" class="table align-items-center table-flush">
+                                  <thead class="thead-light">
+                                      <tr class="text-center">
+                                          <th style="width: 60px;">Name</th>
+                                          <th scope="col">Ci Type</th>
+                                          <th scope="col">Model</th>
+                                          <th scope="col">Operating System</th>
+                                          <th scope="col">Service Tag</th>
+                                          <th scope="col">Asset State</th>
+                                          <th scope="col">User</th>
+                                          <th scope="col">department</th>
+                                          <th scope="col">org</th>
+                                          <th scope="col">serial number</th>
+                                          <th scope="col">purchase cost($)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <?php
+                                        $i = 1;
+                                        foreach ($pengumuman as $u) {
+                                        ?>
+                                          <tr class="text-center">
+                                              <td style="width: 60px;"><?php echo $i ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                          </tr>
+                                      <?php
+                                        }
+                                        ?>
+                                  </tbody>
+                              </table>
+                              <?php } ?>
+
+                              <?php if ($menu == "Virtual Hosts") { ?>
+                              <table id="example" class="table align-items-center table-flush">
+                                  <thead class="thead-light">
+                                      <tr class="text-center">
+                                          <th style="width: 60px;">Name</th>
+                                          <th scope="col">Model</th>
+                                          <th scope="col">Operating System</th>
+                                          <th scope="col">Installed VMs</th>
+                                          <th scope="col">Total Memory (GB)</th>
+                                          <th scope="col">Logical Processors</th>
+                                          <th scope="col">purchase cost($)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <?php
+                                        $i = 1;
+                                        foreach ($pengumuman as $u) {
+                                        ?>
+                                          <tr class="text-center">
+                                              <td style="width: 60px;"><?php echo $i ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                          </tr>
+                                      <?php
+                                        }
+                                        ?>
+                                  </tbody>
+                              </table>
+                              <?php } ?>
+
+                              <?php if ($menu == "Virtual Machines") { ?>
+                              <table id="example" class="table align-items-center table-flush">
+                                  <thead class="thead-light">
+                                      <tr class="text-center">
+                                          <th style="width: 60px;">Name</th>
+                                          <th scope="col">Host</th>
+                                          <th scope="col">CPU Reservation (mhz)</th>
+                                          <th scope="col">CPU Limit (mhz)</th>
+                                          <th scope="col">CPU Limit(%)</th>
+                                          <th scope="col">Memory Reservation (mb)/th>
+                                          <th scope="col">purchase cost($)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <?php
+                                        $i = 1;
+                                        foreach ($pengumuman as $u) {
+                                        ?>
+                                          <tr class="text-center">
+                                              <td style="width: 60px;"><?php echo $i ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                              <td><?php echo $u->judul ?></td>
+                                              <td><?php echo $u->start_date ?></td>
+                                              <td><?php echo $u->end_date ?></td>
+                                          </tr>
+                                      <?php
+                                        }
+                                        ?>
+                                  </tbody>
+                              </table>
+                              <?php } ?>
+
+                              
+
+
+
+                                        
                       </div>
                   </div>
               </div>

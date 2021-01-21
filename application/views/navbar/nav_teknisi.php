@@ -140,7 +140,7 @@ $active = $url[1];
                                 </li>
                                 <li><a class="nav-link" href="<?= base_url('teknisi/list_assets/Video Encoder') ?>">Video Encoder</a>
                                 </li>
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets/WAN Link') ?>">WAN Link</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets/IPS') ?>">IPS</a>
                                 </li>
                             </ul>
                         </li>
@@ -148,7 +148,7 @@ $active = $url[1];
                             <a href="<?= base_url('teknisi/list_assets') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
                                 <span>Non IT Assets</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets/Project') ?>">Project</a>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets/Projector') ?>">Projector</a>
                                 </li>
                                 <li><a class="nav-link" href="<?= base_url('teknisi/list_assets/TV') ?>">TV</a>
                                 </li>

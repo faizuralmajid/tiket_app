@@ -127,12 +127,13 @@ class Teknisi extends CI_Controller
 		}
 	}
 
-	public function list_assets()
+	public function list_assets($menu)
 	{
 		$this->load->model('Mpengumuman');
 		$data['nama'] = $this->session->userdata('nama');
 		$data['level'] = $this->session->userdata('level');
 		$data['pengumuman'] = $this->Mpengumuman->tampil_data()->result();
+		$data['menu'] = $menu;
 		$this->load->view('navbar/nav_teknisi',$data);
 		$this->load->view('teknisi/list_assets',$data);
 	}
