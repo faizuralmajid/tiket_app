@@ -5,7 +5,7 @@
                   <h1>List <?=$menu?></h1>
               </div>
               <div class="section-header">
-                  <a id="filtering" class="btn btn-primary" href="<?= base_url('teknisi/add_assets') ?>">Tambah Assets</a>
+                  <a id="filtering" class="btn btn-primary" href="<?= base_url('teknisi/add_assets/'.$menu) ?>">Tambah Assets</a>
               </div>
               <div class="row" style="overflow: scroll">
                   <div class="col-md-12">

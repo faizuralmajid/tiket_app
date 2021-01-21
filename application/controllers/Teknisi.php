@@ -138,7 +138,7 @@ class Teknisi extends CI_Controller
 		$this->load->view('teknisi/list_assets',$data);
 	}
 	
-	public function add_assets()
+	public function add_assets($menu)
 	{
 		$this->load->model('Mrequest');
 		$this->load->model('Mkategori');
@@ -149,6 +149,7 @@ class Teknisi extends CI_Controller
 		$data['id_user'] = $this->session->userdata('id');
 		$data['m_asset'] = $this->Mrequest->for_option('tbl_asset');
 		$data['m_pj'] = $this->Mkategori->get_teknisi()->result();
+		$data['menu'] = $menu;
 		$this->load->view('navbar/nav_teknisi', $data);
 		$this->load->view('teknisi/add_assets', $data);
 	}
