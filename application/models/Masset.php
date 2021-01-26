@@ -7,6 +7,13 @@ class Masset extends CI_Model
         return $this->db->get('tbl_asset');
     }
 
+    public function tampil_data_group($id)
+    {
+        $query = $this->db->get_where('tbl_asset', array('jenis' => $id));
+        return $query;
+    }
+
+
     public function delete_asset($where, $table)
     {
         $this->db->where($where);

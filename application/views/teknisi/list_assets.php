@@ -2,10 +2,10 @@
       <div class="main-content">
           <section class="section">
               <div class="section-header">
-                  <h1>List <?=$menu?></h1>
+                  <h1>List <?= $menu ?></h1>
               </div>
               <div class="section-header">
-                  <a id="filtering" class="btn btn-primary" href="<?= base_url('teknisi/add_assets/'.$menu) ?>">Tambah Assets</a>
+                  <a id="filtering" class="btn btn-primary" href="<?= base_url('teknisi/add_assets/' . $menu) ?>">Tambah Assets</a>
               </div>
               <div class="row" style="overflow: scroll">
                   <div class="col-md-12">
@@ -13,7 +13,7 @@
 
 
 
-                          <?php if ($menu == "Access Point" || $menu == "Firewall" || $menu == "IP Phone" || $menu == "Rack"  || $menu == "TV"  || $menu == "Video Conference"  || $menu == "Projector"  ) { ?>
+                          <?php if ($menu == "Access Point" || $menu == "Firewall" || $menu == "IP Phone" || $menu == "Rack"  || $menu == "TV"  || $menu == "Video Conference"  || $menu == "Projector") { ?>
                               <table id="example" class="table align-items-center table-flush">
                                   <thead class="thead-light">
                                       <tr class="text-center">
@@ -37,29 +37,29 @@
                                         foreach ($pengumuman as $u) {
                                         ?>
                                           <tr class="text-center">
-                                              <td style="width: 60px;"><?php echo $i ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
+                                              <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
+                                              <td><?php echo $u->jenis ?></td>
+                                              <td><?php echo $u->date1 ?></td>
+                                              <td><?php echo $u->date2 ?></td>
+                                              <td><?php echo $u->i ?></td>
+                                              <td><?php echo $u->j ?></td>
+                                              <td><?php echo $u->k ?></td>
+                                              <td><?php echo $u->d ?></td>
+                                              <td><?php echo $u->e ?></td>
+                                              <td><?php echo $u->f ?></td>
+                                              <td><?php echo $u->g ?></td>
+                                              <td><?php echo $u->h ?></td>
                                           </tr>
                                       <?php
                                         }
                                         ?>
                                   </tbody>
                               </table>
-                              <?php } ?>
+                          <?php } ?>
 
-                             
-                             
-                              <?php if ($menu == "IPS" || $menu == "NTP" || $menu == "Router" || $menu == "Switch" ||  $menu == "UPS"  ||  $menu == "Video Encoder"  ||  $menu == "Storage Device" ||  $menu == "Room Sensor"   ) { ?>
+
+
+                          <?php if ($menu == "IPS" || $menu == "NTP" || $menu == "Router" || $menu == "Switch" ||  $menu == "UPS"  ||  $menu == "Video Encoder"  ||  $menu == "Storage Device" ||  $menu == "Room Sensor") { ?>
                               <table id="example" class="table align-items-center table-flush">
                                   <thead class="thead-light">
                                       <tr class="text-center">
@@ -84,28 +84,28 @@
                                         foreach ($pengumuman as $u) {
                                         ?>
                                           <tr class="text-center">
-                                              <td style="width: 60px;"><?php echo $i ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
+                                              <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
+                                              <td><?php echo $u->jenis ?></td>
+                                              <td><?php echo $u->date1 ?></td>
+                                              <td><?php echo $u->date2 ?></td>
+                                              <td><?php echo $u->i ?></td>
+                                              <td><?php echo $u->j ?></td>
+                                              <td><?php echo $u->k ?></td>
+                                              <td><?php echo $u->d ?></td>
+                                              <td><?php echo $u->e ?></td>
+                                              <td><?php echo $u->f ?></td>
+                                              <td><?php echo $u->g ?></td>
+                                              <td><?php echo $u->h ?></td>
                                           </tr>
                                       <?php
                                         }
                                         ?>
                                   </tbody>
                               </table>
-                              <?php } ?>
+                          <?php } ?>
 
 
-                              <?php if ($menu == "Smart Phone" || $menu == "Tablet") { ?>
+                          <?php if ($menu == "Smart Phone" || $menu == "Tablet") { ?>
                               <table id="example" class="table align-items-center table-flush">
                                   <thead class="thead-light">
                                       <tr class="text-center">
@@ -130,28 +130,27 @@
                                         foreach ($pengumuman as $u) {
                                         ?>
                                           <tr class="text-center">
-                                              <td style="width: 60px;"><?php echo $i ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->start_date ?></td>
+                                              <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
+                                              <td><?php echo $u->jenis ?></td>
+                                              <td><?php echo $u->date1 ?></td>
+                                              <td><?php echo $u->date2 ?></td>
+                                              <td><?php echo $u->i ?></td>
+                                              <td><?php echo $u->j ?></td>
+                                              <td><?php echo $u->k ?></td>
+                                              <td><?php echo $u->d ?></td>
+                                              <td><?php echo $u->e ?></td>
+                                              <td><?php echo $u->f ?></td>
+                                              <td><?php echo $u->g ?></td>
+                                              <td><?php echo $u->h ?></td>
                                           </tr>
                                       <?php
                                         }
                                         ?>
                                   </tbody>
                               </table>
-                              <?php } ?>
+                          <?php } ?>
 
-                              <?php if ($menu == "Server") { ?>
+                          <?php if ($menu == "Server") { ?>
                               <table id="example" class="table align-items-center table-flush">
                                   <thead class="thead-light">
                                       <tr class="text-center">
@@ -174,26 +173,27 @@
                                         foreach ($pengumuman as $u) {
                                         ?>
                                           <tr class="text-center">
-                                              <td style="width: 60px;"><?php echo $i ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
+                                              <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
+                                              <td><?php echo $u->jenis ?></td>
+                                              <td><?php echo $u->date1 ?></td>
+                                              <td><?php echo $u->date2 ?></td>
+                                              <td><?php echo $u->i ?></td>
+                                              <td><?php echo $u->j ?></td>
+                                              <td><?php echo $u->k ?></td>
+                                              <td><?php echo $u->d ?></td>
+                                              <td><?php echo $u->e ?></td>
+                                              <td><?php echo $u->f ?></td>
+                                              <td><?php echo $u->g ?></td>
+                                              <td><?php echo $u->h ?></td>
                                           </tr>
                                       <?php
                                         }
                                         ?>
                                   </tbody>
                               </table>
-                              <?php } ?>
+                          <?php } ?>
 
-                              <?php if ($menu == "Virtual Hosts") { ?>
+                          <?php if ($menu == "Virtual Hosts") { ?>
                               <table id="example" class="table align-items-center table-flush">
                                   <thead class="thead-light">
                                       <tr class="text-center">
@@ -212,22 +212,23 @@
                                         foreach ($pengumuman as $u) {
                                         ?>
                                           <tr class="text-center">
-                                              <td style="width: 60px;"><?php echo $i ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
+                                              <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
+                                              <td><?php echo $u->jenis ?></td>
+                                              <td><?php echo $u->date1 ?></td>
+                                              <td><?php echo $u->date2 ?></td>
+                                              <td><?php echo $u->i ?></td>
+                                              <td><?php echo $u->j ?></td>
+                                              <td><?php echo $u->k ?></td>
+                                              <td><?php echo $u->d ?></td>
                                           </tr>
                                       <?php
                                         }
                                         ?>
                                   </tbody>
                               </table>
-                              <?php } ?>
+                          <?php } ?>
 
-                              <?php if ($menu == "Virtual Machines") { ?>
+                          <?php if ($menu == "Virtual Machines") { ?>
                               <table id="example" class="table align-items-center table-flush">
                                   <thead class="thead-light">
                                       <tr class="text-center">
@@ -246,26 +247,25 @@
                                         foreach ($pengumuman as $u) {
                                         ?>
                                           <tr class="text-center">
-                                              <td style="width: 60px;"><?php echo $i ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
-                                              <td><?php echo $u->judul ?></td>
-                                              <td><?php echo $u->start_date ?></td>
-                                              <td><?php echo $u->end_date ?></td>
+                                          <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
+                                              <td><?php echo $u->jenis ?></td>
+                                              <td><?php echo $u->date1 ?></td>
+                                              <td><?php echo $u->date2 ?></td>
+                                              <td><?php echo $u->i ?></td>
+                                              <td><?php echo $u->j ?></td>\
                                           </tr>
                                       <?php
                                         }
                                         ?>
                                   </tbody>
                               </table>
-                              <?php } ?>
-
-                              
+                          <?php } ?>
 
 
 
-                                        
+
+
+
                       </div>
                   </div>
               </div>
