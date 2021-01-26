@@ -14,16 +14,16 @@
                             <div class="col-lg-6">
                                 <div class="form-group ">
                                     <label>Name</label>
-                                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                                 </div>
                                 <div class="form-group ">
                                     <label>Business Impact</label>
-                                    <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                                    <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                                 </div>
                                 <div class="form-group">
                                     <label>Product</label>
                                     <select style=" height:50px;" class="form-control selectpicker" id="category" name="kategori">
-                                        <option>---- Pilih Kategori ---- </option>
+                                        <option>---- Pilih Product ---- </option>
                                         <?php
                                         foreach ($kategori as $u) {
                                         ?>
@@ -34,7 +34,7 @@
                                 <div class="form-group">
                                     <label>nama lokasi</label>
                                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                                        <option value="">---- Pilih Status ---- </option>
+                                        <option value="">---- Pilih Lokasi ---- </option>
                                         <option value="Open">Open</option>
                                         <option value="Close">Close</option>
                                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -43,7 +43,7 @@
                                 <div class="form-group">
                                     <label>kota</label>
                                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                                        <option value="">---- Pilih Status ---- </option>
+                                        <option value="">---- Pilih Lokasi ---- </option>
                                         <option value="Open">Open</option>
                                         <option value="Close">Close</option>
                                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -52,7 +52,7 @@
                                 <div class="form-group">
                                     <label>parent lokasi</label>
                                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                                        <option value="">---- Pilih PJ ---- </option>
+                                        <option value="">---- Pilih Parent Lokasi ---- </option>
                                         <?php
                                         foreach ($m_pj as $u) {
                                         ?>
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>asset tag :</label>
-                                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                                    <input class="form-control" id="count_data" name="count_a" type="text" >
                                 </div>
                                 <div class="form-group">
                                     <label>vendor name : </label>
@@ -119,67 +119,67 @@
                     <div class="col-lg-6">
                         <div class="form-group ">
                             <label>Name</label>
-                            <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                            <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Firmware Revision</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Subnet Mask</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Os Version</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>CPU (Mb)</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Flash Size (Mb)</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>NvRam Size (Kb)</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>CPU Revision</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Description</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Product</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Mac Address</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>IP Address</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Estimated Bandwidth</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>DRAM Size</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Business Impact</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Firmware Revision</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
 
                     </div>
@@ -187,16 +187,16 @@
 
                         <div class="form-group ">
                             <label>IP Address</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Description</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                         </div>
                         <div class="form-group">
                             <label>Product</label>
                             <select style=" height:50px;" class="form-control selectpicker" id="category" name="kategori">
-                                <option>---- Pilih Kategori ---- </option>
+                                <option>---- Pilih Product ---- </option>
                                 <?php
                                 foreach ($kategori as $u) {
                                 ?>
@@ -207,7 +207,7 @@
                         <div class="form-group">
                             <label>nama lokasi</label>
                             <select style=" height:50px;" class="form-control selectpicker" name="status">
-                                <option value="">---- Pilih Status ---- </option>
+                                <option value="">---- Pilih Lokasi ---- </option>
                                 <option value="Open">Open</option>
                                 <option value="Close">Close</option>
                                 <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -216,7 +216,7 @@
                         <div class="form-group">
                             <label>kota</label>
                             <select style=" height:50px;" class="form-control selectpicker" name="status">
-                                <option value="">---- Pilih Status ---- </option>
+                                <option value="">---- Pilih Kota ---- </option>
                                 <option value="Open">Open</option>
                                 <option value="Close">Close</option>
                                 <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -225,7 +225,7 @@
                         <div class="form-group">
                             <label>parent lokasi</label>
                             <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                                <option value="">---- Pilih PJ ---- </option>
+                                <option value="">---- Pilih Parent Lokasi ---- </option>
                                 <?php
                                 foreach ($m_pj as $u) {
                                 ?>
@@ -243,7 +243,7 @@
                         </div>
                         <div class="form-group">
                             <label>asset tag :</label>
-                            <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                            <input class="form-control" id="count_data" name="count_a" type="text" >
                         </div>
                         <div class="form-group">
                             <label>vendor name : </label>
@@ -290,28 +290,28 @@
                 <div class="col-lg-6">
                     <div class="form-group ">
                         <label>Name</label>
-                        <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                        <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>Business Impact</label>
-                        <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                        <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>Firmware Revision</label>
-                        <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                        <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>IP Address</label>
-                        <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                        <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>Description</label>
-                        <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                        <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                     </div>
                     <div class="form-group">
                         <label>Product</label>
                         <select style=" height:50px;" class="form-control selectpicker" id="category" name="kategori">
-                            <option>---- Pilih Kategori ---- </option>
+                            <option>---- Pilih Product ---- </option>
                             <?php
                             foreach ($kategori as $u) {
                             ?>
@@ -322,7 +322,7 @@
                     <div class="form-group">
                         <label>nama lokasi</label>
                         <select style=" height:50px;" class="form-control selectpicker" name="status">
-                            <option value="">---- Pilih Status ---- </option>
+                            <option value="">---- Pilih Lokasi ---- </option>
                             <option value="Open">Open</option>
                             <option value="Close">Close</option>
                             <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -331,7 +331,7 @@
                     <div class="form-group">
                         <label>kota</label>
                         <select style=" height:50px;" class="form-control selectpicker" name="status">
-                            <option value="">---- Pilih Status ---- </option>
+                            <option value="">---- Pilih Lokasi ---- </option>
                             <option value="Open">Open</option>
                             <option value="Close">Close</option>
                             <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -340,7 +340,7 @@
                     <div class="form-group">
                         <label>parent lokasi</label>
                         <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                            <option value="">---- Pilih PJ ---- </option>
+                            <option value="">---- Pilih Parent Lokasi ---- </option>
                             <?php
                             foreach ($m_pj as $u) {
                             ?>
@@ -358,7 +358,7 @@
                     </div>
                     <div class="form-group">
                         <label>asset tag :</label>
-                        <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                        <input class="form-control" id="count_data" name="count_a" type="text" >
                     </div>
 
 
@@ -409,36 +409,36 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Serial Number</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Mac Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Business Impact</label>
-                    <input type="text"  class="form-control" name="user" placeholder="Masukan Nama">
+                    <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -447,7 +447,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -456,7 +456,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -474,7 +474,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -528,32 +528,32 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Software Version</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Hardware Version</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -562,7 +562,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -571,7 +571,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -589,7 +589,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -642,36 +642,36 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>System Type</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Os Version</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Bussines Impact</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -680,7 +680,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -689,7 +689,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -707,7 +707,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -759,36 +759,36 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>System Type</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Os Version</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Bussines Impact</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -797,7 +797,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -806,7 +806,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -824,7 +824,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -874,40 +874,40 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>FootPrint</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Rack unit </label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Power Consumption</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Rack unit in Use</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Bussines Impact</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -916,7 +916,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -925,7 +925,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -943,7 +943,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -996,24 +996,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1022,7 +1022,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1031,7 +1031,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -1049,7 +1049,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -1101,24 +1101,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1127,7 +1127,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1136,7 +1136,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -1154,7 +1154,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -1208,24 +1208,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1234,7 +1234,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1243,7 +1243,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -1261,7 +1261,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -1315,24 +1315,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1341,7 +1341,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1350,7 +1350,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -1368,7 +1368,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -1422,24 +1422,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1448,7 +1448,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1457,7 +1457,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -1475,7 +1475,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -1528,24 +1528,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1554,7 +1554,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1563,7 +1563,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -1581,7 +1581,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -1633,24 +1633,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1659,7 +1659,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1668,7 +1668,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -1686,7 +1686,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -1739,24 +1739,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1765,7 +1765,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1774,7 +1774,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -1792,7 +1792,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -1845,24 +1845,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1871,7 +1871,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1880,7 +1880,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -1898,7 +1898,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -1950,24 +1950,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1976,7 +1976,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -1985,7 +1985,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -2003,7 +2003,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -2055,24 +2055,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -2081,7 +2081,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -2090,7 +2090,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -2108,7 +2108,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
@@ -2160,24 +2160,24 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Nama">
+                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -2186,7 +2186,7 @@
                 <div class="form-group">
                     <label>kota</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Status ---- </option>
+                        <option value="">---- Pilih Lokasi ---- </option>
                         <option value="Open">Open</option>
                         <option value="Close">Close</option>
                         <option value="Tindak Lanjut">Tindak Lanjut</option>
@@ -2195,7 +2195,7 @@
                 <div class="form-group">
                     <label>parent lokasi</label>
                     <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih PJ ---- </option>
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
                         <?php
                         foreach ($m_pj as $u) {
                         ?>
@@ -2213,7 +2213,7 @@
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" readonly>
+                    <input class="form-control" id="count_data" name="count_a" type="text" >
                 </div>
 
 
