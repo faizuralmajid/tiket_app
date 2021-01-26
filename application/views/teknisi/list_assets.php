@@ -34,7 +34,7 @@
                                   <tbody>
                                       <?php
                                         $i = 1;
-                                        foreach ($pengumuman as $u) {
+                                        foreach ($asset as $u) {
                                         ?>
                                           <tr class="text-center">
                                               <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
@@ -81,7 +81,7 @@
                                   <tbody>
                                       <?php
                                         $i = 1;
-                                        foreach ($pengumuman as $u) {
+                                        foreach ($asset as $u) {
                                         ?>
                                           <tr class="text-center">
                                               <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
@@ -127,7 +127,7 @@
                                   <tbody>
                                       <?php
                                         $i = 1;
-                                        foreach ($pengumuman as $u) {
+                                        foreach ($asset as $u) {
                                         ?>
                                           <tr class="text-center">
                                               <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
@@ -170,7 +170,7 @@
                                   <tbody>
                                       <?php
                                         $i = 1;
-                                        foreach ($pengumuman as $u) {
+                                        foreach ($asset as $u) {
                                         ?>
                                           <tr class="text-center">
                                               <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
@@ -209,7 +209,7 @@
                                   <tbody>
                                       <?php
                                         $i = 1;
-                                        foreach ($pengumuman as $u) {
+                                        foreach ($asset as $u) {
                                         ?>
                                           <tr class="text-center">
                                               <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
@@ -244,7 +244,7 @@
                                   <tbody>
                                       <?php
                                         $i = 1;
-                                        foreach ($pengumuman as $u) {
+                                        foreach ($asset as $u) {
                                         ?>
                                           <tr class="text-center">
                                           <td style="width: 60px;"><?php echo $u->nama_asset ?></td>

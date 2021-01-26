@@ -132,7 +132,7 @@ class Teknisi extends CI_Controller
 		$this->load->model('Masset');
 		$data['nama'] = $this->session->userdata('nama');
 		$data['level'] = $this->session->userdata('level');
-		$data['pengumuman'] = $this->Masset->tampil_data_group($menu)->result();
+		$data['asset'] = $this->Masset->tampil_data_group($menu)->result();
 		$data['menu'] = $menu;
 		$this->load->view('navbar/nav_teknisi', $data);
 		$this->load->view('teknisi/list_assets', $data);
