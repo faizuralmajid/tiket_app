@@ -9,101 +9,89 @@
                 <h3 class="font-weight-bold" style="color: #34395e!important; padding-top: 15px;"><?= $menu ?> </h3>
                 <hr>
                 <?php if ($menu == "Access Point") { ?>
-                    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+                    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
                         <div class="row" style="width: 100%;">
                             <div class="col-lg-6">
                                 <div class="form-group ">
                                     <label>Name</label>
-                                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                                 </div>
                                 <div class="form-group ">
                                     <label>Business Impact</label>
-                                    <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                                    <input type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
                                 </div>
                                 <div class="form-group">
                                     <label>Product</label>
-                                    <select style=" height:50px;" class="form-control selectpicker" id="category" name="kategori">
+                                    <select style=" height:50px;" class="form-control selectpicker" name="a">
                                         <option>---- Pilih Product ---- </option>
-                                        <?php
-                                        foreach ($kategori as $u) {
-                                        ?>
-                                            <option <?php if ($_GET['menu'] == $u->kategori) : ?> selected <?php endif ?> value="<?php echo $u->kategori ?>"><?php echo $u->kategori ?></option>
-                                        <?php } ?>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>nama lokasi</label>
-                                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                                    <select style=" height:50px;" class="form-control selectpicker" name="b">
                                         <option value="">---- Pilih Lokasi ---- </option>
-                                        <option value="Open">Open</option>
-                                        <option value="Close">Close</option>
-                                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>kota</label>
-                                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                                    <select style=" height:50px;" class="form-control selectpicker" name="c">
                                         <option value="">---- Pilih Lokasi ---- </option>
-                                        <option value="Open">Open</option>
-                                        <option value="Close">Close</option>
-                                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>parent lokasi</label>
-                                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                                        <?php
-                                        foreach ($m_pj as $u) {
-                                        ?>
-                                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                                        <?php } ?>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>org serial number : </label>
-                                    <input class="form-control" id="ass" type="text" name="assets">
+                                    <input class="form-control" id="ass" type="text" name="e">
                                 </div>
                                 <div class="form-group">
                                     <label>Barcode : </label>
-                                    <input class="form-control" id="ass" type="text" name="assets">
+                                    <input class="form-control" id="ass" type="text" name="f">
                                 </div>
                                 <div class="form-group">
                                     <label>asset tag :</label>
-                                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                                    <input class="form-control" id="count_data" name="g" type="text">
                                 </div>
                                 <div class="form-group">
                                     <label>vendor name : </label>
-                                    <input class="form-control" type="text" name="start_date">
+                                    <input class="form-control" type="text" name="h">
                                 </div>
 
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Purchase Cost</label>
-                                    <input class="form-control" type="text" name="end_date">
+                                    <input class="form-control" type="text" name="i">
                                 </div>
                                 <div class="form-group">
                                     <label>acquisition date :</label>
-                                    <input class="form-control" type="date" name="end_date">
+                                    <input class="form-control" type="date" name="date1" required>
                                 </div>
                                 <div class="form-group">
                                     <label>expiry date :</label>
-                                    <input class="form-control" type="date" name="end_date">
+                                    <input class="form-control" type="date" name="date2" required>
                                 </div>
                                 <div class="form-group">
                                     <label>warrant expiry date :</label>
-                                    <input class="form-control" type="date" name="end_date">
+                                    <input class="form-control" type="date" name="date3" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Single Line :</label>
-                                    <input class="form-control" type="text" name="end_date">
+                                    <input class="form-control" type="text" name="j">
                                 </div>
                                 <div class="form-group">
                                     <label>Multi Line :</label>
 
                                 </div>
-                                <textarea name="Text1" rows="5" cols="100"></textarea>
+                                <textarea name="k" rows="5" cols="100"></textarea>
                             </div>
                             <p style="padding-bottom: 20px;">
                         </div>
@@ -113,73 +101,76 @@
             </form>
         <?php } ?>
 
-        <?php if ($menu == "Router" || $menu == "Switch") { ?>
-            <form method="POST" action="<?= base_url('staff/create_request') ?>">
+
+
+
+        <?php if ($menu == "Router" || $menu == "Switch" || $menu == "Server") { ?>
+            <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
                 <div class="row" style="width: 100%;">
                     <div class="col-lg-6">
                         <div class="form-group ">
                             <label>Name</label>
-                            <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Firmware Revision</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Subnet Mask</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Os Version</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>CPU (Mb)</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="d" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Flash Size (Mb)</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="e" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>NvRam Size (Kb)</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="f" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>CPU Revision</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="g" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Description</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="h" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Product</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="i" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Mac Address</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="j" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>IP Address</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="k" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Estimated Bandwidth</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="l" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>DRAM Size</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="m" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Business Impact</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Firmware Revision</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="o" placeholder="Masukan Data">
                         </div>
 
                     </div>
@@ -187,93 +178,80 @@
 
                         <div class="form-group ">
                             <label>IP Address</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="p" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Description</label>
-                            <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                            <input type="text" class="form-control" name="q" placeholder="Masukan Data">
                         </div>
                         <div class="form-group">
                             <label>Product</label>
-                            <select style=" height:50px;" class="form-control selectpicker" id="category" name="kategori">
+                            <select style=" height:50px;" class="form-control selectpicker" name="r">
                                 <option>---- Pilih Product ---- </option>
-                                <?php
-                                foreach ($kategori as $u) {
-                                ?>
-                                    <option <?php if ($_GET['menu'] == $u->kategori) : ?> selected <?php endif ?> value="<?php echo $u->kategori ?>"><?php echo $u->kategori ?></option>
-                                <?php } ?>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>nama lokasi</label>
-                            <select style=" height:50px;" class="form-control selectpicker" name="status">
+                            <select style=" height:50px;" class="form-control selectpicker" name="s">
                                 <option value="">---- Pilih Lokasi ---- </option>
-                                <option value="Open">Open</option>
-                                <option value="Close">Close</option>
-                                <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                             </select>
                         </div>
                         <div class="form-group">
                             <label>kota</label>
-                            <select style=" height:50px;" class="form-control selectpicker" name="status">
+                            <select style=" height:50px;" class="form-control selectpicker" name="t">
                                 <option value="">---- Pilih Kota ---- </option>
-                                <option value="Open">Open</option>
-                                <option value="Close">Close</option>
-                                <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                             </select>
                         </div>
                         <div class="form-group">
                             <label>parent lokasi</label>
-                            <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                            <select style=" height:50px;" class="form-control selectpicker" name="u">
                                 <option value="">---- Pilih Parent Lokasi ---- </option>
-                                <?php
-                                foreach ($m_pj as $u) {
-                                ?>
-                                    <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                                <?php } ?>
+
                             </select>
                         </div>
                         <div class="form-group">
                             <label>org serial number : </label>
-                            <input class="form-control" id="ass" type="text" name="assets">
+                            <input class="form-control" id="ass" type="text" name="v">
                         </div>
                         <div class="form-group">
                             <label>Barcode : </label>
-                            <input class="form-control" id="ass" type="text" name="assets">
+                            <input class="form-control" id="ass" type="text" name="w">
                         </div>
                         <div class="form-group">
                             <label>asset tag :</label>
-                            <input class="form-control" id="count_data" name="count_a" type="text" >
+                            <input class="form-control" id="count_data" name="count_a" type="x">
                         </div>
                         <div class="form-group">
                             <label>vendor name : </label>
-                            <input class="form-control" type="text" name="start_date">
+                            <input class="form-control" type="text" name="y">
                         </div>
                         <div class="form-group">
                             <label>Purchase Cost</label>
-                            <input class="form-control" type="text" name="end_date">
+                            <input class="form-control" type="text" name="z">
                         </div>
                         <div class="form-group">
                             <label>acquisition date :</label>
-                            <input class="form-control" type="date" name="end_date">
+                            <input class="form-control" type="date" name="date1" required>
                         </div>
                         <div class="form-group">
                             <label>expiry date :</label>
-                            <input class="form-control" type="date" name="end_date">
+                            <input class="form-control" type="date" name="date2" required>
                         </div>
                         <div class="form-group">
                             <label>warrant expiry date :</label>
-                            <input class="form-control" type="date" name="end_date">
+                            <input class="form-control" type="date" name="date3" required>
                         </div>
                         <div class="form-group">
                             <label>Single Line :</label>
-                            <input class="form-control" type="text" name="end_date">
+                            <input class="form-control" type="text" name="aa">
                         </div>
                         <div class="form-group">
                             <label>Multi Line :</label>
 
                         </div>
-                        <textarea name="Text1" rows="5" cols="100"></textarea>
+                        <textarea name="ab" rows="5" cols="100"></textarea>
                     </div>
                     <p style="padding-bottom: 20px;">
                 </div>
@@ -284,81 +262,71 @@
     <?php } ?>
 
 
+
+
     <?php if ($menu == "Firewall") { ?>
-        <form method="POST" action="<?= base_url('staff/create_request') ?>">
+        <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
             <div class="row" style="width: 100%;">
                 <div class="col-lg-6">
                     <div class="form-group ">
                         <label>Name</label>
-                        <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                        <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>Business Impact</label>
-                        <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                        <input type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>Firmware Revision</label>
-                        <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                        <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>IP Address</label>
-                        <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                        <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>Description</label>
-                        <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                        <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                     </div>
                     <div class="form-group">
                         <label>Product</label>
-                        <select style=" height:50px;" class="form-control selectpicker" id="category" name="kategori">
+                        <select style=" height:50px;" class="form-control selectpicker" name="d">
                             <option>---- Pilih Product ---- </option>
-                            <?php
-                            foreach ($kategori as $u) {
-                            ?>
-                                <option <?php if ($_GET['menu'] == $u->kategori) : ?> selected <?php endif ?> value="<?php echo $u->kategori ?>"><?php echo $u->kategori ?></option>
-                            <?php } ?>
+                           
                         </select>
                     </div>
                     <div class="form-group">
                         <label>nama lokasi</label>
-                        <select style=" height:50px;" class="form-control selectpicker" name="status">
+                        <select style=" height:50px;" class="form-control selectpicker" name="e">
                             <option value="">---- Pilih Lokasi ---- </option>
-                            <option value="Open">Open</option>
-                            <option value="Close">Close</option>
-                            <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                         </select>
                     </div>
                     <div class="form-group">
                         <label>kota</label>
-                        <select style=" height:50px;" class="form-control selectpicker" name="status">
+                        <select style=" height:50px;" class="form-control selectpicker" name="f">
                             <option value="">---- Pilih Lokasi ---- </option>
-                            <option value="Open">Open</option>
-                            <option value="Close">Close</option>
-                            <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                         </select>
                     </div>
                     <div class="form-group">
                         <label>parent lokasi</label>
-                        <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                        <select style=" height:50px;" class="form-control selectpicker" name="g">
                             <option value="">---- Pilih Parent Lokasi ---- </option>
-                            <?php
-                            foreach ($m_pj as $u) {
-                            ?>
-                                <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                            <?php } ?>
+                            
                         </select>
                     </div>
                     <div class="form-group">
                         <label>org serial number : </label>
-                        <input class="form-control" id="ass" type="text" name="assets">
+                        <input class="form-control" id="ass" type="text" name="h">
                     </div>
                     <div class="form-group">
                         <label>Barcode : </label>
-                        <input class="form-control" id="ass" type="text" name="assets">
+                        <input class="form-control" id="ass" type="text" name="i">
                     </div>
                     <div class="form-group">
                         <label>asset tag :</label>
-                        <input class="form-control" id="count_data" name="count_a" type="text" >
+                        <input class="form-control" id="count_data" name="j" type="text">
                     </div>
 
 
@@ -366,33 +334,33 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label>vendor name : </label>
-                        <input class="form-control" type="text" name="start_date">
+                        <input class="form-control" type="text" name="k">
                     </div>
                     <div class="form-group">
                         <label>Purchase Cost</label>
-                        <input class="form-control" type="text" name="end_date">
+                        <input class="form-control" type="text" name="l">
                     </div>
                     <div class="form-group">
                         <label>acquisition date :</label>
-                        <input class="form-control" type="date" name="end_date">
+                        <input class="form-control" type="date" name="date1">
                     </div>
                     <div class="form-group">
                         <label>expiry date :</label>
-                        <input class="form-control" type="date" name="end_date">
+                        <input class="form-control" type="date" name="date2">
                     </div>
                     <div class="form-group">
                         <label>warrant expiry date :</label>
-                        <input class="form-control" type="date" name="end_date">
+                        <input class="form-control" type="date" name="date3">
                     </div>
                     <div class="form-group">
                         <label>Single Line :</label>
-                        <input class="form-control" type="text" name="end_date">
+                        <input class="form-control" type="text" name="m">
                     </div>
                     <div class="form-group">
                         <label>Multi Line :</label>
 
                     </div>
-                    <textarea name="Text1" rows="5" cols="100"></textarea>
+                    <textarea name="n" rows="5" cols="100"></textarea>
                 </div>
                 <p style="padding-bottom: 20px;">
             </div>
@@ -404,77 +372,69 @@
 
 
 <?php if ($menu == "IP Phone") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Serial Number</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="d" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Mac Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="e" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Business Impact</label>
-                    <input type="text"  class="form-control" name="user" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="f" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="g">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="h">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="i">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="l" type="text">
                 </div>
 
 
@@ -482,33 +442,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="m">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="n">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="o">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="p" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -523,73 +483,65 @@
 
 
 <?php if ($menu == "IPS") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Software Version</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="d" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Hardware Version</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="e" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="f">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="g">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="h">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="count_a" type="k">
                 </div>
 
 
@@ -597,33 +549,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="l">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="m">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="n">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="o" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -637,77 +589,69 @@
 
 
 <?php if ($menu == "NTP") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>System Type</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="d" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Os Version</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="e" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Bussines Impact</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="f" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="g">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="h">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="i">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="l" type="text">
                 </div>
 
 
@@ -715,150 +659,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="m">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="n">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="o">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
-            </div>
-            <p style="padding-bottom: 20px;">
-        </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
-        <p style="padding-bottom: 20px;">
-            </div>
-    </form>
-<?php } ?>
-
-
-
-<?php if ($menu == "NTP") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
-        <div class="row" style="width: 100%;">
-            <div class="col-lg-6">
-                <div class="form-group ">
-                    <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
-                </div>
-                <div class="form-group ">
-                    <label>IP Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
-                </div>
-                <div class="form-group ">
-                    <label>System Type</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
-                </div>
-                <div class="form-group ">
-                    <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
-                </div>
-                <div class="form-group ">
-                    <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
-                </div>
-                <div class="form-group ">
-                    <label>Os Version</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
-                </div>
-                <div class="form-group ">
-                    <label>Bussines Impact</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
-                </div>
-                <div class="form-group">
-                    <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
-                        <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
-                        <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
-                </div>
-                <div class="form-group">
-                    <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
-                </div>
-                <div class="form-group">
-                    <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
-                </div>
-
-
-            </div>
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
-                </div>
-                <div class="form-group">
-                    <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
-                </div>
-                <div class="form-group">
-                    <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
-                </div>
-                <div class="form-group">
-                    <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
-                </div>
-                <div class="form-group">
-                    <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
-                </div>
-                <div class="form-group">
-                    <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
-                </div>
-                <div class="form-group">
-                    <label>Multi Line :</label>
-
-                </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="p" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -869,81 +696,73 @@
 <?php } ?>
 
 <?php if ($menu == "Rack") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>FootPrint</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Rack unit </label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Power Consumption</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="d" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="e" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Rack unit in Use</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="f" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Bussines Impact</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="g" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="h">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="i">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="j">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="l">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="m" type="text">
                 </div>
 
 
@@ -951,33 +770,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="n">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="o">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="p">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="q" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -991,65 +810,57 @@
 
 
 <?php if ($menu == "Room Sensor") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1057,33 +868,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -1096,65 +907,57 @@
 
 
 <?php if ($menu == "Smart Phone") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1162,33 +965,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -1203,65 +1006,57 @@
 
 
 <?php if ($menu == "Storage Device") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1269,33 +1064,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -1310,65 +1105,57 @@
 
 
 <?php if ($menu == "Tablet") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1376,33 +1163,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -1417,65 +1204,57 @@
 
 
 <?php if ($menu == "UPS") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1483,33 +1262,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -1523,65 +1302,57 @@
 
 
 <?php if ($menu == "Video Encoder") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1589,33 +1360,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -1628,65 +1399,57 @@
 
 
 <?php if ($menu == "IPS") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1694,33 +1457,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -1734,65 +1497,57 @@
 
 
 <?php if ($menu == "Projector") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1800,33 +1555,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -1840,65 +1595,57 @@
 
 
 <?php if ($menu == "TV") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1906,33 +1653,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -1945,65 +1692,57 @@
 
 
 <?php if ($menu == "Video Conference") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -2011,33 +1750,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -2050,65 +1789,57 @@
 
 
 <?php if ($menu == "Virtual Hosts") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -2116,33 +1847,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>
@@ -2155,65 +1886,57 @@
 
 
 <?php if ($menu == "Virtual Machines") { ?>
-    <form method="POST" action="<?= base_url('staff/create_request') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                <div class="form-group ">
+                               <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="user_id" placeholder="Masukan Data">
+                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="status">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <option value="Open">Open</option>
-                        <option value="Close">Close</option>
-                        <option value="Tindak Lanjut">Tindak Lanjut</option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>parent lokasi</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="pj">
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
                         <option value="">---- Pilih Parent Lokasi ---- </option>
-                        <?php
-                        foreach ($m_pj as $u) {
-                        ?>
-                            <option value="<?php echo $u->nama ?>"><?php echo $u->nama ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="assets">
+                    <input class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="text" >
+                    <input class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -2221,33 +1944,33 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="start_date">
+                    <input class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="end_date">
+                    <input class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="end_date">
+                    <input class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
 
                 </div>
-                <textarea name="Text1" rows="5" cols="100"></textarea>
+                <textarea name="l" rows="5" cols="100"></textarea>
             </div>
             <p style="padding-bottom: 20px;">
         </div>

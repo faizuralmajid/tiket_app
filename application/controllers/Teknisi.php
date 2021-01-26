@@ -18,9 +18,9 @@ class Teknisi extends CI_Controller
     window.location.href=base_url+'/tiket';
     </script>");
 		}
-    }
+	}
 
-    public function index()
+	public function index()
 	{
 		$this->load->model('Msolusi');
 		$data['level'] = $this->session->userdata('level');
@@ -134,10 +134,10 @@ class Teknisi extends CI_Controller
 		$data['level'] = $this->session->userdata('level');
 		$data['pengumuman'] = $this->Mpengumuman->tampil_data()->result();
 		$data['menu'] = $menu;
-		$this->load->view('navbar/nav_teknisi',$data);
-		$this->load->view('teknisi/list_assets',$data);
+		$this->load->view('navbar/nav_teknisi', $data);
+		$this->load->view('teknisi/list_assets', $data);
 	}
-	
+
 	public function add_assets($menu)
 	{
 		$this->load->model('Mrequest');
@@ -152,5 +152,51 @@ class Teknisi extends CI_Controller
 		$data['menu'] = $menu;
 		$this->load->view('navbar/nav_teknisi', $data);
 		$this->load->view('teknisi/add_assets', $data);
+	}
+
+
+	public function create_assets($type, $jenis)
+	{
+		$data = [
+			'type' => $type,
+			'jenis' => $jenis,
+			'nama_asset' => htmlspecialchars($this->input->post('nama', true)),
+			'created_by' => $this->session->userdata('nama'),
+			'a' => htmlspecialchars($this->input->post('a', true)),
+			'b' => htmlspecialchars($this->input->post('b', true)),
+			'c' => htmlspecialchars($this->input->post('c', true)),
+			'd' => htmlspecialchars($this->input->post('d', true)),
+			'e' => htmlspecialchars($this->input->post('e', true)),
+			'f' => htmlspecialchars($this->input->post('f', true)),
+			'g' => htmlspecialchars($this->input->post('g', true)),
+			'h' => htmlspecialchars($this->input->post('h', true)),
+			'i' => htmlspecialchars($this->input->post('i', true)),
+			'j' => htmlspecialchars($this->input->post('j', true)),
+			'k' => htmlspecialchars($this->input->post('k', true)),
+			'l' => htmlspecialchars($this->input->post('l', true)),
+			'm' => htmlspecialchars($this->input->post('m', true)),
+			'n' => htmlspecialchars($this->input->post('n', true)),
+			'o' => htmlspecialchars($this->input->post('o', true)),
+			'p' => htmlspecialchars($this->input->post('p', true)),
+			'q' => htmlspecialchars($this->input->post('q', true)),
+			'r' => htmlspecialchars($this->input->post('r', true)),
+			's' => htmlspecialchars($this->input->post('s', true)),
+			't' => htmlspecialchars($this->input->post('t', true)),
+			'u' => htmlspecialchars($this->input->post('u', true)),
+			'v' => htmlspecialchars($this->input->post('v', true)),
+			'w' => htmlspecialchars($this->input->post('w', true)),
+			'x' => htmlspecialchars($this->input->post('x', true)),
+			'y' => htmlspecialchars($this->input->post('y', true)),
+			'z' => htmlspecialchars($this->input->post('z', true)),
+			'aa' => htmlspecialchars($this->input->post('aa', true)),
+			'ab' => htmlspecialchars($this->input->post('ab', true)),
+			'bisnis' => htmlspecialchars($this->input->post('bisnis', true)),
+			'date1' => htmlspecialchars($this->input->post('date1', true)),
+			'date2' => htmlspecialchars($this->input->post('date2', true)),
+			'date3' => htmlspecialchars($this->input->post('date3', true)),
+			
+		];
+		$this->db->insert('tbl_asset', $data);
+		redirect(base_url('teknisi/list_assets/'.$jenis));
 	}
 }
