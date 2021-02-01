@@ -136,9 +136,9 @@
                                     <label>Description</label>
                                     <textarea class="ckeditor" id="ckedtor" name="body"><?= $u->body ?></textarea>
                                 </div>
-
+                                
                                 <div class="form-group" style="display: none;">
-                                    <input name="id_menu" value="<?php echo $_GET['id_menu'] ?>" id="menu_id">
+                                    <input name="id_menu" id="menu_id" readonly >
                                 </div>
 
                                 <div class="form-group" style="display: none;">
@@ -173,6 +173,13 @@
             return false;
         });
     });
+
+    $(document).ready(function() {
+        document.getElementById("menu_id").value = $('#category').val();
+        console.log("tes")
+    });
+
+
 </script>
 
 <!-- General JS Scripts -->

@@ -106,7 +106,7 @@ class Staff extends CI_Controller
 			}
 		} else {
 			$subkat = $this->Mkategori->cek('master_subkategori', $submenu, 'subkategori')->row();
-			$data['m_subkategori'] = $this->Mkategori->get_sub_category($subkat->id_kategori)->result();
+			$data['m_subkategori'] = $this->Mkategori->get_sub_category($id)->result();
 		}
 
 		$data['nama'] = $this->session->userdata('nama');

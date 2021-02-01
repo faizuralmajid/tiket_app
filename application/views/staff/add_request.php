@@ -2,11 +2,11 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1><?php echo $_GET['menu']; ?> </h1>
+            <h1 id="menu"><?php echo $_GET['menu']; ?> </h1>
         </div>
         <div class="row" syu>
             <div class="col-md-12 bg-white" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px;">
-                <h3 class="font-weight-bold" style="color: #34395e!important; padding-top: 15px;"><?php echo $_GET['submenu']; ?> </h3>
+                <h3 class="font-weight-bold" style="color: #34395e!important; padding-top: 15px;" id="test"><?php echo $_GET['submenu']; ?> </h3>
                 <hr>
                 <form method="POST" action="<?= base_url('staff/create_request') ?>">
                     <div class="row" style="width: 100%;">
@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Sub Kategori:</label>
-                                <select style=" height:50px;" class="form-control selectpicker" id="sub_category" name="sub_kategori">
+                                <select onchange="ganti()" style=" height:50px;" class="form-control selectpicker" id="sub_category" name="sub_kategori">
                                     <option >---- Pilih Sub Kategori ---- </option>
                                     <?php
                                     foreach ($m_subkategori as $u) {
@@ -149,6 +149,12 @@
             return false;
         });
     });
+
+    function ganti() {
+        $('#test').text($('#sub_category').val());
+        console.log($('#sub_category').val());
+    }
+
 </script>
 
 <!-- General JS Scripts -->
@@ -165,6 +171,7 @@
         console.log(count);
     } // end of function
 
+    $
 </script>
 
 

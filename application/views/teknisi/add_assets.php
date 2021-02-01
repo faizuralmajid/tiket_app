@@ -14,11 +14,11 @@
                             <div class="col-lg-6">
                                 <div class="form-group ">
                                     <label>Name</label>
-                                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                                 </div>
                                 <div class="form-group ">
                                     <label>Business Impact</label>
-                                    <input type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
+                                    <input required type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
                                 </div>
                                 <div class="form-group">
                                     <label>Product</label>
@@ -50,42 +50,42 @@
                                 </div>
                                 <div class="form-group">
                                     <label>org serial number : </label>
-                                    <input class="form-control" id="ass" type="text" name="e">
+                                    <input required class="form-control" id="ass" type="text" name="e">
                                 </div>
                                 <div class="form-group">
                                     <label>Barcode : </label>
-                                    <input class="form-control" id="ass" type="text" name="f">
+                                    <input required class="form-control" id="ass" type="text" name="f">
                                 </div>
                                 <div class="form-group">
                                     <label>asset tag :</label>
-                                    <input class="form-control" id="count_data" name="g" type="text">
+                                    <input required class="form-control" id="count_data" name="g" type="text">
                                 </div>
                                 <div class="form-group">
                                     <label>vendor name : </label>
-                                    <input class="form-control" type="text" name="h">
+                                    <input required class="form-control" type="text" name="h">
                                 </div>
 
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Purchase Cost</label>
-                                    <input class="form-control" type="text" name="i">
+                                    <input required class="form-control" type="text" name="i">
                                 </div>
                                 <div class="form-group">
                                     <label>acquisition date :</label>
-                                    <input class="form-control" type="date" name="date1" required>
+                                    <input required class="form-control" type="date" name="date1" required>
                                 </div>
                                 <div class="form-group">
                                     <label>expiry date :</label>
-                                    <input class="form-control" type="date" name="date2" required>
+                                    <input required class="form-control" type="date" name="date2" required>
                                 </div>
                                 <div class="form-group">
                                     <label>warrant expiry date :</label>
-                                    <input class="form-control" type="date" name="date3" required>
+                                    <input required class="form-control" type="date" name="date3" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Single Line :</label>
-                                    <input class="form-control" type="text" name="j">
+                                    <input required class="form-control" type="text" name="j">
                                 </div>
                                 <div class="form-group">
                                     <label>Multi Line :</label>
@@ -95,7 +95,7 @@
                             </div>
                             <p style="padding-bottom: 20px;">
                         </div>
-                        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+                        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
                         <p style="padding-bottom: 20px;">
             </div>
             </form>
@@ -110,67 +110,67 @@
                     <div class="col-lg-6">
                         <div class="form-group ">
                             <label>Name</label>
-                            <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Firmware Revision</label>
-                            <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Subnet Mask</label>
-                            <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Os Version</label>
-                            <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>CPU (Mb)</label>
-                            <input type="text" class="form-control" name="d" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="d" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Flash Size (Mb)</label>
-                            <input type="text" class="form-control" name="e" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="e" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>NvRam Size (Kb)</label>
-                            <input type="text" class="form-control" name="f" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="f" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>CPU Revision</label>
-                            <input type="text" class="form-control" name="g" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="g" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Description</label>
-                            <input type="text" class="form-control" name="h" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="h" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Product</label>
-                            <input type="text" class="form-control" name="i" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="i" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Mac Address</label>
-                            <input type="text" class="form-control" name="j" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="j" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>IP Address</label>
-                            <input type="text" class="form-control" name="k" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="k" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Estimated Bandwidth</label>
-                            <input type="text" class="form-control" name="l" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="l" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>DRAM Size</label>
-                            <input type="text" class="form-control" name="m" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="m" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Business Impact</label>
-                            <input type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Firmware Revision</label>
-                            <input type="text" class="form-control" name="o" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="o" placeholder="Masukan Data">
                         </div>
 
                     </div>
@@ -178,11 +178,11 @@
 
                         <div class="form-group ">
                             <label>IP Address</label>
-                            <input type="text" class="form-control" name="p" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="p" placeholder="Masukan Data">
                         </div>
                         <div class="form-group ">
                             <label>Description</label>
-                            <input type="text" class="form-control" name="q" placeholder="Masukan Data">
+                            <input required type="text" class="form-control" name="q" placeholder="Masukan Data">
                         </div>
                         <div class="form-group">
                             <label>Product</label>
@@ -213,39 +213,39 @@
                         </div>
                         <div class="form-group">
                             <label>org serial number : </label>
-                            <input class="form-control" id="ass" type="text" name="v">
+                            <input required class="form-control" id="ass" type="text" name="v">
                         </div>
                         <div class="form-group">
                             <label>Barcode : </label>
-                            <input class="form-control" id="ass" type="text" name="w">
+                            <input required class="form-control" id="ass" type="text" name="w">
                         </div>
                         <div class="form-group">
                             <label>asset tag :</label>
-                            <input class="form-control" id="count_data" name="count_a" type="x">
+                            <input required class="form-control" id="count_data" name="count_a" type="x">
                         </div>
                         <div class="form-group">
                             <label>vendor name : </label>
-                            <input class="form-control" type="text" name="y">
+                            <input required class="form-control" type="text" name="y">
                         </div>
                         <div class="form-group">
                             <label>Purchase Cost</label>
-                            <input class="form-control" type="text" name="z">
+                            <input required class="form-control" type="text" name="z">
                         </div>
                         <div class="form-group">
                             <label>acquisition date :</label>
-                            <input class="form-control" type="date" name="date1" required>
+                            <input required class="form-control" type="date" name="date1" required>
                         </div>
                         <div class="form-group">
                             <label>expiry date :</label>
-                            <input class="form-control" type="date" name="date2" required>
+                            <input required class="form-control" type="date" name="date2" required>
                         </div>
                         <div class="form-group">
                             <label>warrant expiry date :</label>
-                            <input class="form-control" type="date" name="date3" required>
+                            <input required class="form-control" type="date" name="date3" required>
                         </div>
                         <div class="form-group">
                             <label>Single Line :</label>
-                            <input class="form-control" type="text" name="aa">
+                            <input required class="form-control" type="text" name="aa">
                         </div>
                         <div class="form-group">
                             <label>Multi Line :</label>
@@ -255,7 +255,7 @@
                     </div>
                     <p style="padding-bottom: 20px;">
                 </div>
-                <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+                <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
                 <p style="padding-bottom: 20px;">
         </div>
         </form>
@@ -270,29 +270,29 @@
                 <div class="col-lg-6">
                     <div class="form-group ">
                         <label>Name</label>
-                        <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                        <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>Business Impact</label>
-                        <input type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
+                        <input required type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>Firmware Revision</label>
-                        <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                        <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>IP Address</label>
-                        <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                        <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                     </div>
                     <div class="form-group ">
                         <label>Description</label>
-                        <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                        <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                     </div>
                     <div class="form-group">
                         <label>Product</label>
                         <select style=" height:50px;" class="form-control selectpicker" name="d">
                             <option>---- Pilih Product ---- </option>
-                           
+
                         </select>
                     </div>
                     <div class="form-group">
@@ -313,20 +313,20 @@
                         <label>parent lokasi</label>
                         <select style=" height:50px;" class="form-control selectpicker" name="g">
                             <option value="">---- Pilih Parent Lokasi ---- </option>
-                            
+
                         </select>
                     </div>
                     <div class="form-group">
                         <label>org serial number : </label>
-                        <input class="form-control" id="ass" type="text" name="h">
+                        <input required class="form-control" id="ass" type="text" name="h">
                     </div>
                     <div class="form-group">
                         <label>Barcode : </label>
-                        <input class="form-control" id="ass" type="text" name="i">
+                        <input required class="form-control" id="ass" type="text" name="i">
                     </div>
                     <div class="form-group">
                         <label>asset tag :</label>
-                        <input class="form-control" id="count_data" name="j" type="text">
+                        <input required class="form-control" id="count_data" name="j" type="text">
                     </div>
 
 
@@ -334,27 +334,27 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label>vendor name : </label>
-                        <input class="form-control" type="text" name="k">
+                        <input required class="form-control" type="text" name="k">
                     </div>
                     <div class="form-group">
                         <label>Purchase Cost</label>
-                        <input class="form-control" type="text" name="l">
+                        <input required class="form-control" type="text" name="l">
                     </div>
                     <div class="form-group">
                         <label>acquisition date :</label>
-                        <input class="form-control" type="date" name="date1">
+                        <input required class="form-control" type="date" name="date1">
                     </div>
                     <div class="form-group">
                         <label>expiry date :</label>
-                        <input class="form-control" type="date" name="date2">
+                        <input required class="form-control" type="date" name="date2">
                     </div>
                     <div class="form-group">
                         <label>warrant expiry date :</label>
-                        <input class="form-control" type="date" name="date3">
+                        <input required class="form-control" type="date" name="date3">
                     </div>
                     <div class="form-group">
                         <label>Single Line :</label>
-                        <input class="form-control" type="text" name="m">
+                        <input required class="form-control" type="text" name="m">
                     </div>
                     <div class="form-group">
                         <label>Multi Line :</label>
@@ -364,7 +364,7 @@
                 </div>
                 <p style="padding-bottom: 20px;">
             </div>
-            <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+            <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
             <p style="padding-bottom: 20px;">
 </div>
 </form>
@@ -377,31 +377,31 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Serial Number</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="d" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="d" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Mac Address</label>
-                    <input type="text" class="form-control" name="e" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="e" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Business Impact</label>
-                    <input type="text" class="form-control" name="f" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="f" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -426,15 +426,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="j">
+                    <input required class="form-control" id="ass" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="k">
+                    <input required class="form-control" id="ass" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="l" type="text">
+                    <input required class="form-control" id="count_data" name="l" type="text">
                 </div>
 
 
@@ -442,27 +442,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="m">
+                    <input required class="form-control" type="text" name="m">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="n">
+                    <input required class="form-control" type="text" name="n">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="o">
+                    <input required class="form-control" type="text" name="o">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -472,7 +472,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -488,27 +488,27 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Software Version</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="d" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="d" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Hardware Version</label>
-                    <input type="text" class="form-control" name="e" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="e" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -533,15 +533,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="i">
+                    <input required class="form-control" id="ass" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="j">
+                    <input required class="form-control" id="ass" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="count_a" type="k">
+                    <input required class="form-control" id="count_data" name="count_a" type="k">
                 </div>
 
 
@@ -549,27 +549,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="l">
+                    <input required class="form-control" type="text" name="l">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="m">
+                    <input required class="form-control" type="text" name="m">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="n">
+                    <input required class="form-control" type="text" name="n">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -579,7 +579,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -594,31 +594,31 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>IP Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>System Type</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="d" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="d" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Os Version</label>
-                    <input type="text" class="form-control" name="e" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="e" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Bussines Impact</label>
-                    <input type="text" class="form-control" name="f" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="f" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -643,15 +643,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="j">
+                    <input required class="form-control" id="ass" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="k">
+                    <input required class="form-control" id="ass" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="l" type="text">
+                    <input required class="form-control" id="count_data" name="l" type="text">
                 </div>
 
 
@@ -659,27 +659,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="m">
+                    <input required class="form-control" type="text" name="m">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="n">
+                    <input required class="form-control" type="text" name="n">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="o">
+                    <input required class="form-control" type="text" name="o">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -689,7 +689,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -701,35 +701,35 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>FootPrint</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Rack unit </label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Power Consumption</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="d" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="d" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="e" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="e" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Rack unit in Use</label>
-                    <input type="text" class="form-control" name="f" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="f" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Bussines Impact</label>
-                    <input type="text" class="form-control" name="g" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="g" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -754,15 +754,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="k">
+                    <input required class="form-control" id="ass" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="l">
+                    <input required class="form-control" id="ass" type="text" name="l">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="m" type="text">
+                    <input required class="form-control" id="count_data" name="m" type="text">
                 </div>
 
 
@@ -770,27 +770,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="n">
+                    <input required class="form-control" type="text" name="n">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="o">
+                    <input required class="form-control" type="text" name="o">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="p">
+                    <input required class="form-control" type="text" name="p">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -800,7 +800,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -815,19 +815,19 @@
             <div class="col-lg-6">
                 <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -852,15 +852,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -868,27 +868,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -898,7 +898,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -910,21 +910,21 @@
     <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -949,15 +949,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -965,27 +965,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -995,7 +995,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1009,21 +1009,21 @@
     <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1048,15 +1048,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1064,27 +1064,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1094,7 +1094,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1108,21 +1108,21 @@
     <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1147,15 +1147,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1163,27 +1163,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1193,7 +1193,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1207,21 +1207,21 @@
     <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1246,15 +1246,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1262,27 +1262,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1292,7 +1292,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1305,21 +1305,21 @@
     <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1344,15 +1344,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1360,27 +1360,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1390,7 +1390,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1402,21 +1402,21 @@
     <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1441,15 +1441,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1457,27 +1457,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1487,7 +1487,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1497,24 +1497,24 @@
 
 
 <?php if ($menu == "Projector") { ?>
-    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/Non IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1539,15 +1539,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1555,27 +1555,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1585,7 +1585,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1595,24 +1595,24 @@
 
 
 <?php if ($menu == "TV") { ?>
-    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/Non IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1637,15 +1637,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1653,27 +1653,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1683,7 +1683,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1692,24 +1692,24 @@
 
 
 <?php if ($menu == "Video Conference") { ?>
-    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/Non IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1734,15 +1734,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1750,27 +1750,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1780,7 +1780,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1789,24 +1789,24 @@
 
 
 <?php if ($menu == "Virtual Hosts") { ?>
-    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/Virtual Host/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1831,15 +1831,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1847,27 +1847,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1877,7 +1877,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
@@ -1886,24 +1886,24 @@
 
 
 <?php if ($menu == "Virtual Machines") { ?>
-    <form method="POST" action="<?= base_url('teknisi/create_assets') ?>">
+    <form method="POST" action="<?= base_url('teknisi/create_assets/Virtual Host/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
-                               <div class="form-group ">
+                <div class="form-group ">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="nama" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Ip Address</label>
-                    <input type="text" class="form-control" name="a" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="a" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Description</label>
-                    <input type="text" class="form-control" name="b" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="b" placeholder="Masukan Data">
                 </div>
                 <div class="form-group ">
                     <label>Product</label>
-                    <input type="text" class="form-control" name="c" placeholder="Masukan Data">
+                    <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
@@ -1928,15 +1928,15 @@
                 </div>
                 <div class="form-group">
                     <label>org serial number : </label>
-                    <input class="form-control" id="ass" type="text" name="f">
+                    <input required class="form-control" id="ass" type="text" name="f">
                 </div>
                 <div class="form-group">
                     <label>Barcode : </label>
-                    <input class="form-control" id="ass" type="text" name="g">
+                    <input required class="form-control" id="ass" type="text" name="g">
                 </div>
                 <div class="form-group">
                     <label>asset tag :</label>
-                    <input class="form-control" id="count_data" name="h" type="text">
+                    <input required class="form-control" id="count_data" name="h" type="text">
                 </div>
 
 
@@ -1944,27 +1944,27 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>vendor name : </label>
-                    <input class="form-control" type="text" name="i">
+                    <input required class="form-control" type="text" name="i">
                 </div>
                 <div class="form-group">
                     <label>Purchase Cost</label>
-                    <input class="form-control" type="text" name="j">
+                    <input required class="form-control" type="text" name="j">
                 </div>
                 <div class="form-group">
                     <label>acquisition date :</label>
-                    <input class="form-control" type="date" name="date1">
+                    <input required class="form-control" type="date" name="date1">
                 </div>
                 <div class="form-group">
                     <label>expiry date :</label>
-                    <input class="form-control" type="date" name="date2">
+                    <input required class="form-control" type="date" name="date2">
                 </div>
                 <div class="form-group">
                     <label>warrant expiry date :</label>
-                    <input class="form-control" type="date" name="date3">
+                    <input required class="form-control" type="date" name="date3">
                 </div>
                 <div class="form-group">
                     <label>Single Line :</label>
-                    <input class="form-control" type="text" name="k">
+                    <input required class="form-control" type="text" name="k">
                 </div>
                 <div class="form-group">
                     <label>Multi Line :</label>
@@ -1974,7 +1974,7 @@
             </div>
             <p style="padding-bottom: 20px;">
         </div>
-        <input type="submit" value="Created Asset" class="btn btn-success btn-block">
+        <input required type="submit" value="Created Asset" class="btn btn-success btn-block">
         <p style="padding-bottom: 20px;">
             </div>
     </form>
