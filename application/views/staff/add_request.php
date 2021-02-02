@@ -19,14 +19,18 @@
                                 <label>Nama</label>
                                 <input type="text" readonly="readonly" value="<?php echo $nama ?>" class="form-control" name="user" placeholder="Masukan Nama">
                             </div>
+                            <div class="form-group" style="display: none;">
+                                <label>kat</label>
+                                <input type="text" readonly="readonly" value="<?php echo $_GET['menu']  ?>" class="form-control" name="kategori" placeholder="Masukan Nama">
+                            </div>
                             <div class="form-group">
                                 <label>Kategori:</label>
-                                <select style=" height:50px;" class="form-control selectpicker" id="category" name="kategori">
+                                <select style=" height:50px;" class="form-control selectpicker" id="category">
                                     <option>---- Pilih Kategori ---- </option>
                                     <?php
                                     foreach ($kategori as $u) {
                                     ?>
-                                        <option <?php if ($_GET['menu'] == $u->kategori) : ?> selected <?php endif ?> value="<?php echo $u->kategori ?>"><?php echo $u->kategori ?></option>
+                                        <option <?php if ($_GET['id_menu'] == $u->id) : ?> selected <?php endif ?> value="<?php echo $u->id ?>"><?php echo $u->kategori ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
@@ -137,11 +141,7 @@
             var id_menu = $('#menu_id').val();
             var sub_kategori = $('#sub_category').val();
             var base_url = window.location.origin + window.location.pathname;
-            if (id_menu == 1) {
-                var url = base_url + "?id_menu=" + 2 + "&menu=" + kategori + "&submenu=" + sub_kategori
-            } else {
-                var url = base_url + "?id_menu=" + 1 + "&menu=" + kategori + "&submenu=" + sub_kategori
-            }
+            var url = base_url + "?id_menu=" + $('#category').val() + "&menu=" + $("#category option:selected").text() + "&submenu=" + sub_kategori
 
             if (url) { // require a URL
                 window.location = url; // redirect
