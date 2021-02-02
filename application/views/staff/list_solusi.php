@@ -32,7 +32,7 @@
                                           <td><?php echo $u->created_date ?></td>
                                           <td><?php echo $u->end_date ?></td>
                                           <td class="text-center">
-                                              <a href="#" class="btn btn-sm btn-success">Detail</a>
+                                              <a href="<?=base_url("staff/detail_solusi/".$u->id)?>"  class="btn btn-sm btn-success">Detail</a>
                                           </td>
                                       </tr>
                                   <?php

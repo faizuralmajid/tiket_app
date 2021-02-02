@@ -2,7 +2,7 @@
      <div class="main-content">
          <section class="section">
              <div class="section-header">
-                 <h1>Detail Pengumuman </h1>
+                 <h1>Detail Solusi </h1>
              </div>
              <div class="row col-12" style="width: 100%;">
                      <div class="section-header col-12">
@@ -18,17 +18,28 @@
                                          <td><?php echo $u->judul ?></td>
                                      </tr>
 
+                                     <tr class="text-left">
+                                         <th scope="col" style=" font-weight: bold;">Nama Pembuat</th>
+                                         <th scope="col" style="padding: 10px;">:</th>
+                                         <td><?php echo $u->user ?></td>
+                                     </tr>
 
                                      <tr class="text-left">
                                          <th scope="col" style=" font-weight: bold;">Created Date</th>
                                          <th scope="col" style="padding: 10px;">:</th>
-                                         <td><?php echo $u->start_date ?></td>
+                                         <td><?php echo $u->created_date ?></td>
                                      </tr>
 
                                      <tr class="text-left">
                                          <th scope="col" style=" font-weight: bold;">End Date</th>
                                          <th scope="col" style="padding: 10px;">:</th>
                                          <td><?php echo $u->end_date ?></td>
+                                     </tr>
+
+                                     <tr class="text-left">
+                                         <th scope="col" style=" font-weight: bold;">Tujuan</th>
+                                         <th scope="col" style="padding: 10px;">:</th>
+                                         <td><?php echo $u->tujuan ?></td>
                                      </tr>
 
                                      <tr class="text-left">

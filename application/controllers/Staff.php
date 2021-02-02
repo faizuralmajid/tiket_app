@@ -312,4 +312,24 @@ class Staff extends CI_Controller
 		$this->session->sess_destroy();
 		redirect(base_url());
 	}
+
+	public function detail_solusi($id)
+	{
+		$this->load->model('Msolusi');
+		$data['level'] = $this->session->userdata('level');
+		$data['nama'] = $this->session->userdata('nama');
+		$data['detail'] = $this->Msolusi->tampil_data_detail($id)->result();
+		$this->load->view('navbar/nav_staff', $data);
+		$this->load->view('staff/detail_solusi', $data);
+	}
+
+	public function detail_pengumuman($id)
+	{
+		$this->load->model('Mpengumuman');
+		$data['level'] = $this->session->userdata('level');
+		$data['nama'] = $this->session->userdata('nama');
+		$data['detail'] = $this->Mpengumuman->tampil_data_detail($id)->result();
+		$this->load->view('navbar/nav_staff', $data);
+		$this->load->view('staff/detail_pengumuman', $data);
+	}
 }
