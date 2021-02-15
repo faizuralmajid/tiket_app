@@ -127,5 +127,14 @@ $active = $url[1];
                                 </li>
                             </ul>
                         </li>
+                        <li class="menu-header">List Lokasi</li>
+                        <li class="nav-item dropdown <?php if ($active == 'data_pengembalian') : ?> active <?php endif ?>">
+                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i>
+                                <span>List Lokasi</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="<?= base_url('admin/list_lokasi') ?>">List Lokasi</a>
+                                </li>
+                            </ul>
+                        </li>
                 </aside>
             </div>

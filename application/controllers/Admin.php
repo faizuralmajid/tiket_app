@@ -147,6 +147,17 @@ class Admin extends CI_Controller
 		$this->load->view('admin/list_menu', $data);
 	}
 
+	public function list_lokasi()
+	{
+		$this->load->model('Mlokasi');
+		$data['nama'] = $this->session->userdata('nama');
+		$data['level'] = $this->session->userdata('level');
+		$data['kategori'] = $this->Mlokasi->get_category()->result();
+		$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+		$this->load->view('navbar/nav_admin', $data);
+		$this->load->view('admin/list_lokasi', $data);
+	}
+
 	public function create_parent()
 	{
 		$this->form_validation->set_rules('kategori', 'kategori', 'required', [
@@ -286,5 +297,149 @@ class Admin extends CI_Controller
 		$this->Muser->delete_user($where, 'master_subkategori');
 		redirect(base_url('admin/list_menu'));
 	}
+
+
+	public function create_lokasi()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'required', [
+			'required' => 'Kategori Wajib Diisi.',
+		]);
+
+		if ($this->form_validation->run() == false) {
+			$this->load->model('Mlokasi');
+			$data['nama'] = $this->session->userdata('nama');
+			$data['level'] = $this->session->userdata('level');
+			$data['kategori'] = $this->Mlokasi->get_category()->result();
+			$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+			$this->load->view('navbar/nav_admin', $data);
+			$this->load->view('admin/list_lokasi', $data);
+		} else {
+			$data = [
+				'lokasi' => htmlspecialchars($this->input->post('kategori', true))
+			];
+			$this->db->insert('master_lokasi', $data);
+			redirect(base_url('admin/list_lokasi'));
+		}
+	}
+
+	public function update_lokasi()
+	{
+		$this->load->model('Muser');
+		$this->form_validation->set_rules('kategori', 'kategroi', 'required', [
+			'required' => 'sla Wajib Diisi.',
+		]);
+
+		if ($this->form_validation->run() == false) {
+			$this->load->model('Mlokasi');
+			$data['nama'] = $this->session->userdata('nama');
+			$data['level'] = $this->session->userdata('level');
+			$data['kategori'] = $this->Mlokasi->get_category()->result();
+			$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+			$this->load->view('navbar/nav_admin', $data);
+			$this->load->view('admin/list_lokasi', $data);
+		} else {
+			$where = array(
+				'id' => htmlspecialchars($this->input->post('id_kat', true)),
+			);
+
+			$data = [
+				'lokasi' => htmlspecialchars($this->input->post('kategori', true)),
+			];
+			$this->Muser->update_data($where, $data, 'master_lokasi');
+			redirect(base_url('admin/list_lokasi'));
+		}
+	}
+
+	public function delete_lokasi($kategori,$id_kategori)
+	{
+		$this->load->model('Muser');
+		$where = array(
+			'id' => $kategori
+		);
+
+		$whereid = array(
+			'id_lokasi' => $id_kategori
+		);
+
+		$this->Muser->delete_user($where, 'master_lokasi');
+		$this->Muser->delete_user($whereid, 'master_kota');
+		redirect(base_url('admin/list_lokasi'));
+	}
+
+	public function create_kota()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'required', [
+			'required' => 'kategori Wajib Diisi.',
+		]);
+
+		$this->form_validation->set_rules('subkategori', 'subkategori', 'required', [
+			'required' => 'Sub Kategori Wajib Diisi.',
+		]);
+
+		if ($this->form_validation->run() == false) {
+			$this->load->model('Mlokasi');
+			$data['nama'] = $this->session->userdata('nama');
+			$data['level'] = $this->session->userdata('level');
+			$data['kategori'] = $this->Mlokasi->get_category()->result();
+			$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+			$this->load->view('navbar/nav_admin', $data);
+			$this->load->view('admin/list_lokasi', $data);
+		} else {
+			$data = [
+				'id_lokasi' => htmlspecialchars($this->input->post('kategori', true)),
+				'kota' => htmlspecialchars($this->input->post('subkategori', true))
+			];
+			$this->db->insert('master_kota', $data);
+			redirect(base_url('admin/list_lokasi'));
+		}
+	}
+
+	
+	public function update_kota()
+	{
+		$this->load->model('Muser');
+		$this->form_validation->set_rules('kategori', 'kategori', 'required', [
+			'required' => 'sla Wajib Diisi.',
+		]);
+
+		$this->form_validation->set_rules('subkategori', 'subkategori', 'required', [
+			'required' => 'sub kategori Wajib Diisi.',
+		]);
+
+		if ($this->form_validation->run() == false) {
+			$this->load->model('Mlokasi');
+			$data['nama'] = $this->session->userdata('nama');
+			$data['level'] = $this->session->userdata('level');
+			$data['kategori'] = $this->Mlokasi->get_category()->result();
+			$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+			$this->load->view('navbar/nav_admin', $data);
+			$this->load->view('admin/list_lokasi', $data);
+		} else {
+			$where = [
+				'id' => htmlspecialchars($this->input->post('id_sub', true)),
+			];
+
+			$data = [
+				'id_lokasi' => htmlspecialchars($this->input->post('kategori', true)),
+				'kota' => htmlspecialchars($this->input->post('subkategori', true)),
+			];
+			$this->Muser->update_data($where, $data, 'master_kota');
+			redirect(base_url('admin/list_lokasi'));
+		}
+	}
+
+	public function delete_kota($subkategori)
+	{
+		$this->load->model('Muser');
+		$where = array(
+			'id' => $subkategori
+		);
+
+		$this->Muser->delete_user($where, 'master_kota');
+		redirect(base_url('admin/list_lokasi'));
+	}
+
+
+
 
 }
