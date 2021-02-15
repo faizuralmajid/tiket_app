@@ -142,6 +142,7 @@ class Teknisi extends CI_Controller
 	{
 		$this->load->model('Mrequest');
 		$this->load->model('Mkategori');
+		$this->load->model('Mlokasi');
 		$data['level'] = $this->session->userdata('level');
 		$data['kategori'] = $this->Mkategori->get_category()->result();
 		$data['group'] = $this->Mkategori->get_group()->result();
@@ -149,6 +150,8 @@ class Teknisi extends CI_Controller
 		$data['id_user'] = $this->session->userdata('id');
 		$data['m_asset'] = $this->Mrequest->for_option('tbl_asset');
 		$data['m_pj'] = $this->Mkategori->get_teknisi()->result();
+		$data['lokasi'] = $this->Mlokasi->get_category()->result();
+		$data['kota'] = $this->Mlokasi->get_category_back()->result();
 		$data['menu'] = $menu;
 		$this->load->view('navbar/nav_teknisi', $data);
 		$this->load->view('teknisi/add_assets', $data);

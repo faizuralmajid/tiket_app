@@ -8,6 +8,10 @@ class Mlokasi extends CI_Model{
         return $query;  
     }
  
+    function get_category_back(){
+        $query = $this->db->get('master_kota');
+        return $query;  
+    }
 
     function get_all_subcategory(){
       return  $this->db->select('*,t1.id AS id,t2.id AS id_id')

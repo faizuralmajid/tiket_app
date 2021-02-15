@@ -20,30 +20,32 @@
                                     <label>Business Impact</label>
                                     <input required type="text" class="form-control" name="bisnis" placeholder="Masukan Data">
                                 </div>
-                                <div class="form-group ">
+                                <div class="form-group">
                                     <label>Product</label>
-                                    <input required type="text" class="form-control" name="i" placeholder="Masukan Data">
+                                    <select style=" height:50px;" class="form-control selectpicker" name="a">
+                                        <option>---- Pilih Product ---- </option>
+
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>nama lokasi</label>
-                                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                                    <select style=" height:50px;" class="form-control selectpicker" name="b">
                                         <option value="">---- Pilih Lokasi ---- </option>
-                                        <?php
-                                        foreach ($lokasi as $u) {
-                                        ?>
-                                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                                        <?php } ?>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>kota</label>
                                     <select style=" height:50px;" class="form-control selectpicker" name="c">
-                                        <option value="">---- Pilih Kota ---- </option>
-                                        <?php
-                                        foreach ($kota as $u) {
-                                        ?>
-                                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                                        <?php } ?>
+                                        <option value="">---- Pilih Lokasi ---- </option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>parent lokasi</label>
+                                    <select style=" height:50px;" class="form-control selectpicker" name="d">
+                                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -182,30 +184,31 @@
                             <label>Description</label>
                             <input required type="text" class="form-control" name="q" placeholder="Masukan Data">
                         </div>
-                        <div class="form-group ">
+                        <div class="form-group">
                             <label>Product</label>
-                            <input required type="text" class="form-control" name="i" placeholder="Masukan Data">
+                            <select style=" height:50px;" class="form-control selectpicker" name="r">
+                                <option>---- Pilih Product ---- </option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>nama lokasi</label>
-                            <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                            <select style=" height:50px;" class="form-control selectpicker" name="s">
                                 <option value="">---- Pilih Lokasi ---- </option>
-                                <?php
-                                foreach ($lokasi as $u) {
-                                ?>
-                                    <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                                <?php } ?>
+
                             </select>
                         </div>
                         <div class="form-group">
                             <label>kota</label>
-                            <select style=" height:50px;" class="form-control selectpicker" name="c">
+                            <select style=" height:50px;" class="form-control selectpicker" name="t">
                                 <option value="">---- Pilih Kota ---- </option>
-                                <?php
-                                foreach ($kota as $u) {
-                                ?>
-                                    <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                                <?php } ?>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>parent lokasi</label>
+                            <select style=" height:50px;" class="form-control selectpicker" name="u">
+                                <option value="">---- Pilih Parent Lokasi ---- </option>
+
                             </select>
                         </div>
                         <div class="form-group">
@@ -285,30 +288,32 @@
                         <label>Description</label>
                         <input required type="text" class="form-control" name="c" placeholder="Masukan Data">
                     </div>
-                    <div class="form-group ">
+                    <div class="form-group">
                         <label>Product</label>
-                        <input required type="text" class="form-control" name="i" placeholder="Masukan Data">
+                        <select style=" height:50px;" class="form-control selectpicker" name="d">
+                            <option>---- Pilih Product ---- </option>
+
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>nama lokasi</label>
-                        <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                        <select style=" height:50px;" class="form-control selectpicker" name="e">
                             <option value="">---- Pilih Lokasi ---- </option>
-                            <?php
-                            foreach ($lokasi as $u) {
-                            ?>
-                                <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                            <?php } ?>
+
                         </select>
                     </div>
                     <div class="form-group">
                         <label>kota</label>
-                        <select style=" height:50px;" class="form-control selectpicker" name="c">
-                            <option value="">---- Pilih Kota ---- </option>
-                            <?php
-                            foreach ($kota as $u) {
-                            ?>
-                                <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                            <?php } ?>
+                        <select style=" height:50px;" class="form-control selectpicker" name="f">
+                            <option value="">---- Pilih Lokasi ---- </option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>parent lokasi</label>
+                        <select style=" height:50px;" class="form-control selectpicker" name="g">
+                            <option value="">---- Pilih Parent Lokasi ---- </option>
+
                         </select>
                     </div>
                     <div class="form-group">
@@ -400,24 +405,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="g">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="h">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="i">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -508,24 +512,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="f">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="g">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="h">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -619,24 +622,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="g">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="h">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="i">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -731,24 +733,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="h">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="i">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="j">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -830,24 +831,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -928,24 +928,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1028,24 +1027,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1128,24 +1126,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1228,24 +1225,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1327,24 +1323,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1425,24 +1420,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1524,24 +1518,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1623,24 +1616,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1721,24 +1713,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1819,24 +1810,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -1917,24 +1907,23 @@
                 </div>
                 <div class="form-group">
                     <label>nama lokasi</label>
-                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                    <select style=" height:50px;" class="form-control selectpicker" name="d">
                         <option value="">---- Pilih Lokasi ---- </option>
-                        <?php
-                        foreach ($lokasi as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label>kota</label>
-                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                        <option value="">---- Pilih Kota ---- </option>
-                        <?php
-                        foreach ($kota as $u) {
-                        ?>
-                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                        <?php } ?>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Lokasi ---- </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>parent lokasi</label>
+                    <select style=" height:50px;" class="form-control selectpicker" name="e">
+                        <option value="">---- Pilih Parent Lokasi ---- </option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -2040,6 +2029,7 @@
         console.log(count);
     } // end of function
 </script>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
