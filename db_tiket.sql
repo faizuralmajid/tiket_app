@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2021 at 08:55 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.8
+-- Waktu pembuatan: 18 Feb 2021 pada 10.53
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `log_request`
+-- Struktur dari tabel `log_request`
 --
 
 CREATE TABLE `log_request` (
@@ -50,16 +50,19 @@ CREATE TABLE `log_request` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `log_request`
+-- Dumping data untuk tabel `log_request`
 --
 
 INSERT INTO `log_request` (`id`, `id_data`, `id_user`, `username`, `user`, `status`, `kategori`, `sub_kategori`, `pj`, `grup`, `asset`, `count_asset`, `subject`, `body`, `created_date`, `done_date`, `start_date`, `end_date`) VALUES
-(1, 7, '', '', 'Roy Suryo', 'Open', 'Data Center', 'Tambah Ubah DNS', 'Jajang Suharja', 'IT Support', '', '1', 'Random Text Generator', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-01-03 14:26:06', NULL, '2021-01-22', '2021-01-28');
+(1, 7, '', '', 'Roy Suryo', 'Open', 'Data Center', 'Tambah Ubah DNS', 'Jajang Suharja', 'IT Support', '', '1', 'Random Text Generator', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-01-03 14:26:06', NULL, '2021-01-22', '2021-01-28'),
+(2, 6, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', 'reporting', 'Abdul Roji', 'Networking', '', '1', 'Random Text Generator', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-01-31 07:01:14', NULL, '2021-01-25', '2021-01-21'),
+(3, 4, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', 'core telepon', 'Jajang Suharja', 'Networking', '', '1', '&quot;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-01-31 07:01:33', NULL, '2021-01-16', '2021-01-13'),
+(4, 5, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', 'core network', 'Jajang Suharja', 'IT Support', '', '1', 'Random Text Generator', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-02-02 07:45:48', NULL, '2021-01-22', '2021-01-13');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_kategori`
+-- Struktur dari tabel `master_kategori`
 --
 
 CREATE TABLE `master_kategori` (
@@ -68,17 +71,56 @@ CREATE TABLE `master_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_kategori`
+-- Dumping data untuk tabel `master_kategori`
 --
 
 INSERT INTO `master_kategori` (`id`, `kategori`) VALUES
 (1, 'Data Center'),
-(2, 'Infrastruktur');
+(2, 'Infrastruktur'),
+(5, 'Test'),
+(6, 'Tes');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_subkategori`
+-- Struktur dari tabel `master_kota`
+--
+
+CREATE TABLE `master_kota` (
+  `id` int(11) NOT NULL,
+  `kota` varchar(30) NOT NULL,
+  `id_lokasi` varchar(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `master_kota`
+--
+
+INSERT INTO `master_kota` (`id`, `kota`, `id_lokasi`) VALUES
+(2, 'tlosaaa', '3');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `master_lokasi`
+--
+
+CREATE TABLE `master_lokasi` (
+  `id` int(11) NOT NULL,
+  `lokasi` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `master_lokasi`
+--
+
+INSERT INTO `master_lokasi` (`id`, `lokasi`) VALUES
+(3, 'Tus');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `master_subkategori`
 --
 
 CREATE TABLE `master_subkategori` (
@@ -88,7 +130,7 @@ CREATE TABLE `master_subkategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `master_subkategori`
+-- Dumping data untuk tabel `master_subkategori`
 --
 
 INSERT INTO `master_subkategori` (`id`, `id_kategori`, `subkategori`) VALUES
@@ -104,12 +146,13 @@ INSERT INTO `master_subkategori` (`id`, `id_kategori`, `subkategori`) VALUES
 (13, 2, 'core telepon'),
 (14, 2, 'distribution network'),
 (15, 2, 'layanan ess'),
-(16, 2, 'layanan gps');
+(16, 2, 'layanan gps'),
+(32, 5, 'asasdas');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_asset`
+-- Struktur dari tabel `tbl_asset`
 --
 
 CREATE TABLE `tbl_asset` (
@@ -153,20 +196,16 @@ CREATE TABLE `tbl_asset` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_asset`
+-- Dumping data untuk tabel `tbl_asset`
 --
 
 INSERT INTO `tbl_asset` (`id`, `type`, `jenis`, `nama_asset`, `bisnis`, `created_by`, `a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `date1`, `date2`, `date3`, `v`, `w`, `x`, `y`, `z`, `aa`, `ab`) VALUES
-(1, 'Hardware', 'Tinta', 'Printer', '', 'admin', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', '', '', '', ''),
-(2, 'Hardware', 'Tinta', 'Monitor', '', 'admin', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', '', '', '', ''),
-(3, 'IT Assets', 'Access Point', '', '', 'Jajang Suharja', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', '', '', '', ''),
-(4, 'IT Assets', 'Access Point', '', '', 'Jajang Suharja', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', '', '', '', ''),
 (5, 'IT Assets', 'Access Point', 'Faizurrahman Allam M', '', 'Jajang Suharja', '---- Pilih Product ----', '', '', '', 'asfs', 'fasfsf', 'asfasf', 'asfasfas', 'fasfasfa', 'asfasf', 'fasfasfasf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-01-19', '2021-01-14', '2021-01-04', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_group`
+-- Struktur dari tabel `tbl_group`
 --
 
 CREATE TABLE `tbl_group` (
@@ -176,7 +215,7 @@ CREATE TABLE `tbl_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_group`
+-- Dumping data untuk tabel `tbl_group`
 --
 
 INSERT INTO `tbl_group` (`id`, `nama_group`, `created_date`) VALUES
@@ -186,7 +225,7 @@ INSERT INTO `tbl_group` (`id`, `nama_group`, `created_date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pengumuman`
+-- Struktur dari tabel `tbl_pengumuman`
 --
 
 CREATE TABLE `tbl_pengumuman` (
@@ -198,7 +237,7 @@ CREATE TABLE `tbl_pengumuman` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_pengumuman`
+-- Dumping data untuk tabel `tbl_pengumuman`
 --
 
 INSERT INTO `tbl_pengumuman` (`id`, `judul`, `isi`, `start_date`, `end_date`) VALUES
@@ -207,7 +246,7 @@ INSERT INTO `tbl_pengumuman` (`id`, `judul`, `isi`, `start_date`, `end_date`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_request`
+-- Struktur dari tabel `tbl_request`
 --
 
 CREATE TABLE `tbl_request` (
@@ -231,15 +270,15 @@ CREATE TABLE `tbl_request` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_request`
+-- Dumping data untuk tabel `tbl_request`
 --
 
 INSERT INTO `tbl_request` (`id`, `id_user`, `username`, `user`, `status`, `kategori`, `sub_kategori`, `pj`, `grup`, `asset`, `count_asset`, `subject`, `body`, `created_date`, `done_date`, `start_date`, `end_date`) VALUES
 (2, '', '', 'Roy Suryo', 'Open', 'Data Center', 'Backup / Restore server', 'Jajang Suharja', 'Networking', 'Monitor', '1', 'LOGIN CPANEL (LIHAT USERNAME DAN PASSWORD)', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-02 12:57:21', NULL, '2021-01-20', '2021-01-14'),
 (3, '', '', 'Roy Suryo', 'Open', 'Data Center', 'Install Aplikasi', 'Abdul Roji', 'IT Support', 'Monitor', '1', 'Mencoba Kembali', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-02 14:35:22', NULL, '2021-01-13', '2021-01-21'),
-(4, '', '', 'Roy Suryo', 'Open', 'Infrastruktur', 'core telepon', 'Jajang Suharja', 'Networking', 'Monitor', '1', '&quot;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 10:48:29', NULL, '2021-01-16', '2021-01-13'),
-(5, '', '', 'Roy Suryo', 'Open', 'Infrastruktur', 'core network', 'Jajang Suharja', 'IT Support', 'Monitor', '1', 'Random Text Generator', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 11:04:50', NULL, '2021-01-22', '2021-01-13'),
-(6, '', '', 'Roy Suryo', 'Open', 'Infrastruktur', 'reporting', 'Abdul Roji', 'Networking', 'Monitor', '1', 'Random Text Generator', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 11:07:05', NULL, '2021-01-25', '2021-01-21'),
+(4, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', '---- Pilih Sub Kategori ----', 'Jajang Suharja', 'Networking', 'Faizurrahman Allam M', '1', '&quot;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 10:48:29', NULL, '2021-01-16', '2021-01-13'),
+(5, '3', 'Roy', 'Roy Suryo', 'Close', 'Infrastruktur', 'core telepon', 'Abdul Roji Nanu', 'Networking', 'Faizurrahman Allam M', '1', 'Random Text Generator', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 11:04:50', NULL, '2021-01-22', '2021-01-13'),
+(6, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', '---- Pilih Sub Kategori ----', 'Jajang Suharja', 'Networking', 'Faizurrahman Allam M', '1', 'Random Text Generator', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 11:07:05', NULL, '2021-01-25', '2021-01-21'),
 (7, '', '', 'Roy Suryo', 'Close', 'Data Center', 'Sarana Lainnya', 'Jajang Suharja', 'Networking', 'Printer,Monitor', '2', 'Random Text Generator', '<p>Testing Update</p>\r\n\r\n<ol>\r\n <li>Percobaan 1</li>\r\n</ol>\r\n', '2021-01-03 11:08:54', NULL, '2021-01-22', '2021-01-28'),
 (8, '', '', 'Roy Suryo', 'Open', 'Data Center', 'Permintaan File Sharing', 'Jajang Suharja', 'Networking', 'Monitor', '1', 'LOGIN CPANEL (LIHAT USERNAME DAN PASSWORD)', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 11:12:06', NULL, '2021-01-14', '2021-01-05'),
 (9, '', '', 'Roy Suryo', 'Open', 'Infrastruktur', 'core cctv', 'Abdul Roji', 'Networking', 'Monitor', '1', 'LOGIN CPANEL (LIHAT USERNAME DAN PASSWORD)', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 11:15:02', NULL, '2021-02-03', '2021-01-14'),
@@ -255,7 +294,7 @@ INSERT INTO `tbl_request` (`id`, `id_user`, `username`, `user`, `status`, `kateg
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_solusi`
+-- Struktur dari tabel `tbl_solusi`
 --
 
 CREATE TABLE `tbl_solusi` (
@@ -269,7 +308,7 @@ CREATE TABLE `tbl_solusi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_solusi`
+-- Dumping data untuk tabel `tbl_solusi`
 --
 
 INSERT INTO `tbl_solusi` (`id`, `judul`, `user`, `created_date`, `isi`, `tujuan`, `end_date`) VALUES
@@ -278,7 +317,7 @@ INSERT INTO `tbl_solusi` (`id`, `judul`, `user`, `created_date`, `isi`, `tujuan`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -292,7 +331,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `nama`, `email`, `username`, `password`, `level_akses`, `created_date`) VALUES
@@ -306,113 +345,137 @@ INSERT INTO `users` (`id`, `nama`, `email`, `username`, `password`, `level_akses
 --
 
 --
--- Indexes for table `log_request`
+-- Indeks untuk tabel `log_request`
 --
 ALTER TABLE `log_request`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_kategori`
+-- Indeks untuk tabel `master_kategori`
 --
 ALTER TABLE `master_kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_subkategori`
+-- Indeks untuk tabel `master_kota`
+--
+ALTER TABLE `master_kota`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `master_lokasi`
+--
+ALTER TABLE `master_lokasi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `master_subkategori`
 --
 ALTER TABLE `master_subkategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_asset`
+-- Indeks untuk tabel `tbl_asset`
 --
 ALTER TABLE `tbl_asset`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_group`
+-- Indeks untuk tabel `tbl_group`
 --
 ALTER TABLE `tbl_group`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_pengumuman`
+-- Indeks untuk tabel `tbl_pengumuman`
 --
 ALTER TABLE `tbl_pengumuman`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_request`
+-- Indeks untuk tabel `tbl_request`
 --
 ALTER TABLE `tbl_request`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_solusi`
+-- Indeks untuk tabel `tbl_solusi`
 --
 ALTER TABLE `tbl_solusi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `log_request`
+-- AUTO_INCREMENT untuk tabel `log_request`
 --
 ALTER TABLE `log_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `master_kategori`
---
-ALTER TABLE `master_kategori`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `master_subkategori`
+-- AUTO_INCREMENT untuk tabel `master_kategori`
 --
-ALTER TABLE `master_subkategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+ALTER TABLE `master_kategori`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `tbl_asset`
+-- AUTO_INCREMENT untuk tabel `master_kota`
+--
+ALTER TABLE `master_kota`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `master_lokasi`
+--
+ALTER TABLE `master_lokasi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `master_subkategori`
+--
+ALTER TABLE `master_subkategori`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_asset`
 --
 ALTER TABLE `tbl_asset`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tbl_group`
+-- AUTO_INCREMENT untuk tabel `tbl_group`
 --
 ALTER TABLE `tbl_group`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tbl_pengumuman`
+-- AUTO_INCREMENT untuk tabel `tbl_pengumuman`
 --
 ALTER TABLE `tbl_pengumuman`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tbl_request`
+-- AUTO_INCREMENT untuk tabel `tbl_request`
 --
 ALTER TABLE `tbl_request`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `tbl_solusi`
+-- AUTO_INCREMENT untuk tabel `tbl_solusi`
 --
 ALTER TABLE `tbl_solusi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;

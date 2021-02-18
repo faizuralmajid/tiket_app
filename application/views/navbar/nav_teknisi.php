@@ -166,6 +166,18 @@ $active = $url[1];
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown <?php if ($active == 'data_peminjaman' || $active == 'add_peminjaman') : ?> active <?php endif ?>">
+                            <a href="<?= base_url('teknisi/list_assets') ?>" class="nav-link has-dropdown"><i class="fas fa-chalkboard-teacher"></i>
+                                <span>Non Telco</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets/Telepon') ?>">Telepon</a>
+                                </li>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets/Telco Infrastructure') ?>">Telco Infrastructure</a>
+                                </li>
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_assets/Radio') ?>">Radio</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="menu-header">List Solusi</li>
                         <li class="nav-item dropdown <?php if ($active == 'data_pengembalian') : ?> active <?php endif ?>">
                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i>

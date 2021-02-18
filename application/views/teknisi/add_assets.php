@@ -906,7 +906,7 @@
 
 
 
-<?php if ($menu == "Smart Phone") { ?>
+<?php if ($menu == "Smart Phone" || $menu == "Telepon" || $menu == "Telco Infrastructure" || $menu == "Radio") { ?>
     <form method="POST" action="<?= base_url('teknisi/create_assets/IT Assets/' . $menu) ?>">
         <div class="row" style="width: 100%;">
             <div class="col-lg-6">
