@@ -395,9 +395,10 @@ class Admin extends CI_Controller
 	}
 
 	
-	public function update_kota()
-	{
+	public function update_kota(){
+		
 		$this->load->model('Muser');
+
 		$this->form_validation->set_rules('kategori', 'kategori', 'required', [
 			'required' => 'sla Wajib Diisi.',
 		]);
@@ -439,6 +440,8 @@ class Admin extends CI_Controller
 		redirect(base_url('admin/list_lokasi'));
 	}
 
+
+	
 
 
 

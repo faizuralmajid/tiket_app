@@ -178,6 +178,15 @@ $active = $url[1];
                                 </li>
                             </ul>
                         </li>
+                        <li class="menu-header">List Request</li>
+                        <li class="nav-item dropdown <?php if ($active == 'data_pengembalian') : ?> active <?php endif ?>">
+                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i>
+                                <span>List Request</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="<?= base_url('teknisi/list_request') ?>">List Request</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="menu-header">List Solusi</li>
                         <li class="nav-item dropdown <?php if ($active == 'data_pengembalian') : ?> active <?php endif ?>">
                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i>
