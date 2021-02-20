@@ -24,28 +24,57 @@
                                     <label>Product</label>
                                     <input required type="text" class="form-control" name="i" placeholder="Masukan Data">
                                 </div>
-                                <div class="form-group">
-                                    <label>nama lokasi</label>
-                                    <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
-                                        <option value="">---- Pilih Lokasi ---- </option>
-                                        <?php
-                                        foreach ($lokasi as $u) {
-                                        ?>
-                                            <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>kota</label>
-                                    <select style=" height:50px;" class="form-control selectpicker" name="c">
-                                        <option value="">---- Pilih Kota ---- </option>
-                                        <?php
-                                        foreach ($kota as $u) {
-                                        ?>
-                                            <option value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
+                                <?php if (isset($_GET['id_lokasi'])) {
+                                    if ($_GET['id_lokasi'] != NULL) { ?>
+                                        <div class="form-group">
+                                            <label>nama lokasi</label>
+                                            <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                                                <option value="">---- Pilih Lokasi ---- </option>
+                                                <?php
+                                                foreach ($lokasi as $u) {
+                                                ?>
+                                                    <option <?php if ($_GET['id_lokasi'] == $u->id) : ?> selected <?php endif ?> value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>kota</label>
+                                            <select style=" height:50px;" id="kotaaa" class="form-control selectpicker" name="c">
+                                                <option value="">---- Pilih Kota ---- </option>
+                                                <?php
+                                                foreach ($kota as $u) {
+                                                ?>
+                                                    <option <?php if ($_GET['id_kota'] == $u->id) : ?> selected <?php endif ?> value="<?php echo $u->id ?>"><?php echo $u->kota ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>nama Kawasan</label>
+                                            <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                                                <option value="">---- Pilih Kawasan ----</option>
+                                                <?php
+                                                foreach ($kawasan as $u) {
+                                                ?>
+                                                    <option value="<?php echo $u->id ?>"><?php echo $u->kawasan ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    <?php }
+                                } else {
+                                    ?> <div class="form-group">
+                                        <label>nama lokasi</label>
+                                        <select style=" height:50px;" id="lokasii" class="form-control selectpicker" name="b">
+                                            <option value="">---- Pilih Lokasi ---- </option>
+                                            <?php
+                                            foreach ($lokasi as $u) {
+                                            ?>
+                                                <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div><?php
+                                        }
+                                            ?>
+
                                 <div class="form-group">
                                     <label>org serial number : </label>
                                     <input required class="form-control" id="ass" type="text" name="e">
@@ -2007,16 +2036,24 @@
 <script>
     $(function() {
         // bind change event to select
-        $('#category').on('change', function() {
+        $('#lokasii').on('change', function() {
             var kategori = $(this).val();
-            var id_menu = $('#menu_id').val();
-            var sub_kategori = $('#sub_category').val();
             var base_url = window.location.origin + window.location.pathname;
-            if (id_menu == 1) {
-                var url = base_url + "?id_menu=" + 2 + "&menu=" + kategori + "&submenu=" + sub_kategori
-            } else {
-                var url = base_url + "?id_menu=" + 1 + "&menu=" + kategori + "&submenu=" + sub_kategori
+            var url = base_url + "?id_lokasi=" + $('#lokasii').val() + "&id_kota=" + $('#kotaaa').val();
+
+            if (url) { // require a URL
+                window.location = url; // redirect
             }
+            return false;
+        });
+    });
+
+    $(function() {
+        // bind change event to select
+        $('#kotaaa').on('change', function() {
+            var kategori = $(this).val();
+            var base_url = window.location.origin + window.location.pathname;
+            var url = base_url + "?id_lokasi=" + $('#lokasii').val() + "&id_kota=" + $('#kotaaa').val();
 
             if (url) { // require a URL
                 window.location = url; // redirect
@@ -2026,20 +2063,7 @@
     });
 </script>
 
-<!-- General JS Scripts -->
-<script>
-    function count_aset() {
-        var selectedItem = $('#assetss').val();
-        var options = document.getElementById("assetss").options,
-            count = 0;
-        for (var i = 0; i < options.length; i++) {
-            if (options[i].selected) count++;
-        } // end of for loop
-        document.getElementById("count_data").value = count;
-        document.getElementById("ass").value = selectedItem;
-        console.log(count);
-    } // end of function
-</script>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">

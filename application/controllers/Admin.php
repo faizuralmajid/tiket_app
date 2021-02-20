@@ -439,10 +439,4 @@ class Admin extends CI_Controller
 		$this->Muser->delete_user($where, 'master_kota');
 		redirect(base_url('admin/list_lokasi'));
 	}
-
-
-	
-
-
-
 }

@@ -151,7 +151,16 @@ class Teknisi extends CI_Controller
 		$data['m_asset'] = $this->Mrequest->for_option('tbl_asset');
 		$data['m_pj'] = $this->Mkategori->get_teknisi()->result();
 		$data['lokasi'] = $this->Mlokasi->get_category()->result();
-		$data['kota'] = $this->Mlokasi->get_category_back()->result();
+		if (isset($_GET['id_lokasi'])) {
+			if ($_GET['id_lokasi'] != NULL) {
+				$data['kota'] = $this->Mlokasi->get_sub_category($_GET['id_lokasi'])->result();
+			}
+		}
+		if (isset($_GET['id_kota'])) {
+			if ($_GET['id_kota'] != NULL) {
+				$data['kawasan'] = $this->Mlokasi->get_sub_category_a($_GET['id_kota'])->result();
+			}
+		}
 		$data['menu'] = $menu;
 		$this->load->view('navbar/nav_teknisi', $data);
 		$this->load->view('teknisi/add_assets', $data);
@@ -274,31 +283,6 @@ class Teknisi extends CI_Controller
 	{
 		$this->load->model('Mrequest');
 
-		$this->form_validation->set_rules('status', 'status', 'required', [
-			'required' => 'sla Wajib Diisi.',
-		]);
-
-		$this->form_validation->set_rules('pj', 'pj', 'required', [
-			'required' => 'Penanggung Jawab Wajib Diisi.',
-		]);
-
-		$this->form_validation->set_rules('grup', 'grup', 'required', [
-			'required' => 'Group Wajib Diisi.',
-		]);
-
-		$this->form_validation->set_rules('subject', 'subject', 'required', [
-			'required' => 'subject Wajib Diisi.',
-		]);
-
-		$this->form_validation->set_rules('body', 'body', 'required', [
-			'required' => 'body Wajib Diisi.',
-		]);
-
-		$this->form_validation->set_rules('assets', 'asset', 'required', [
-			'required' => 'asset Wajib Diisi.',
-		]);
-
-
 		$this->form_validation->set_rules('start_date', 'start_date', 'required', [
 			'required' => 'Start Date Wajib Diisi.',
 		]);
@@ -348,7 +332,7 @@ class Teknisi extends CI_Controller
 			//echo $this->session->userdata('level');
 			$this->db->insert('log_request', $data_log);
 			$this->Mrequest->update_data($where,$data_update,'tbl_request');
-			redirect(base_url('staff/list_request'));
+			redirect(base_url('teknisi/list_request'));
 		}
 	}
 }

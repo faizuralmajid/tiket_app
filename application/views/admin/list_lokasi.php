@@ -11,6 +11,9 @@
                   <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#submenu">
                       Tambah Kota
                   </button>
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#submenu">
+                      Tambah Kawasan
+                  </button>
               </div>
               <div class="row" style="overflow: scroll">
                   <div class="col-md-12">
@@ -68,6 +71,46 @@
                                   <?php
                                     $i = 1;
                                     foreach ($subkategori as $u) {
+                                    ?>
+                                      <tr class="text-center">
+                                          <td style="width: 60px;"><?php echo $i ?></td>
+                                          <td style="text-align: left;"><?php echo $u->lokasi ?></td>
+                                          <td style="text-align: left;"><?php echo $u->kota ?></td>
+                                          <td class="text-center">
+                                              <button class="btn btn-sm btn-warning btn-edit-sub" data-id='<?php echo $u->id; ?>' data-idsub='<?php echo $u->id_id; ?>' data-namakat='<?php echo $u->lokasi; ?>' data-nama='<?php echo $u->kota; ?>'>Update</button>
+                                              <a href=<?= base_url("admin/delete_kota/" . $u->id_id) ?> class=" btn btn-sm btn-danger">Hapus</a>
+                                          </td>
+                                      </tr>
+                                  <?php
+                                        $i++;
+                                    }
+                                    ?>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+
+              </br></br>
+              <div class="row" style="overflow: scroll">
+                  <div class="col-md-12">
+                      <div class="section-header">
+                          <h1>Kawasan </h1>
+                      </div>
+                      <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
+                          <table id="tble" class="table align-items-center table-flush">
+                              <thead class="thead-light">
+                                  <tr class="text-center">
+                                      <th style="width: 60px;">No</th>
+                                      <th scope="col" style="text-align: left;">Lokasi</th>
+                                      <th scope="col" style="text-align: left;">Kota</th>
+                                      <th scope="col">Option</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <?php
+                                    $i = 1;
+                                    foreach ($kawasan as $u) {
                                     ?>
                                       <tr class="text-center">
                                           <td style="width: 60px;"><?php echo $i ?></td>

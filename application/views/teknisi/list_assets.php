@@ -263,6 +263,95 @@
 
 
 
+                          <?php if ($menu == "Telepon" || $menu == "Radio") { ?>
+                              <table id="example" class="table align-items-center table-flush">
+                                  <thead class="thead-light">
+                                      <tr class="text-center">
+                                          <th style="width: 60px;">Name</th>
+                                          <th scope="col">Ci Type</th>
+                                          <th scope="col">Is loaned</th>
+                                          <th scope="col">loan expiry</th>
+                                          <th scope="col">product</th>
+                                          <th scope="col">asset state</th>
+                                          <th scope="col">associated to</th>
+                                          <th scope="col">user</th>
+                                          <th scope="col">department</th>
+                                          <th scope="col">org</th>
+                                          <th scope="col">serial number</th>
+                                          <th scope="col">purchase cost($)</th>
+                                          <th scope="col">is personal</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <?php
+                                        $i = 1;
+                                        foreach ($asset as $u) {
+                                        ?>
+                                          <tr class="text-center">
+                                              <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
+                                              <td><?php echo $u->jenis ?></td>
+                                              <td><?php echo $u->date1 ?></td>
+                                              <td><?php echo $u->date2 ?></td>
+                                              <td><?php echo $u->i ?></td>
+                                              <td><?php echo $u->j ?></td>
+                                              <td><?php echo $u->k ?></td>
+                                              <td><?php echo $u->d ?></td>
+                                              <td><?php echo $u->e ?></td>
+                                              <td><?php echo $u->f ?></td>
+                                              <td><?php echo $u->g ?></td>
+                                              <td><?php echo $u->h ?></td>
+                                          </tr>
+                                      <?php
+                                        }
+                                        ?>
+                                  </tbody>
+                              </table>
+                          <?php } ?>
+
+                          <?php if ($menu == "Telco Infrastructure") { ?>
+                              <table id="example" class="table align-items-center table-flush">
+                                  <thead class="thead-light">
+                                      <tr class="text-center">
+                                          <th style="width: 60px;">Name</th>
+                                          <th scope="col">Ci Type</th>
+                                          <th scope="col">Is loaned</th>
+                                          <th scope="col">loan expiry</th>
+                                          <th scope="col">product</th>
+                                          <th scope="col">asset state</th>
+                                          <th scope="col">associated to</th>
+                                          <th scope="col">user</th>
+                                          <th scope="col">department</th>
+                                          <th scope="col">org</th>
+                                          <th scope="col">serial number</th>
+                                          <th scope="col">purchase cost($)</th>
+                                          <th scope="col">is personal</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <?php
+                                        $i = 1;
+                                        foreach ($asset as $u) {
+                                        ?>
+                                          <tr class="text-center">
+                                              <td style="width: 60px;"><?php echo $u->nama_asset ?></td>
+                                              <td><?php echo $u->jenis ?></td>
+                                              <td><?php echo $u->date1 ?></td>
+                                              <td><?php echo $u->date2 ?></td>
+                                              <td><?php echo $u->i ?></td>
+                                              <td><?php echo $u->j ?></td>
+                                              <td><?php echo $u->k ?></td>
+                                              <td><?php echo $u->d ?></td>
+                                              <td><?php echo $u->e ?></td>
+                                              <td><?php echo $u->f ?></td>
+                                              <td><?php echo $u->g ?></td>
+                                              <td><?php echo $u->h ?></td>
+                                          </tr>
+                                      <?php
+                                        }
+                                        ?>
+                                  </tbody>
+                              </table>
+                          <?php } ?>
 
 
 

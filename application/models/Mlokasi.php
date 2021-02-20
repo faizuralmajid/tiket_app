@@ -7,11 +7,6 @@ class Mlokasi extends CI_Model{
         $query = $this->db->get('master_lokasi');
         return $query;  
     }
- 
-    function get_category_back(){
-        $query = $this->db->get('master_kota');
-        return $query;  
-    }
 
     function get_all_subcategory(){
       return  $this->db->select('*,t1.id AS id,t2.id AS id_id')
@@ -21,7 +16,12 @@ class Mlokasi extends CI_Model{
     }
 
     function get_sub_category($category_id){
-        $query = $this->db->get_where('master_kota', array('id' => $category_id));
+        $query = $this->db->get_where('master_kota', array('id_lokasi' => $category_id));
+        return $query;
+    }
+
+    function get_sub_category_a($category_id){
+        $query = $this->db->get_where('master_kawasan', array('id_kota' => $category_id));
         return $query;
     }
 

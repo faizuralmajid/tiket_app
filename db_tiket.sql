@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Feb 2021 pada 10.53
+-- Waktu pembuatan: 20 Feb 2021 pada 15.02
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.8
 
@@ -57,7 +57,8 @@ INSERT INTO `log_request` (`id`, `id_data`, `id_user`, `username`, `user`, `stat
 (1, 7, '', '', 'Roy Suryo', 'Open', 'Data Center', 'Tambah Ubah DNS', 'Jajang Suharja', 'IT Support', '', '1', 'Random Text Generator', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-01-03 14:26:06', NULL, '2021-01-22', '2021-01-28'),
 (2, 6, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', 'reporting', 'Abdul Roji', 'Networking', '', '1', 'Random Text Generator', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-01-31 07:01:14', NULL, '2021-01-25', '2021-01-21'),
 (3, 4, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', 'core telepon', 'Jajang Suharja', 'Networking', '', '1', '&quot;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-01-31 07:01:33', NULL, '2021-01-16', '2021-01-13'),
-(4, 5, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', 'core network', 'Jajang Suharja', 'IT Support', '', '1', 'Random Text Generator', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-02-02 07:45:48', NULL, '2021-01-22', '2021-01-13');
+(4, 5, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', 'core network', 'Jajang Suharja', 'IT Support', '', '1', 'Random Text Generator', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-02-02 07:45:48', NULL, '2021-01-22', '2021-01-13'),
+(5, 2, '2', 'jajang', 'Roy Suryo', 'Open', '', '', 'Jajang Suharja', 'Networking', '', '', 'LOGIN CPANEL (LIHAT USERNAME DAN PASSWORD)', '<ol> <li><strong>ADUIAIDBAIBDABDBAD</strong></li> <li><strong>ADAIDNIADNIAND</strong></li> <li><strong>safasfas</strong></li></ol><p><strong>sfasdfadsfasd</strong></p><p><em><strong>asdfasdfadsf</strong></em></p>', '2021-02-20 11:52:01', NULL, '2021-01-20', '2021-01-14');
 
 -- --------------------------------------------------------
 
@@ -79,6 +80,26 @@ INSERT INTO `master_kategori` (`id`, `kategori`) VALUES
 (2, 'Infrastruktur'),
 (5, 'Test'),
 (6, 'Tes');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `master_kawasan`
+--
+
+CREATE TABLE `master_kawasan` (
+  `id` int(11) NOT NULL,
+  `kawasan` varchar(40) NOT NULL,
+  `id_kota` varchar(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `master_kawasan`
+--
+
+INSERT INTO `master_kawasan` (`id`, `kawasan`, `id_kota`) VALUES
+(3, 'ISFNAFNIS', '2'),
+(4, 'dfsdfd', '1');
 
 -- --------------------------------------------------------
 
@@ -274,7 +295,7 @@ CREATE TABLE `tbl_request` (
 --
 
 INSERT INTO `tbl_request` (`id`, `id_user`, `username`, `user`, `status`, `kategori`, `sub_kategori`, `pj`, `grup`, `asset`, `count_asset`, `subject`, `body`, `created_date`, `done_date`, `start_date`, `end_date`) VALUES
-(2, '', '', 'Roy Suryo', 'Open', 'Data Center', 'Backup / Restore server', 'Jajang Suharja', 'Networking', 'Monitor', '1', 'LOGIN CPANEL (LIHAT USERNAME DAN PASSWORD)', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-02 12:57:21', NULL, '2021-01-20', '2021-01-14'),
+(2, '2', 'jajang', 'Roy Suryo', 'Tindak Lanjut', 'Data Center', 'Backup / Restore server', 'Jajang Suharja', 'Networking', '', '1', 'LOGIN CPANEL (LIHAT USERNAME DAN PASSWORD)', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-02 12:57:21', NULL, '2021-01-20', '2021-01-14'),
 (3, '', '', 'Roy Suryo', 'Open', 'Data Center', 'Install Aplikasi', 'Abdul Roji', 'IT Support', 'Monitor', '1', 'Mencoba Kembali', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-02 14:35:22', NULL, '2021-01-13', '2021-01-21'),
 (4, '3', 'Roy', 'Roy Suryo', 'Open', 'Infrastruktur', '---- Pilih Sub Kategori ----', 'Jajang Suharja', 'Networking', 'Faizurrahman Allam M', '1', '&quot;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 10:48:29', NULL, '2021-01-16', '2021-01-13'),
 (5, '3', 'Roy', 'Roy Suryo', 'Close', 'Infrastruktur', 'core telepon', 'Abdul Roji Nanu', 'Networking', 'Faizurrahman Allam M', '1', 'Random Text Generator', '<ol>\r\n <li><strong>ADUIAIDBAIBDABDBAD</strong></li>\r\n <li><strong>ADAIDNIADNIAND</strong></li>\r\n <li><strong>safasfas</strong></li>\r\n</ol>\r\n\r\n<p><strong>sfasdfadsfasd</strong></p>\r\n\r\n<p><em><strong>asdfasdfadsf</strong></em></p>\r\n', '2021-01-03 11:04:50', NULL, '2021-01-22', '2021-01-13'),
@@ -357,6 +378,12 @@ ALTER TABLE `master_kategori`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `master_kawasan`
+--
+ALTER TABLE `master_kawasan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `master_kota`
 --
 ALTER TABLE `master_kota`
@@ -418,13 +445,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `log_request`
 --
 ALTER TABLE `log_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `master_kategori`
 --
 ALTER TABLE `master_kategori`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `master_kawasan`
+--
+ALTER TABLE `master_kawasan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `master_kota`
