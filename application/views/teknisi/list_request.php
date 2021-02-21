@@ -37,6 +37,7 @@
                                           <td class="text-center">
                                               <a href=<?= base_url("teknisi/detail_request/" . $u->id) ?> class="btn btn-sm btn-success">Detail</a>
                                               <a href='<?= base_url("teknisi/update_request/" . $u->id. "/" . $u->sub_kategori."/?id_menu=".$u->kategori)?>' class="btn btn-sm btn-primary">Update</a>
+                                              <a href='<?= base_url("teknisi/delete_request/" . $u->id)?>' class="btn btn-sm btn-danger">Delete</a>
                                           </td>
                                       </tr>
                                   <?php

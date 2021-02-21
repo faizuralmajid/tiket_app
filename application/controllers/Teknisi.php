@@ -335,4 +335,15 @@ class Teknisi extends CI_Controller
 			redirect(base_url('teknisi/list_request'));
 		}
 	}
+
+	public function delete_request($username)
+	{
+		$this->load->model('Muser');
+		$where = array(
+			'id' => $username
+		);
+
+		$this->Muser->delete_user($where, 'tbl_request');
+		redirect(base_url('teknisi/list_request'));
+	}
 }

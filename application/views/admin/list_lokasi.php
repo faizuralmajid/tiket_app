@@ -8,10 +8,10 @@
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#parentmenu" style="margin-right: 10px;">
                       Tambah Lokasi
                   </button>
-                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#submenu">
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#submenu" style="margin-right: 10px;">
                       Tambah Kota
                   </button>
-                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#submenu">
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#kawasan">
                       Tambah Kawasan
                   </button>
               </div>
@@ -98,13 +98,13 @@
                           <h1>Kawasan </h1>
                       </div>
                       <div class="bg-white p-4" style="border-radius:3px;box-shadow:rgba(0, 0, 0, 0.03) 0px 4px 8px 0px">
-                          <table id="tble" class="table align-items-center table-flush">
+                          <table id="tbaale" class="table align-items-center table-flush">
                               <thead class="thead-light">
                                   <tr class="text-center">
                                       <th style="width: 60px;">No</th>
                                       <th scope="col" style="text-align: left;">Lokasi</th>
                                       <th scope="col" style="text-align: left;">Kota</th>
-                                      <th scope="col">Option</th>
+                                      
                                   </tr>
                               </thead>
                               <tbody>
@@ -114,12 +114,9 @@
                                     ?>
                                       <tr class="text-center">
                                           <td style="width: 60px;"><?php echo $i ?></td>
-                                          <td style="text-align: left;"><?php echo $u->lokasi ?></td>
                                           <td style="text-align: left;"><?php echo $u->kota ?></td>
-                                          <td class="text-center">
-                                              <button class="btn btn-sm btn-warning btn-edit-sub" data-id='<?php echo $u->id; ?>' data-idsub='<?php echo $u->id_id; ?>' data-namakat='<?php echo $u->lokasi; ?>' data-nama='<?php echo $u->kota; ?>'>Update</button>
-                                              <a href=<?= base_url("admin/delete_kota/" . $u->id_id) ?> class=" btn btn-sm btn-danger">Hapus</a>
-                                          </td>
+                                          <td style="text-align: left;"><?php echo $u->kawasan ?></td>
+                                          
                                       </tr>
                                   <?php
                                         $i++;
@@ -213,14 +210,14 @@
 
                   <!-- Modal body -->
                   <div class="modal-body">
-                      <form method="post" action="<?= base_url('admin/create_kota') ?>">
+                      <form method="post" action="<?= base_url('admin/create_kawasan') ?>">
 
                           <div class="form-group">
                               <label class="col-form-label">Pilih Menu:</label>
                               <select class="form-control" name="kategori">
                                   <option>--Pilih Menu</option>
                                   <?php
-                                    foreach ($kategori as $u) {
+                                    foreach ($kota as $u) {
                                     ?>
                                       <option value="<?php echo $u->id ?>"><?php echo $u->lokasi ?></option>
                                   <?php } ?>
@@ -278,6 +275,48 @@
                           </div>
                          
                           <input type="submit" class="btn btn-success" value="Update Kota">
+                      </form>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="modal" id="kawasan">
+          <div class="modal-dialog">
+              <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title">Form Tambah Kawasan</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                      <form method="post" action="<?= base_url('admin/create_kawasan') ?>">
+
+                          <div class="form-group">
+                              <label class="col-form-label">Pilih Kota:</label>
+                              <select class="form-control" name="kategori">
+                                  <option>--Pilih Kota</option>
+                                  <?php
+                                    foreach ($subkategori as $u) {
+                                    ?>
+                                      <option value="<?php echo $u->id_id ?>"><?php echo $u->kota ?></option>
+                                  <?php } ?>
+                              </select>
+                          </div>
+                          <div class="form-group ">
+                              <label>Nama Kawasan</label>
+                              <input type="text" name="subkategori" required class="form-control" placeholder="Masukan Kota Baru">
+                          </div>
+                          <input type="submit" class="btn btn-success" value="Tambah Kota">
                       </form>
                   </div>
 

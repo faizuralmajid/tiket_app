@@ -154,6 +154,7 @@ class Admin extends CI_Controller
 		$data['level'] = $this->session->userdata('level');
 		$data['kategori'] = $this->Mlokasi->get_category()->result();
 		$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+		$data['kawasan'] = $this->Mlokasi->get_all_subcategory_b()->result();
 		$this->load->view('navbar/nav_admin', $data);
 		$this->load->view('admin/list_lokasi', $data);
 	}
@@ -218,12 +219,12 @@ class Admin extends CI_Controller
 
 		if ($this->form_validation->run() == false) {
 			$this->load->model('Mkategori');
-		$data['nama'] = $this->session->userdata('nama');
-		$data['level'] = $this->session->userdata('level');
-		$data['kategori'] = $this->Mkategori->get_category()->result();
-		$data['subkategori'] = $this->Mkategori->get_all_subcategory()->result();
-		$this->load->view('navbar/nav_admin', $data);
-		$this->load->view('admin/list_menu', $data);
+			$data['nama'] = $this->session->userdata('nama');
+			$data['level'] = $this->session->userdata('level');
+			$data['kategori'] = $this->Mkategori->get_category()->result();
+			$data['subkategori'] = $this->Mkategori->get_all_subcategory()->result();
+			$this->load->view('navbar/nav_admin', $data);
+			$this->load->view('admin/list_menu', $data);
 		} else {
 			$where = array(
 				'id' => htmlspecialchars($this->input->post('id_kat', true)),
@@ -237,7 +238,7 @@ class Admin extends CI_Controller
 		}
 	}
 
-	public function delete_parent($kategori,$id_kategori)
+	public function delete_parent($kategori, $id_kategori)
 	{
 		$this->load->model('Muser');
 		$where = array(
@@ -266,12 +267,12 @@ class Admin extends CI_Controller
 
 		if ($this->form_validation->run() == false) {
 			$this->load->model('Mkategori');
-		$data['nama'] = $this->session->userdata('nama');
-		$data['level'] = $this->session->userdata('level');
-		$data['kategori'] = $this->Mkategori->get_category()->result();
-		$data['subkategori'] = $this->Mkategori->get_all_subcategory()->result();
-		$this->load->view('navbar/nav_admin', $data);
-		$this->load->view('admin/list_menu', $data);
+			$data['nama'] = $this->session->userdata('nama');
+			$data['level'] = $this->session->userdata('level');
+			$data['kategori'] = $this->Mkategori->get_category()->result();
+			$data['subkategori'] = $this->Mkategori->get_all_subcategory()->result();
+			$this->load->view('navbar/nav_admin', $data);
+			$this->load->view('admin/list_menu', $data);
 		} else {
 			$where = array(
 				'id' => htmlspecialchars($this->input->post('id_sub', true)),
@@ -280,7 +281,7 @@ class Admin extends CI_Controller
 			$data = [
 				'id_kategori' => htmlspecialchars($this->input->post('kategori', true)),
 				'subkategori' => htmlspecialchars($this->input->post('subkategori', true)),
-				
+
 			];
 			$this->Muser->update_data($where, $data, 'master_subkategori');
 			redirect(base_url('admin/list_menu'));
@@ -311,6 +312,7 @@ class Admin extends CI_Controller
 			$data['level'] = $this->session->userdata('level');
 			$data['kategori'] = $this->Mlokasi->get_category()->result();
 			$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+			$data['kawasan'] = $this->Mlokasi->get_all_subcategory_b()->result();
 			$this->load->view('navbar/nav_admin', $data);
 			$this->load->view('admin/list_lokasi', $data);
 		} else {
@@ -335,6 +337,7 @@ class Admin extends CI_Controller
 			$data['level'] = $this->session->userdata('level');
 			$data['kategori'] = $this->Mlokasi->get_category()->result();
 			$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+			$data['kawasan'] = $this->Mlokasi->get_all_subcategory_b()->result();
 			$this->load->view('navbar/nav_admin', $data);
 			$this->load->view('admin/list_lokasi', $data);
 		} else {
@@ -350,7 +353,7 @@ class Admin extends CI_Controller
 		}
 	}
 
-	public function delete_lokasi($kategori,$id_kategori)
+	public function delete_lokasi($kategori, $id_kategori)
 	{
 		$this->load->model('Muser');
 		$where = array(
@@ -382,6 +385,7 @@ class Admin extends CI_Controller
 			$data['level'] = $this->session->userdata('level');
 			$data['kategori'] = $this->Mlokasi->get_category()->result();
 			$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+			$data['kawasan'] = $this->Mlokasi->get_all_subcategory_b()->result();
 			$this->load->view('navbar/nav_admin', $data);
 			$this->load->view('admin/list_lokasi', $data);
 		} else {
@@ -394,9 +398,10 @@ class Admin extends CI_Controller
 		}
 	}
 
-	
-	public function update_kota(){
-		
+
+	public function update_kota()
+	{
+
 		$this->load->model('Muser');
 
 		$this->form_validation->set_rules('kategori', 'kategori', 'required', [
@@ -413,6 +418,7 @@ class Admin extends CI_Controller
 			$data['level'] = $this->session->userdata('level');
 			$data['kategori'] = $this->Mlokasi->get_category()->result();
 			$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+			$data['kawasan'] = $this->Mlokasi->get_all_subcategory_b()->result();
 			$this->load->view('navbar/nav_admin', $data);
 			$this->load->view('admin/list_lokasi', $data);
 		} else {
@@ -438,5 +444,34 @@ class Admin extends CI_Controller
 
 		$this->Muser->delete_user($where, 'master_kota');
 		redirect(base_url('admin/list_lokasi'));
+	}
+
+	public function create_kawasan()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'required', [
+			'required' => 'kategori Wajib Diisi.',
+		]);
+
+		$this->form_validation->set_rules('subkategori', 'subkategori', 'required', [
+			'required' => 'Sub Kategori Wajib Diisi.',
+		]);
+
+		if ($this->form_validation->run() == false) {
+			$this->load->model('Mlokasi');
+			$data['nama'] = $this->session->userdata('nama');
+			$data['level'] = $this->session->userdata('level');
+			$data['kategori'] = $this->Mlokasi->get_category()->result();
+			$data['subkategori'] = $this->Mlokasi->get_all_subcategory()->result();
+			$data['kawasan'] = $this->Mlokasi->get_all_subcategory_b()->result();
+			$this->load->view('navbar/nav_admin', $data);
+			$this->load->view('admin/list_lokasi', $data);
+		} else {
+			$data = [
+				'id_kota' => htmlspecialchars($this->input->post('kategori', true)),
+				'kawasan' => htmlspecialchars($this->input->post('subkategori', true))
+			];
+			$this->db->insert('master_kawasan', $data);
+			redirect(base_url('admin/list_lokasi'));
+		}
 	}
 }

@@ -25,6 +25,13 @@ class Mlokasi extends CI_Model{
         return $query;
     }
 
+    function get_all_subcategory_b(){
+        return  $this->db->select('*,t1.id AS id,t2.id AS id_id')
+       ->from('master_kota as t1')
+       ->join('master_kawasan as t2', 't1.id = t2.id_kota', 'INNER')
+       ->get();
+      }
+
     function get_group(){
         $query = $this->db->get('tbl_group');
         return $query;
